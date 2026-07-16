@@ -99,7 +99,7 @@ Manager
 
 HR Manager
 
-<iframe class="embed-frame" src="https://link.prodigiouschampion.com/widget/booking/5Nnsa8UoghAqJv60vN0l" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://link.prodigiouschampion.com/widget/booking/5Nnsa8UoghAqJv60vN0l" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
 
 ##### Book Now
 
@@ -125,4 +125,4 @@ yogidental@gmail.com
 
 +1 973-707-3968
 
-<iframe class="embed-frame" src="https://maps.google.com/maps?q=yogi%20dental%2C30%20Scotland%20Road%2C%20Orange%2C%20NJ%2007050&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://maps.google.com/maps?q=yogi%20dental%2C30%20Scotland%20Road%2C%20Orange%2C%20NJ%2007050&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowFullScreen loading="lazy"></iframe>

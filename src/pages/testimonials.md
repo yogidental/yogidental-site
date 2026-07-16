@@ -131,4 +131,4 @@ Schedule your appointment today, using the button below to book online, or fill 
 
 (973-673-1311
 
-<iframe class="embed-frame" src="https://maps.google.com/maps?q=30%20Scotland%20Road%2C%20Orange%2C%20NJ%2007050%209%20Mount%20Pleasant%20TPKE%2C%20STE%20203%2C%20Denville%2C%20NJ%2007834&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://maps.google.com/maps?q=30%20Scotland%20Road%2C%20Orange%2C%20NJ%2007050%209%20Mount%20Pleasant%20TPKE%2C%20STE%20203%2C%20Denville%2C%20NJ%2007834&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowFullScreen loading="lazy"></iframe>

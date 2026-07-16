@@ -79,4 +79,4 @@ Patient Type Select New Patient Existing Patient
 
 Make Appointment
 
-<iframe class="embed-frame" src="https://maps.google.com/maps?q=30%20Scotland%20Road%20Orange%2C%20NJ%2007050&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://maps.google.com/maps?q=30%20Scotland%20Road%20Orange%2C%20NJ%2007050&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowFullScreen loading="lazy"></iframe>

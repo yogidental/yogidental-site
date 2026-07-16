@@ -312,6 +312,6 @@ Welcome to the future of painless, drill-free cavity treatment. What is Drill-Fr
 
 Facebook-f Twitter Instagram Youtube
 
-<iframe class="embed-frame" src="https://maps.google.com/maps?q=Yogi%20Dental%20Center%2030%20Scotland%20Road%20Orange%2C%20NJ%2007050&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://maps.google.com/maps?q=Yogi%20Dental%20Center%2030%20Scotland%20Road%20Orange%2C%20NJ%2007050&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
 
-<iframe class="embed-frame" src="https://maps.google.com/maps?q=Smile%20Care%20of%20Denville%209%20Mount%20Pleasant%20%E2%80%93%20Turnpike%2C%20Suite%20203%20Denville%2C%20NJ%2007834&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://maps.google.com/maps?q=Smile%20Care%20of%20Denville%209%20Mount%20Pleasant%20%E2%80%93%20Turnpike%2C%20Suite%20203%20Denville%2C%20NJ%2007834&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowFullScreen loading="lazy"></iframe>

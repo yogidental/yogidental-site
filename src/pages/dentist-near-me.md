@@ -133,7 +133,7 @@ From the first call to the moment you leave, our goal is simple: help you feel s
 
 ## Located In Orange NJ Easy To Reach From Newark East Orange West Orange And South Orange See Map Below
 
-<iframe class="embed-frame" src="https://maps.google.com/maps?q=yogi%20dental%20&t=m&z=11&output=embed&iwloc=near" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://maps.google.com/maps?q=yogi%20dental%20&t=m&z=11&output=embed&iwloc=near" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
 
 Just minutes from Newark and the Oranges, Yogi Dental Center is easy to reach for fast root canal care. Use the map below for quick directions and book a convenient time that fits your schedule.
 
@@ -157,7 +157,7 @@ yogidental@gmail.com
 
 (862) 396 - 4986
 
-<iframe class="embed-frame" src="https://link.prodigiouschampion.com/widget/booking/5Nnsa8UoghAqJv60vN0l" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://link.prodigiouschampion.com/widget/booking/5Nnsa8UoghAqJv60vN0l" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
 
 ![Dentist-near-me](/img/site/dentaloptexpert.jpg)
 

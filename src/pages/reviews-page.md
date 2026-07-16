@@ -456,12 +456,12 @@ Lina and Dr. Niraj worked well together. Made an appt same day and got a crown f
 
 ](https://g.co/kgs/Tm4tLsU)
 
-<iframe class="embed-frame" src="https://www.youtube.com/embed/gf8wqVMxzqc?feature=oembed" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://www.youtube.com/embed/gf8wqVMxzqc?feature=oembed" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
 
-<iframe class="embed-frame" src="https://www.youtube.com/embed/lzxykTgyjPI?feature=oembed" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://www.youtube.com/embed/lzxykTgyjPI?feature=oembed" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
 
-<iframe class="embed-frame" src="https://www.youtube.com/embed/E5FUOcnTbqQ?feature=oembed" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://www.youtube.com/embed/E5FUOcnTbqQ?feature=oembed" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
 
-<iframe class="embed-frame" src="https://www.youtube.com/embed/PPm_F02SAns?feature=oembed" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://www.youtube.com/embed/PPm_F02SAns?feature=oembed" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
 
-<iframe class="embed-frame" src="https://www.youtube.com/embed/eYc3qgW930o?feature=oembed" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://www.youtube.com/embed/eYc3qgW930o?feature=oembed" width="100%" height="450" allowFullScreen loading="lazy"></iframe>

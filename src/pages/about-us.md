@@ -154,6 +154,6 @@ We are a skilled dental team committed to your healthy smile. Through ongoing ed
 
 We build trust by treating each patient as unique. Understanding dental visit anxieties, we strive to create a relaxing, positive experience. Our dedicated team provides personalized care to make every visit comfortable and pleasant for you.
 
-<iframe class="embed-frame" src="https://maps.google.com/maps?q=Yogi%20Dental%20Center%2030%20Scotland%20Rd%2C%20City%20of%20Orange%2C%20NJ%2007050%2C%20United%20States&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://maps.google.com/maps?q=Yogi%20Dental%20Center%2030%20Scotland%20Rd%2C%20City%20of%20Orange%2C%20NJ%2007050%2C%20United%20States&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
 
-<iframe class="embed-frame" src="https://maps.google.com/maps?q=Smile%20Center%20of%20Denville%209%20Mt%20Pleasant%20Turnpike%20%23%20203%2C%20Denville%2C%20NJ%2007834%2C%20United%20States&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowfullscreen loading="lazy"></iframe>
+<iframe className="embed-frame" src="https://maps.google.com/maps?q=Smile%20Center%20of%20Denville%209%20Mt%20Pleasant%20Turnpike%20%23%20203%2C%20Denville%2C%20NJ%2007834%2C%20United%20States&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
