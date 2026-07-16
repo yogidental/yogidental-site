@@ -17,6 +17,9 @@ hide_table_of_contents: true
 
 [Learn More](/about)
 
+<div className="yd-grid yd-grid--3">
+<div className="yd-card yd-step">
+
 ## 01
 
 ### Understanding Tooth Wear
@@ -24,6 +27,9 @@ hide_table_of_contents: true
 Learn how tooth wear affects your smile and oral health. We offer expert care to prevent, manage, and treat worn or damaged teeth.
 
 [Read More](/understanding-tooth-wear)
+
+</div>
+<div className="yd-card yd-step">
 
 ## 02
 
@@ -33,6 +39,9 @@ Bone loss can lead to tooth loss, facial sagging, and weakened jaw support. Earl
 
 [Read More](/causes-of-tooth-pain)
 
+</div>
+<div className="yd-card yd-step">
+
 ## 03
 
 ### Obstructive Sleep Apnea
@@ -40,6 +49,9 @@ Bone loss can lead to tooth loss, facial sagging, and weakened jaw support. Earl
 Treat Obstructive Sleep Apnea with custom oral appliances for better sleep, reduced snoring, and improved overall health.
 
 [Read More](/obstructive-sleep-apnea)
+
+</div>
+<div className="yd-card yd-step">
 
 ## 04
 
@@ -49,6 +61,9 @@ Relieve jaw pain and discomfort with our TMJ treatment. We offer expert care to 
 
 [Read More](/temporomandibular-joint-disorder)
 
+</div>
+<div className="yd-card yd-step">
+
 ## 05
 
 ### Cracked Tooth
@@ -56,6 +71,9 @@ Relieve jaw pain and discomfort with our TMJ treatment. We offer expert care to 
 Relieve pain and restore function with our expert cracked tooth treatments. Get quick, effective care to save your natural tooth.
 
 [Read More](/cracked-tooth)
+
+</div>
+<div className="yd-card yd-step">
 
 ## 06
 
@@ -65,6 +83,9 @@ Tooth pain may be caused by cavities, gum disease, infection, cracked teeth, or 
 
 [Read More](/consequences-of-bone-loss)
 
+</div>
+<div className="yd-card yd-step">
+
 ## 07
 
 ### Plaque and Calculus
@@ -72,6 +93,9 @@ Tooth pain may be caused by cavities, gum disease, infection, cracked teeth, or 
 Remove harmful plaque and calculus with our professional cleanings to prevent gum disease and keep your smile fresh and healthy.
 
 [Read More](/plaque-and-calculus)
+
+</div>
+</div>
 
 ##### Testimonial
 

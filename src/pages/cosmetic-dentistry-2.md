@@ -19,61 +19,55 @@ Experience the benefits of **CEREC** Same-Day Crowns at Yogi Dental—get custom
 
 ### Expert Cosmetic Dentistry to Brighten and Perfect Your Smile
 
-[
+<div className="yd-grid yd-grid--3">
+<div className="yd-card">
 
-![Cosmetic Dentistry](/img/site/ZOOM-Teeth-Whitening.jpg)
-
-](/zoom-teeth-whitening)
+[![Cosmetic Dentistry](/img/site/ZOOM-Teeth-Whitening.jpg)](/zoom-teeth-whitening)
 
 ### ZOOM! Teeth Whitening
 
 Brighten your smile in one visit with safe, effective ZOOM! whitening—removing deep stains for instantly whiter, radiant teeth.
 
-[
+</div>
+<div className="yd-card">
 
-![Cosmetic Dentistry](/img/site/Porcelain-Veneers.jpg)
-
-](/porcelain-veneers)
+[![Cosmetic Dentistry](/img/site/Porcelain-Veneers.jpg)](/porcelain-veneers)
 
 ### Porcelain Veneers
 
 Cover chips, gaps, or discoloration with custom porcelain veneers that give you a flawless, natural-looking smile.
 
-[
+</div>
+<div className="yd-card">
 
-![Cosmetic Dentistry](/img/site/Porcelain-Bridges.jpg)
-
-](/porcelain-bridges)
+[![Cosmetic Dentistry](/img/site/Porcelain-Bridges.jpg)](/porcelain-bridges)
 
 ### Porcelain Bridges
 
 Replace missing teeth with durable porcelain bridges that restore your smile’s function and appearance seamlessly.
 
-[
+</div>
+<div className="yd-card">
 
-![Cosmetic Dentistry](/img/site/Porcelain-Crowns.png)
-
-](/porcelain-crowns)
+[![Cosmetic Dentistry](/img/site/Porcelain-Crowns.png)](/porcelain-crowns)
 
 ### Porcelain Crowns
 
 Strengthen and protect damaged teeth with porcelain crowns that blend perfectly with your natural teeth.
 
-[
+</div>
+<div className="yd-card">
 
-![Cosmetic Dentistry](/img/site/Tooth-Colored-Restoration.jpg)
-
-](/tooth-fillings)
+[![Cosmetic Dentistry](/img/site/Tooth-Colored-Restoration.jpg)](/tooth-fillings)
 
 ### Tooth-Colored Restoration
 
 Fix cavities or damage with fillings that match your tooth color—no metal, just a natural, clean look.
 
-[
+</div>
+<div className="yd-card">
 
-![Cosmetic Dentistry](/img/site/Snap-On-Smile.webp)
-
-](/snap-on-smile)
+[![Cosmetic Dentistry](/img/site/Snap-On-Smile.webp)](/snap-on-smile)
 
 ### Snap-On Smile
 
@@ -96,6 +90,9 @@ Transform your smile with laser gum contouring at Yogi Dental. This precise, pai
 ![Cosmetic Dentistry](/img/site/laser-gum-contouring-before-and-after-s.webp)
 
 Before And After
+
+</div>
+</div>
 
 ##### Book Now
 
@@ -121,17 +118,43 @@ yogidental@gmail.com
 
 +1 973-673-1311
 
-Name
+<div className="yd-form">
+  <div className="yd-field">
+    <label htmlFor="f-cosmetic-dentistry-2-name">Name</label>
+    <input id="f-cosmetic-dentistry-2-name" type="text" placeholder="Enter your name" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-cosmetic-dentistry-2-email">Email</label>
+    <input id="f-cosmetic-dentistry-2-email" type="email" placeholder="Enter your email" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-cosmetic-dentistry-2-phone">Contact Number</label>
+    <input id="f-cosmetic-dentistry-2-phone" type="tel" placeholder="Enter your contact number" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-cosmetic-dentistry-2-service">Service</label>
+    <select id="f-cosmetic-dentistry-2-service" defaultValue="">
+      <option value="">Select a service</option>
+      <option>Preventive checkup</option>
+      <option>Restorative pain</option>
+      <option>Tooth Replacement</option>
+      <option>Cosmetic</option>
+      <option>Orthodontic</option>
+    </select>
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-cosmetic-dentistry-2-type">Patient Type</label>
+    <select id="f-cosmetic-dentistry-2-type" defaultValue="">
+      <option value="">Select</option>
+      <option>New Patient</option>
+      <option>Existing Patient</option>
+    </select>
+  </div>
+</div>
 
-Email
-
-Contact Number
-
-Service Select a service Preventive checkup Restorative pain Tooth Replacement Cosmetic Orthodontic
-
-Patient Type Select New Patient Existing Patient
-
-Make Appointment
+<div className="yd-cta">
+  <a className="yd-btn" href="https://calendly.com/yogidental/new-patient">Make Appointment</a>
+</div>
 
 ## Stay Connected with Yogi Dental
 

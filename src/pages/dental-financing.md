@@ -19,6 +19,8 @@ At Yogi Dental Center, we believe everyone deserves access to exceptional dental
 
 ## Trusted Financing Options
 
+<div className="yd-logos">
+
 ![logo](/img/site/logo.svg)
 
 ![Alphaeon\_Credit\_logo\_registered\_RGB](/img/site/Alphaeon_Credit_logo_registered_RGB-300x138.png)
@@ -28,6 +30,8 @@ At Yogi Dental Center, we believe everyone deserves access to exceptional dental
 ![lendingclubLogo](/img/site/lendingclubLogo.svg)
 
 ![main\_logo](/img/site/main_logo-300x77.png)
+
+</div>
 
 ![Easy Payment Plans & Dental Financing](/img/site/wisdom-teeth-removal.jpg)
 
@@ -105,17 +109,43 @@ yogidental@gmail.com
 
 +1 973-673-1311
 
-Name
+<div className="yd-form">
+  <div className="yd-field">
+    <label htmlFor="f-dental-financing-name">Name</label>
+    <input id="f-dental-financing-name" type="text" placeholder="Enter your name" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-dental-financing-email">Email</label>
+    <input id="f-dental-financing-email" type="email" placeholder="Enter your email" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-dental-financing-phone">Contact Number</label>
+    <input id="f-dental-financing-phone" type="tel" placeholder="Enter your contact number" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-dental-financing-service">Service</label>
+    <select id="f-dental-financing-service" defaultValue="">
+      <option value="">Select a service</option>
+      <option>Preventive checkup</option>
+      <option>Restorative pain</option>
+      <option>Tooth Replacement</option>
+      <option>Cosmetic</option>
+      <option>Orthodontic</option>
+    </select>
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-dental-financing-type">Patient Type</label>
+    <select id="f-dental-financing-type" defaultValue="">
+      <option value="">Select</option>
+      <option>New Patient</option>
+      <option>Existing Patient</option>
+    </select>
+  </div>
+</div>
 
-Email
-
-Contact Number
-
-Service Select a service Preventive checkup Restorative pain Tooth Replacement Cosmetic Orthodontic
-
-Patient Type Select New Patient Existing Patient
-
-Make Appointment
+<div className="yd-cta">
+  <a className="yd-btn" href="https://calendly.com/yogidental/new-patient">Make Appointment</a>
+</div>
 
 ## Stay Connected with Yogi Dental
 

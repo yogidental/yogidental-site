@@ -64,17 +64,44 @@ From the first call to the moment you leave, our goal is simple: help you feel s
 
 ## Meet Our Team Of Experts​
 
+<div className="yd-split">
+<div className="yd-media">
+
 ![Dr Rajal Patel](/img/site/WhatsApp-Image-2026-03-13-at-14.59.29-4-1024x862.jpeg)
+
+</div>
+<div>
 
 **Dr. Rajal J. Patel**, a NYU College of Dentistry graduate since 1990, offers compassionate, expert care. Certified in Invisalign and sedation, she partners with specialists for comprehensive treatment. Outside work, she enjoys reading, cooking, and community service. Her dedication and warm approach make her beloved by patients of all ages.
 
+</div>
+</div>
+
+<div className="yd-split">
+<div className="yd-media">
+
 ![Dr Niraj Patel](/img/site/WhatsApp-Image-2026-03-13-at-14.59.29-3-1-1024x856.jpeg)
+
+</div>
+<div>
 
 **Meet Dr. Niraj** – your smile architect! An NYU-trained dentist and AAID Associate Fellow, he combines artistry, science, and humor to deliver top-notch care. From implants to Invisalign, he takes a whole-health approach, using 3D imaging for precision. With advanced training and a passion for patient comfort, Dr. Niraj and Dr. Patel work together to keep your smile healthy and beautiful. Whether it’s a checkup or a makeover, get ready for expert care and confident smiles!
 
+</div>
+</div>
+
+<div className="yd-split">
+<div className="yd-media">
+
 ![Yogi Dental Center](/img/site/copy_966E6C97-AAC1-4C59-BD53-C2BDD694F5E2-2-1024x637.jpg)
 
+</div>
+<div>
+
 Meet the team behind Yogi Dental Center. From your first call to the moment you leave, we are here to make your visit feel easy, calm, and taken care of. Our front desk and clinical staff work together to keep you comfortable, answer your questions, and guide you through every step without rushing you. If you have been nervous about the dentist or had a bad experience before, you will feel the difference with our team.
+
+</div>
+</div>
 
 ## Located In Orange NJ Easy To Reach From Newark East Orange West Orange And South Orange See Map Below
 

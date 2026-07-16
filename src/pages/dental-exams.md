@@ -53,17 +53,43 @@ yogidental@gmail.com
 
 +1 973-673-1311
 
-Name
+<div className="yd-form">
+  <div className="yd-field">
+    <label htmlFor="f-dental-exams-name">Name</label>
+    <input id="f-dental-exams-name" type="text" placeholder="Enter your name" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-dental-exams-email">Email</label>
+    <input id="f-dental-exams-email" type="email" placeholder="Enter your email" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-dental-exams-phone">Contact Number</label>
+    <input id="f-dental-exams-phone" type="tel" placeholder="Enter your contact number" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-dental-exams-service">Service</label>
+    <select id="f-dental-exams-service" defaultValue="">
+      <option value="">Select a service</option>
+      <option>Preventive checkup</option>
+      <option>Restorative pain</option>
+      <option>Tooth Replacement</option>
+      <option>Cosmetic</option>
+      <option>Orthodontic</option>
+    </select>
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-dental-exams-type">Patient Type</label>
+    <select id="f-dental-exams-type" defaultValue="">
+      <option value="">Select</option>
+      <option>New Patient</option>
+      <option>Existing Patient</option>
+    </select>
+  </div>
+</div>
 
-Email
-
-Contact Number
-
-Service Select a service Preventive checkup Restorative pain Tooth Replacement Cosmetic Orthodontic
-
-Patient Type Select New Patient Existing Patient
-
-Make Appointment
+<div className="yd-cta">
+  <a className="yd-btn" href="https://calendly.com/yogidental/new-patient">Make Appointment</a>
+</div>
 
 ## Stay Connected with Yogi Dental
 

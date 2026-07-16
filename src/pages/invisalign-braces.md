@@ -58,17 +58,43 @@ yogidental@gmail.com
 
 +1 973-673-1311
 
-Name
+<div className="yd-form">
+  <div className="yd-field">
+    <label htmlFor="f-invisalign-braces-name">Name</label>
+    <input id="f-invisalign-braces-name" type="text" placeholder="Enter your name" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-invisalign-braces-email">Email</label>
+    <input id="f-invisalign-braces-email" type="email" placeholder="Enter your email" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-invisalign-braces-phone">Contact Number</label>
+    <input id="f-invisalign-braces-phone" type="tel" placeholder="Enter your contact number" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-invisalign-braces-service">Service</label>
+    <select id="f-invisalign-braces-service" defaultValue="">
+      <option value="">Select a service</option>
+      <option>Preventive checkup</option>
+      <option>Restorative pain</option>
+      <option>Tooth Replacement</option>
+      <option>Cosmetic</option>
+      <option>Orthodontic</option>
+    </select>
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-invisalign-braces-type">Patient Type</label>
+    <select id="f-invisalign-braces-type" defaultValue="">
+      <option value="">Select</option>
+      <option>New Patient</option>
+      <option>Existing Patient</option>
+    </select>
+  </div>
+</div>
 
-Email
-
-Contact Number
-
-Service Select a service Preventive checkup Restorative pain Tooth Replacement Cosmetic Orthodontic
-
-Patient Type Select New Patient Existing Patient
-
-Make Appointment
+<div className="yd-cta">
+  <a className="yd-btn" href="https://calendly.com/yogidental/new-patient">Make Appointment</a>
+</div>
 
 ## Stay Connected with Yogi Dental
 
