@@ -67,16 +67,42 @@ Schedule your appointment today, using the button below to book online, or fill 
 
 yogidental@GMAIL.COM
 
-Name
+<div className="yd-form">
+  <div className="yd-field">
+    <label htmlFor="f-guarantee-name">Name</label>
+    <input id="f-guarantee-name" type="text" placeholder="Enter your name" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-guarantee-email">Email</label>
+    <input id="f-guarantee-email" type="email" placeholder="Enter your email" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-guarantee-phone">Contact Number</label>
+    <input id="f-guarantee-phone" type="tel" placeholder="Enter your contact number" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-guarantee-service">Service</label>
+    <select id="f-guarantee-service" defaultValue="">
+      <option value="">Select a service</option>
+      <option>Preventive checkup</option>
+      <option>Restorative pain</option>
+      <option>Tooth Replacement</option>
+      <option>Cosmetic</option>
+      <option>Orthodontic</option>
+    </select>
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-guarantee-type">Patient Type</label>
+    <select id="f-guarantee-type" defaultValue="">
+      <option value="">Select</option>
+      <option>New Patient</option>
+      <option>Existing Patient</option>
+    </select>
+  </div>
+</div>
 
-Email
-
-Contact Number
-
-Service Select a service Preventive checkup Restorative pain Tooth Replacement Cosmetic Orthodontic
-
-Patient Type Select New Patient Existing Patient
-
-Make Appointment
+<div className="yd-cta">
+  <a className="yd-btn" href="https://calendly.com/yogidental/new-patient">Make Appointment</a>
+</div>
 
 <iframe className="embed-frame" src="https://maps.google.com/maps?q=30%20Scotland%20Road%20Orange%2C%20NJ%2007050&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowFullScreen loading="lazy"></iframe>

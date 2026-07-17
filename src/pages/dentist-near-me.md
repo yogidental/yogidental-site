@@ -63,17 +63,44 @@ We slow down. We explain everything before we touch anything. We make sure you f
 
 ## Meet Our Team Of Experts
 
+<div className="yd-split">
+<div className="yd-media">
+
 ![Dr Rajal Patel](/img/site/WhatsApp-Image-2026-03-13-at-14.59.29-4-1024x862.jpeg)
+
+</div>
+<div>
 
 **Dr. Rajal J. Patel**, a NYU College of Dentistry graduate since 1990, offers compassionate, expert care. Certified in Invisalign and sedation, she partners with specialists for comprehensive treatment. Outside work, she enjoys reading, cooking, and community service. Her dedication and warm approach make her beloved by patients of all ages.
 
+</div>
+</div>
+
+<div className="yd-split">
+<div className="yd-media">
+
 ![Dr Niraj Patel](/img/site/WhatsApp-Image-2026-03-13-at-14.59.29-3-1-1024x856.jpeg)
+
+</div>
+<div>
 
 **Meet Dr. Niraj** – your smile architect! An NYU-trained dentist and AAID Associate Fellow, he combines artistry, science, and humor to deliver top-notch care. From implants to Invisalign, he takes a whole-health approach, using 3D imaging for precision. With advanced training and a passion for patient comfort, Dr. Niraj and Dr. Patel work together to keep your smile healthy and beautiful. Whether it’s a checkup or a makeover, get ready for expert care and confident smiles!
 
+</div>
+</div>
+
+<div className="yd-split">
+<div className="yd-media">
+
 ![Yogi Dental Center](/img/site/copy_966E6C97-AAC1-4C59-BD53-C2BDD694F5E2-2-1024x637.jpg)
 
+</div>
+<div>
+
 Meet the team behind Yogi Dental Center. From your first call to the moment you leave, we are here to make your visit feel easy, calm, and taken care of. Our front desk and clinical staff work together to keep you comfortable, answer your questions, and guide you through every step without rushing you. If you have been nervous about the dentist or had a bad experience before, you will feel the difference with our team.
+
+</div>
+</div>
 
 [Book Now](https://link.prodigiouschampion.com/widget/booking/5Nnsa8UoghAqJv60vN0l)
 
@@ -81,29 +108,50 @@ Meet the team behind Yogi Dental Center. From your first call to the moment you 
 
 ## Everything You Need From Your Family Dentist
 
+<div className="yd-grid yd-grid--3">
+<div className="yd-feature">
+
 ### Cleanings & Checkups
 
 Routine dental exams and professional cleanings to keep your teeth healthy and catch problems early. We make checkups easy and stress-free.
+
+</div>
+<div className="yd-feature">
 
 ### Root Canal Treatment
 
 Fast relief from tooth pain with gentle, precise root canal care. We use modern techniques to make the procedure as comfortable as possible.
 
+</div>
+<div className="yd-feature">
+
 ### Dental Implants
 
 Permanent tooth replacement that looks, feels, and functions like a natural tooth. Restore your smile and confidence with implants placed by Dr. Patel.
+
+</div>
+<div className="yd-feature">
 
 ### Cavities & Fillings
 
 The most common dental procedure, and one of the easiest to take care of. If you have a cavity, we remove the decay and restore your tooth quickly and comfortably, usually in a single visit.
 
+</div>
+<div className="yd-feature">
+
 ### Tooth Extractions
 
 Whether it's a damaged tooth, overcrowding, or wisdom teeth causing problems, we perform gentle extractions and make sure you're comfortable and informed every step of the way.
 
+</div>
+<div className="yd-feature">
+
 ### Broken or Chipped Tooth
 
 Accidents happen. If you've cracked, chipped, or broken a tooth, we can restore it quickly with bonding, a crown, or other solutions, so your smile looks and feels whole again.
+
+</div>
+</div>
 
 [Book Now](https://link.prodigiouschampion.com/widget/booking/5Nnsa8UoghAqJv60vN0l)
 

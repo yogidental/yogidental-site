@@ -50,9 +50,18 @@ Experience exceptional dental care you can trust. Our expert team provides perso
 
 [Call Us Now](tel:\(973\)%20319-2990)
 
+<div className="yd-grid yd-grid--2">
+<div className="yd-media">
+
 ![general family dentistry](/img/site/freepik__two-real-dentists-examining-a-patient-in-a-bright-__54451-1024x1024.jpeg)
 
+</div>
+<div className="yd-media">
+
 ![Dentist at Yogi Dental providing patient care in Orange NJ](/img/site/freepik__male-and-female-dentist-team-portrait-friendly-smi__54456-1024x1024.jpeg)
+
+</div>
+</div>
 
 ## Restore Your Smile. Regain Your Confidence.
 
@@ -66,11 +75,17 @@ At YogiDental, we offer world-class dental care— from routine checkups to adva
 
 ###### Transforming smiles with trusted care, advanced technology, and gentle expertise.
 
+<div className="yd-grid yd-grid--3">
+<div className="yd-card">
+
 ![Landing](/img/site/female-patient-waiting-dentist-office.jpg)
 
 ### General Dentistry
 
 Keep your smile in the natural harmony. Lifelong oral health, including prevention, maintenance, and careful attention to your entire family, is the staple of our general dentistry services. Whether it be mild washing and examinations or more permanent composites and repair, we are your health long-term companions.Careful Cleaning & Cleaning Inspections. Tooth-Colored Fillings Crowns & Bridges Prevention and Oral Cancer Examinations.
+
+</div>
+<div className="yd-card">
 
 ![dental blogs](/img/site/close-up-dentist-showing-teeth-model-smiling-patient.jpg)
 
@@ -78,11 +93,17 @@ Keep your smile in the natural harmony. Lifelong oral health, including preventi
 
 Feel the security and calmness of a full functional smile. Modern replacement of missing teeth is the dental implants which are artfully crafted to appear, touch and perform just like your natural teeth. Our team takes you through a process that is effective and easy, both in restoring your bite as well as your inner balance. Single and Multiple Tooth Replacement. Implant-Supported Dentures Full Arch Restoration
 
+</div>
+<div className="yd-card">
+
 ![Landing](/img/site/woman-wearing-orthodontic-silicone-invisible-braces.jpg)
 
 ### Invisalign
 
 Get a straight smile you have always desired with the comfort and clarity. Invisalign has become an obscure, up-to-date route to alignment employing transparent removable aligners that fit effortlessly into your way of life. Our 3D mapping will map out your path and we are able to help you get gorgeous results without the strain of conventional braces. Discreet Clear Aligners Removable & Comfortable Deliverable Results through 3D Planning.
+
+</div>
+</div>
 
 [Get My Special Offer](https://calendly.com/yogidental/new-patient)
 
@@ -98,11 +119,20 @@ Our highly skilled and compassionate dentists combine advanced expertise with a 
 
 ## [Dr. Rajal J. Patel](javascript:void\(0\))
 
+<div className="yd-split">
+<div className="yd-media">
+
 ![Image Of Doctor](/img/site/dr-image-dpc-remxcgoe26y4m5t93zovgioduu6kuaq4tw7ehb4i00.jpg)
+
+</div>
+<div>
 
 ## Dr. Rajal J. Patel
 
 Dr. Rajal J. Patel, a NYU College of Dentistry graduate since 1990, offers compassionate, expert care. Certified in Invisalign and sedation, she partners with specialists for comprehensive treatment. Outside work, she enjoys reading, cooking, and community service. Her dedication and warm approach make her beloved by patients of all ages.
+
+</div>
+</div>
 
 [
 
@@ -112,11 +142,20 @@ Dr. Rajal J. Patel, a NYU College of Dentistry graduate since 1990, offers compa
 
 ## [Dr. Niraj Patel](javascript:void\(0\))
 
+<div className="yd-split">
+<div className="yd-media">
+
 ![Image Of Doctor](/img/site/dr-niraj-patel-yogi-dental-remxf8ba6mqistsiy6rbstj8tojhi7pojlcvcn0rog.jpg)
+
+</div>
+<div>
 
 ## Dr. Niraj Patel
 
 Meet Dr. Niraj – your smile architect! An NYU-trained dentist and AAID Associate Fellow, he combines artistry, science, and humor to deliver top-notch care. From implants to Invisalign, he takes a whole-health approach, using 3D imaging for precision. With advanced training and a passion for patient comfort, Dr. Niraj and Dr. Patel work together to keep your smile healthy and beautiful. Whether it’s a checkup or a makeover, get ready for expert care and confident smiles!
+
+</div>
+</div>
 
 [Call now](tel:\(973\)%20319-2990)
 
@@ -162,17 +201,43 @@ We are your smile makers at Yogi Dental, and we make the difference between a be
 
 [Contact Us](tel:\(973\)%20319-2990)
 
-Name
+<div className="yd-form">
+  <div className="yd-field">
+    <label htmlFor="f-landing-name">Name</label>
+    <input id="f-landing-name" type="text" placeholder="Enter your name" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-landing-email">Email</label>
+    <input id="f-landing-email" type="email" placeholder="Enter your email" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-landing-phone">Contact Number</label>
+    <input id="f-landing-phone" type="tel" placeholder="Enter your contact number" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-landing-service">Service</label>
+    <select id="f-landing-service" defaultValue="">
+      <option value="">Select a service</option>
+      <option>Preventive checkup</option>
+      <option>Restorative pain</option>
+      <option>Tooth Replacement</option>
+      <option>Cosmetic</option>
+      <option>Orthodontic</option>
+    </select>
+  </div>
+  <div className="yd-field">
+    <label htmlFor="f-landing-type">Patient Type</label>
+    <select id="f-landing-type" defaultValue="">
+      <option value="">Select</option>
+      <option>New Patient</option>
+      <option>Existing Patient</option>
+    </select>
+  </div>
+</div>
 
-Email
-
-Contact Number
-
-Service Select a service Preventive checkup Restorative pain Tooth Replacement Cosmetic Orthodontic
-
-Patient Type Select New Patient Existing Patient
-
-Make Appointment
+<div className="yd-cta">
+  <a className="yd-btn" href="https://calendly.com/yogidental/new-patient">Make Appointment</a>
+</div>
 
 ##### Book Now
 

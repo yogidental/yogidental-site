@@ -17,6 +17,9 @@ hide_table_of_contents: true
 
 **We offer comprehensive dental care including implants, Invisalign, dentures, preventive, cosmetic, and family dentistry for all ages.**
 
+<div className="yd-grid yd-grid--3">
+<div className="yd-card yd-card--icon">
+
 ![Diagnostic Exam](/img/site/whitee.png)
 
 ### Diagnostic Exam
@@ -24,6 +27,9 @@ hide_table_of_contents: true
 A detailed exam using digital tools to assess your teeth, gums, and bite—creating a personalized treatment plan for optimal oral health.
 
 [Read More](/exams)
+
+</div>
+<div className="yd-card yd-card--icon">
 
 ![Cleaning](/img/site/check.png)
 
@@ -33,6 +39,9 @@ Gentle, thorough cleanings remove plaque and tartar to prevent cavities, gum dis
 
 [Read More](/teeth-cleaning)
 
+</div>
+<div className="yd-card yd-card--icon">
+
 ![Periodontal Scaling](/img/site/filling.png)
 
 ### Periodontal Scaling
@@ -40,6 +49,9 @@ Gentle, thorough cleanings remove plaque and tartar to prevent cavities, gum dis
 Deep cleaning below the gumline to remove buildup and treat early-stage gum disease, protecting your teeth and bone health.
 
 [Read More](/periodontal-gum-disease-treatment)
+
+</div>
+<div className="yd-card yd-card--icon">
 
 ![Laser-Assisted Gum Treatments](/img/site/whitee.png)
 
@@ -49,6 +61,9 @@ Minimally invasive laser therapy treats gum disease, reduces bacteria, and promo
 
 [Read More](/contact)
 
+</div>
+<div className="yd-card yd-card--icon">
+
 ![Extraction](/img/site/check.png)
 
 ### Extraction
@@ -56,6 +71,9 @@ Minimally invasive laser therapy treats gum disease, reduces bacteria, and promo
 Gentle tooth removal when damage or infection is too severe—always focused on comfort and future restoration options.
 
 [Read More](/contact)
+
+</div>
+<div className="yd-card yd-card--icon">
 
 ![Socket Preservation](/img/site/filling.png)
 
@@ -65,6 +83,9 @@ Preserves bone structure after extraction, preparing the area for future implant
 
 [Read More](/preventive-dentistry)
 
+</div>
+<div className="yd-card yd-card--icon">
+
 ![Implants (Single and Multiple Teeth)](/img/site/whitee.png)
 
 ### Implants (Single and Multiple Teeth)
@@ -72,6 +93,9 @@ Preserves bone structure after extraction, preparing the area for future implant
 Permanent replacements for missing teeth using titanium roots and custom crowns—restoring full function and natural aesthetics.
 
 [Read More](/dental-implants)
+
+</div>
+<div className="yd-card yd-card--icon">
 
 ![All-on-4 Hybrid Dentures](/img/site/check.png)
 
@@ -81,6 +105,9 @@ All-on-4 Hybrid Dentures offer a secure, full-arch tooth replacement using just 
 
 [Read More](/dentures-teeth-in-a-day)
 
+</div>
+<div className="yd-card yd-card--icon">
+
 ![Snap-On Smile](/img/site/filling.png)
 
 ### Snap-On Smile
@@ -88,6 +115,9 @@ All-on-4 Hybrid Dentures offer a secure, full-arch tooth replacement using just 
 Snap-On Smile is a removable arch that fits over your teeth to instantly transform your smile—no drilling, no pain, just a quick, comfortable way to boost your confidence and appearance.
 
 [Read More](/snap-on-smile)
+
+</div>
+<div className="yd-card yd-card--icon">
 
 ![Zoom Whitening](/img/site/whitee.png)
 
@@ -97,6 +127,9 @@ In-office whitening that lifts stains and brightens your teeth by several shades
 
 [Read More](/zoom-teeth-whitening)
 
+</div>
+<div className="yd-card yd-card--icon">
+
 ![Resin Restoration](/img/site/check.png)
 
 ### Resin Restoration
@@ -104,6 +137,9 @@ In-office whitening that lifts stains and brightens your teeth by several shades
 Tooth-colored fillings that repair decay or damage while blending seamlessly with your natural teeth for a flawless look.
 
 [Read More](/contact)
+
+</div>
+<div className="yd-card yd-card--icon">
 
 ![Veneers (Porcelain)](/img/site/filling.png)
 
@@ -113,6 +149,9 @@ Porcelain veneers are thin, durable shells that cover chips, stains, or gaps—e
 
 [Read More](/porcelain-veneers)
 
+</div>
+<div className="yd-card yd-card--icon">
+
 ![Same-Day Crowns](/img/site/whitee.png)
 
 ### Same-Day Crowns
@@ -120,6 +159,9 @@ Porcelain veneers are thin, durable shells that cover chips, stains, or gaps—e
 Get high-quality crowns crafted and placed in a single visit—no temporary crowns or multiple appointments needed.
 
 [Read More](/porcelain-crowns)
+
+</div>
+<div className="yd-card yd-card--icon">
 
 ![Root Canals](/img/site/check.png)
 
@@ -129,6 +171,9 @@ Save infected teeth with a root canal—relieves pain, removes infection, and re
 
 [Read More](/root-canals-2)
 
+</div>
+<div className="yd-card yd-card--icon">
+
 ![Cosmetic Dentistry](/img/site/filling.png)
 
 ### Cosmetic Dentistry
@@ -136,6 +181,9 @@ Save infected teeth with a root canal—relieves pain, removes infection, and re
 From whitening to veneers, we enhance your smile’s look and feel with treatments tailored to your goals and features.
 
 [Read More](/cosmetic-dentistry-2)
+
+</div>
+<div className="yd-card yd-card--icon">
 
 ![Sinus Augmentation](/img/site/whitee.png)
 
@@ -145,6 +193,9 @@ Boosts bone volume in the upper jaw to prepare for implants—ideal for patients
 
 [Read More](/contact)
 
+</div>
+<div className="yd-card yd-card--icon">
+
 ![Invisalign](/img/site/check.png)
 
 ### Invisalign
@@ -152,6 +203,9 @@ Boosts bone volume in the upper jaw to prepare for implants—ideal for patients
 Clear, removable aligners straighten your teeth discreetly—no wires, no brackets, just a confident, aligned smile.
 
 [Read More](/invisalign-braces)
+
+</div>
+<div className="yd-card yd-card--icon">
 
 ![Preventive Dentistry](/img/site/whitee.png)
 
@@ -161,6 +215,9 @@ Keep your smile healthy with our Preventive Dentistry services, including cleani
 
 [Read More](/preventive-dentistry)
 
+</div>
+<div className="yd-card yd-card--icon">
+
 ![General & Family Dentistry](/img/site/check.png)
 
 ### General & Family Dentistry
@@ -168,6 +225,9 @@ Keep your smile healthy with our Preventive Dentistry services, including cleani
 Complete dental care for all ages! From check-ups to fillings, we keep your family's smiles healthy, bright, and pain-free.
 
 [Read More](/genereral-family-dentistry)
+
+</div>
+</div>
 
 #### Client:
 
@@ -189,17 +249,43 @@ Monday - Thursday
 
 -   09.30 AM - 05.30 PM
 
-Name
+<div className="yd-form">
+  <div className="yd-field">
+    <label htmlFor="sv-name">Name</label>
+    <input id="sv-name" type="text" placeholder="Enter your name" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="sv-email">Email</label>
+    <input id="sv-email" type="email" placeholder="Enter your email" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="sv-phone">Contact Number</label>
+    <input id="sv-phone" type="tel" placeholder="Enter your contact number" />
+  </div>
+  <div className="yd-field">
+    <label htmlFor="sv-service">Service</label>
+    <select id="sv-service" defaultValue="">
+      <option value="">Select a service</option>
+      <option>Preventive checkup</option>
+      <option>Restorative pain</option>
+      <option>Tooth Replacement</option>
+      <option>Cosmetic</option>
+      <option>Orthodontic</option>
+    </select>
+  </div>
+  <div className="yd-field">
+    <label htmlFor="sv-type">Patient Type</label>
+    <select id="sv-type" defaultValue="">
+      <option value="">Select</option>
+      <option>New Patient</option>
+      <option>Existing Patient</option>
+    </select>
+  </div>
+</div>
 
-Email
-
-Contact Number
-
-Service Select a service Preventive checkup Restorative pain Tooth Replacement Cosmetic Orthodontic
-
-Patient Type Select New Patient Existing Patient
-
-Make Appointment
+<div className="yd-cta">
+  <a className="yd-btn" href="https://calendly.com/yogidental/new-patient">Make Appointment</a>
+</div>
 
 ### Satisfaction Guarantee
 
@@ -225,69 +311,96 @@ Read More
 
 “Excellent care, friendly team, and comfortable visits. Truly the best dental experience I’ve ever had!
 
+<div className="yd-grid yd-grid--3">
+<div className="yd-quote yd-quote--avatar">
+
 What I like most is the warmth and professionalism of the staff. The doctors are open, down to earth and truly phenomenal. I have been a client for years and I have no immediate plans to switch.
+
+<div className="yd-avatar">
 
 ![— Ms. Delrose Robinson](/img/site/testimonial-Q8JDNBT.png)
 
+</div>
+
 **— Ms. Delrose Robinson**
 
-Entrepreneur
+<span className="yd-role">Entrepreneur</span>
+
+</div>
+<div className="yd-quote yd-quote--avatar">
 
 The teeth fit perfectly in my mouth. I am very satisfied with the results. I have nothing but promise for the doctors. They do perfect follow up work.
 
+<div className="yd-avatar">
+
 ![— Mr. Frank Reid](/img/site/testimonial-YV9ABZR.png)
+
+</div>
 
 **— Mr. Frank Reid**
 
-Manager
+<span className="yd-role">Manager</span>
+
+</div>
+<div className="yd-quote yd-quote--avatar">
 
 I was very well accommodated. I didn’t feel any pain throughout any of my visits. I trust Dr. Patel and her staff. I feel like I have been treated like a number one patient.
 
+<div className="yd-avatar">
+
 ![—Mr. Jeffery Mathurin](/img/site/testimonial-83S5W35.jpg)
+
+</div>
 
 **—Mr. Jeffery Mathurin**
 
-HR Manager
+<span className="yd-role">HR Manager</span>
+
+</div>
+<div className="yd-quote yd-quote--avatar">
 
 I submit this letter to express my great satisfaction with your combine efforts and commitment towards making me a happy patient. It truly does not go unrecognized. I am genuinely happy with my results, measured in the look of my teeth, but also measured in the fact that I can have great relationship with my dentists.
 
+<div className="yd-avatar">
+
 ![— Ms. Camille Wilkinson](/img/site/testimonial-M6NJPEF.png)
+
+</div>
 
 **— Ms. Camille Wilkinson**
 
-HR Manager
+<span className="yd-role">HR Manager</span>
+
+</div>
+<div className="yd-quote yd-quote--avatar">
 
 Firstly, I must thank each and every one of you for making me feel safe and secure. I was always so nervous and scared of needles but after have Dr. Patel speak to me and explain, I felt so relaxed to do the work in the office. I have three implants done and very happy with the work. I will recommend many people as I can.
 
-![— Mrs. Dhanrajie Sonnylal](/img/site/placeholder.png)
-
 **— Mrs. Dhanrajie Sonnylal**
 
-Designation
+</div>
+<div className="yd-quote yd-quote--avatar">
 
 When I first came in to get my teeth whitened, I was very optimistic about getting it done because I needed to enhance my already big smile with pearly whites. I thought it was going to be a quick job, so wrong I was, but I was willing to stay as long as needed to for my new smile. Dr. Patel did a great job with whitening my teeth that now I find myself blinding my eyes every time I smile in the mirror. I would highly recommend Dr. Patel to any one looking for a bigger and better smile.
 
-![— Emmanuel Freeman](/img/site/placeholder.png)
-
 **— Emmanuel Freeman**
 
-Designation
+</div>
+<div className="yd-quote yd-quote--avatar">
 
 I am satisfied so far with my implants. My doctors have done a good job no disappointment and I thank the staff also for helping. Thank You all so much
 
-![— Charel Matthews](/img/site/placeholder.png)
-
 **— Charel Matthews**
 
-Designation
+</div>
+<div className="yd-quote yd-quote--avatar">
 
 Thank You Dr. Patel and your staff for a wonderful job. I am pain free and confident when I smile. I have learned the importance of regular teeth brushing and regular dental visits. Thank You again
 
-![— Susana Martinez](/img/site/placeholder.png)
-
 **— Susana Martinez**
 
-Designation
+</div>
+</div>
 
 ##### FAQ
 

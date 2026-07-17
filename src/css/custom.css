@@ -3,27 +3,49 @@
  * Bundles Infima, the Docusaurus default CSS framework.
  */
 
+/**
+ * Brand colours taken from yogidental.com: buttons and accents are #01d3be,
+ * service headings #22e0ca, and the services band #eefffd.
+ *
+ * That vivid teal is a background colour on the source site, not a text colour:
+ * against white it measures 1.9:1, well under the WCAG AA minimum of 4.5:1. So
+ * --ifm-color-primary (which Infima also uses for every inline link) is set to a
+ * darker teal that reads at 5.3:1, while --yd-brand keeps the exact source teal
+ * for button fills, bars and bands.
+ */
 :root {
-  --ifm-color-primary: #0a6ebd;
-  --ifm-color-primary-dark: #0963aa;
-  --ifm-color-primary-darker: #095da1;
-  --ifm-color-primary-darkest: #074d85;
-  --ifm-color-primary-light: #0b79d0;
-  --ifm-color-primary-lighter: #0c7fd9;
-  --ifm-color-primary-lightest: #1f92ec;
+  --yd-brand: #01d3be;
+  --yd-brand-dark: #00b8a6;
+  /* Source site sets card headings in #22e0ca, which reads at 1.6:1 on the band.
+     This is the nearest teal that clears 3:1 for large text. */
+  --yd-brand-heading: #0d9488;
+  --yd-band: #eefffd;
+
+  --ifm-color-primary: #00796b;
+  --ifm-color-primary-dark: #006d60;
+  --ifm-color-primary-darker: #00665a;
+  --ifm-color-primary-darkest: #00544a;
+  --ifm-color-primary-light: #008574;
+  --ifm-color-primary-lighter: #008c7b;
+  --ifm-color-primary-lightest: #00a392;
   --ifm-code-font-size: 95%;
   --ifm-navbar-item-padding-horizontal: 0.6rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #4fb3f0;
-  --ifm-color-primary-dark: #33a6ed;
-  --ifm-color-primary-darker: #25a0ec;
-  --ifm-color-primary-lightest: #8dcef5;
-  --ifm-color-primary-light: #6bc0f3;
-  --ifm-color-primary-lighter: #79c6f4;
-  --ifm-color-primary-darkest: #0f88d8;
+  --yd-brand: #01d3be;
+  --yd-brand-dark: #22e0ca;
+  --yd-brand-heading: #4fded0;
+  --yd-band: #10312e;
+
+  --ifm-color-primary: #4fded0;
+  --ifm-color-primary-dark: #33d8c7;
+  --ifm-color-primary-darker: #25d5c3;
+  --ifm-color-primary-darkest: #16b3a3;
+  --ifm-color-primary-light: #6be4d9;
+  --ifm-color-primary-lighter: #79e7dd;
+  --ifm-color-primary-lightest: #97eee6;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -49,6 +71,407 @@
   border-radius: 8px;
 }
 
+/* Source images range from 790px to 2048px wide. Left at natural size they stack
+   at ragged widths, so full-width section images are pinned to the column via
+   .yd-media; icons keep their natural size. */
+.yd-media img,
+.yd-card img,
+.yd-split img {
+  display: block;
+  width: 100%;
+}
+
+.yd-icon img {
+  width: auto;
+  max-width: 96px;
+}
+
+/* Paired portraits are 1333x2000 and 1146x1518; without a shared ratio they end
+   at different heights side by side. */
+.yd-portraits img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* Layout primitives reproducing the Elementor column arrangement of the source
+   site. Section content is a flat markdown stream, so these wrap it back into
+   the rows it is laid out in on yogidental.com. */
+.yd-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+  margin: 2rem 0;
+}
+
+.yd-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.yd-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.yd-grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Service / blog cards: image, heading, copy, then a button pinned to the
+   bottom so buttons line up across the row regardless of copy length. */
+.yd-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+
+.yd-card img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Icon-led cards (the service listings) use a small glyph rather than a
+   cropped photo, so the square photo treatment above must not apply. */
+.yd-card--icon img {
+  width: auto;
+  max-width: 72px;
+  margin-inline: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.yd-card h2,
+.yd-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--yd-brand-heading);
+}
+
+/* Blog cards keep their linked headings in the normal link colour. */
+.yd-card h3 > a {
+  color: var(--yd-brand-heading);
+}
+
+.yd-card--icon h3,
+.yd-card--icon h4 {
+  font-size: 1.25rem;
+}
+
+.yd-card p {
+  margin-bottom: 1rem;
+}
+
+/* Push the trailing link of a card to the bottom edge of the grid row, and give
+   it the pill treatment the source site's card buttons use. */
+.yd-card > p:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+
+.yd-card > p:last-child > a {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  background: var(--yd-brand);
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.yd-card > p:last-child > a:hover {
+  background: var(--yd-brand-dark);
+}
+
+/* The "New Patient Special" offer is a compact icon-beside-text card, not a
+   half-and-half split. Qualified with .yd-split so it outranks the generic
+   split rule defined below it. */
+.yd-split.yd-offer {
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  max-width: 720px;
+  margin: 2.5rem auto;
+  padding: 1.75rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  background: var(--ifm-background-surface-color);
+}
+
+/* Image-beside-text rows (team members, feature sections). */
+.yd-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin: 2.5rem 0;
+}
+
+.yd-split img {
+  border-radius: 12px;
+}
+
+.yd-split > div > :first-child {
+  margin-top: 0;
+}
+
+/* Insurance / financing logo walls. The source logos range from 206x218 to
+   1084x160, so each is contained in a uniform box rather than laid out at its
+   natural size, which would stack them ragged down the page. */
+.yd-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem 2rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.yd-logos p {
+  margin: 0;
+}
+
+.yd-logos img {
+  width: 100%;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* Smile-gallery cases: notes in a narrow column beside the wide before/after
+   photo, as on the source site (380px / 760px). */
+.yd-split.yd-case {
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.yd-case h4 {
+  margin-bottom: 0.5rem;
+}
+
+/* Heading + copy feature cells (service lists with no icon). */
+.yd-feature > :first-child {
+  margin-top: 0;
+}
+
+.yd-feature h3 {
+  color: var(--yd-brand-heading);
+}
+
+/* Numbered "how a check-up works" steps. */
+.yd-step h2 {
+  font-size: 2.25rem;
+  color: var(--yd-brand-heading);
+  margin-bottom: 0.25rem;
+}
+
+.yd-step h3 {
+  font-size: 1.15rem;
+}
+
+/* Counter row. */
+.yd-stat {
+  text-align: center;
+}
+
+.yd-stat-value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ifm-color-primary);
+}
+
+.yd-stat-label {
+  display: block;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* Equipment proficiency bars. */
+.yd-bar + .yd-bar {
+  margin-top: 1rem;
+}
+
+.yd-bar-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.yd-bar-track {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--ifm-color-emphasis-200);
+  overflow: hidden;
+}
+
+.yd-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--yd-brand);
+}
+
+/* Booking form: one row of fields, as on the source site. */
+.yd-form {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  align-items: end;
+  margin: 2rem 0 1rem;
+}
+
+.yd-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.yd-field label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Inputs and selects have different intrinsic heights; pin them so the fields
+   sit on a common baseline across the row. */
+.yd-field input,
+.yd-field select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 42px;
+  padding: 0 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  font-size: 0.95rem;
+}
+
+/* Centred pill call-to-action, matching the source site's buttons. */
+.yd-cta {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.yd-btn {
+  display: inline-block;
+  padding: 0.7rem 1.75rem;
+  border-radius: 999px;
+  background: var(--yd-brand);
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.yd-btn:hover {
+  background: var(--yd-brand-dark);
+}
+
+/* Promo buttons sit in an even row and stay level regardless of label length. */
+.yd-promos .yd-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 1rem 1.5rem;
+}
+
+/* Testimonials. */
+.yd-quote {
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  background: var(--ifm-background-surface-color);
+}
+
+.yd-quote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Testimonial avatars are small round portraits, not full-bleed images. */
+.yd-avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.yd-role {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* The services section sits on a tinted full-width band on the source site.
+   The negative margin widens it past the container, so it must never exceed the
+   container's own horizontal padding or the page scrolls sideways; below 996px
+   that padding shrinks, so the bleed is dropped there. */
+.yd-band {
+  background: var(--yd-band);
+  padding: 2.5rem 2rem;
+  margin: 3rem -2rem;
+  border-radius: 16px;
+}
+
+@media (max-width: 996px) {
+  .yd-band {
+    margin-inline: 0;
+    padding: 2rem 1.25rem;
+  }
+}
+
+.yd-band > :first-child {
+  margin-top: 0;
+}
+
+/* Section eyebrow + heading blocks are centred on the source site. */
+.yd-section-head {
+  text-align: center;
+  margin: 3rem 0 1rem;
+}
+
+.yd-band .yd-section-head {
+  margin-top: 0;
+}
+
+.yd-section-head > * {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 996px) {
+  .yd-grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .yd-grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .yd-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .yd-split {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .yd-grid--2,
+  .yd-grid--3,
+  .yd-grid--4,
+  .yd-form {
+    grid-template-columns: 1fr;
+  }
+}
+
 .navbar__logo img {
   border-radius: 50%;
   object-fit: cover;
@@ -56,7 +479,7 @@
 
 /* "Make an Appointment" call to action in the navbar. */
 .navbar-cta {
-  background-color: var(--ifm-color-primary);
+  background-color: var(--yd-brand);
   color: #fff !important;
   border-radius: 999px;
   padding: 0.35rem 0.9rem;
@@ -64,7 +487,7 @@
 }
 
 .navbar-cta:hover {
-  background-color: var(--ifm-color-primary-dark);
+  background-color: var(--yd-brand-dark);
   color: #fff !important;
 }
 
