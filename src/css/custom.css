@@ -997,14 +997,38 @@
   padding-top: 3.5rem;
 }
 
-.footer__title {
-  font-weight: 700;
-  font-size: 1.1rem;
+.footer .container {
+  max-width: 1200px;
 }
 
+.footer__links {
+  margin-bottom: 1rem;
+}
+
+/* Four columns: brand/locations, two link lists, appointment blurb. */
+.footer__col {
+  --ifm-footer-padding-vertical: 0;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--yd-ink);
+  margin-bottom: 1.25rem;
+}
+
+/* Link lists (Quick Links / Useful Links) get a teal chevron bullet. */
 .footer__link-item {
   font-weight: 500;
+  color: #475569;
   transition: color 0.15s ease;
+}
+
+.footer__link-item::before {
+  content: '›';
+  margin-right: 0.5rem;
+  color: var(--yd-brand);
+  font-weight: 700;
 }
 
 .footer__link-item:hover {
@@ -1012,13 +1036,86 @@
   text-decoration: none;
 }
 
-.footer__col .footer__item {
-  position: relative;
+.footer__item {
+  margin-bottom: 0.65rem;
 }
 
-.footer__logo {
-  max-width: 150px;
-  margin-bottom: 0.5rem;
+/* Brand + location column. */
+.footer__brand-logo {
+  width: 190px;
+  max-width: 80%;
+  margin-bottom: 1.5rem;
+}
+
+.footer__loc {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.footer__loc strong {
+  color: var(--yd-ink);
+}
+
+.footer__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--yd-teal-text);
+  font-weight: 500;
+}
+
+.footer__email:hover {
+  text-decoration: none;
+  color: var(--yd-brand-dark);
+}
+
+.footer__ico {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  fill: var(--yd-brand);
+}
+
+/* Appointment column — blurb plus a teal phone pill. */
+.footer__appt {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.footer__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: var(--yd-teal-text);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.footer__phone:hover {
+  text-decoration: none;
+  color: var(--yd-brand-dark);
+}
+
+.footer__phone-ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  background: var(--yd-brand);
+}
+
+.footer__phone-ico svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
 }
 
 .footer__copyright {
