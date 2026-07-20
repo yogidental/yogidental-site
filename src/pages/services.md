@@ -145,38 +145,7 @@ Experienced and caring dentists providing quality dental care with advanced tech
 
 </div>
 
-<div className="yd-grid yd-grid--3">
-<div className="yd-quote yd-quote--avatar">
-
-Firstly, I must thank each and every one of you for making me feel safe and secure. I was always so nervous and scared of needles but after having Dr. Patel speak to me and explain, I felt so relaxed to do the work in the office. I have three implants done and very happy with the work. I will recommend many people as I can.
-
-<div className="yd-quote__author">
-<span className="yd-avatar-circle"></span>
-<span><strong>— Mrs. Dhanrajie Sonnylal</strong><br/><span className="yd-role">Patient</span></span>
-</div>
-
-</div>
-<div className="yd-quote yd-quote--avatar">
-
-When I first came in to get my teeth whitened, I was very optimistic because I needed to enhance my already big smile with pearly whites. Dr. Patel did a great job with whitening my teeth — now I find myself blinding my eyes every time I smile in the mirror. I would highly recommend Dr. Patel to anyone looking for a bigger and better smile.
-
-<div className="yd-quote__author">
-<span className="yd-avatar-circle"></span>
-<span><strong>— Emmanuel Freeman</strong><br/><span className="yd-role">Patient</span></span>
-</div>
-
-</div>
-<div className="yd-quote yd-quote--avatar">
-
-I am satisfied so far with my implants. My doctors have done a good job — no disappointment — and I thank the staff also for helping. Thank You all so much.
-
-<div className="yd-quote__author">
-<span className="yd-avatar-circle"></span>
-<span><strong>— Charel Matthews</strong><br/><span className="yd-role">Patient</span></span>
-</div>
-
-</div>
-</div>
+<Testimonials />
 </div>
 
 <div className="yd-split yd-faq">

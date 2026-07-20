@@ -2144,3 +2144,78 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   26. Testimonial marquee — continuously scrolling review cards.
+   ========================================================================== */
+.yd-marquee {
+  overflow: hidden;
+  margin: 2rem 0 1rem;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.yd-marquee__track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  padding: 1rem 0.5rem;
+  animation: yd-marquee-scroll 55s linear infinite;
+}
+
+.yd-marquee:hover .yd-marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes yd-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yd-marquee__track { animation: none; }
+}
+
+.yd-tcard {
+  position: relative;
+  flex: 0 0 380px;
+  max-width: 84vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--yd-shadow);
+}
+
+.yd-tcard__mark {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 3.5rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4rem;
+  line-height: 0;
+  color: rgba(1, 211, 190, 0.35);
+  pointer-events: none;
+}
+
+.yd-tcard__quote {
+  color: var(--yd-body);
+  margin-bottom: 1.5rem;
+}
+
+.yd-tcard__author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: auto;
+}
+
+.yd-tcard__avatar {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eef1f5;
+}
