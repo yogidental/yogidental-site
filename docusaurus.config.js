@@ -124,19 +124,9 @@ const config = {
           // src/components/ServicesMenu.js).
           {type: 'custom-servicesMenu', position: 'left'},
           {to: '/smile-gallery', label: 'Smile Gallery', position: 'left'},
-          {
-            type: 'dropdown',
-            label: 'Resources',
-            position: 'left',
-            items: [
-              {to: '/resource', label: 'Resources'},
-              {to: '/patient-education', label: 'Patient Education'},
-              {to: '/blogs', label: 'Blogs'},
-              {to: '/reviews-page', label: 'Reviews'},
-              {to: '/testimonials', label: 'Testimonials'},
-              {to: '/survey-link', label: 'Survey Link'},
-            ],
-          },
+          // Nested Resources flyout (Patient Education flies out its pages —
+          // see src/components/ResourcesMenu.js).
+          {type: 'custom-resourcesMenu', position: 'left'},
           {
             to: '/appointment',
             label: 'Make Appointment',

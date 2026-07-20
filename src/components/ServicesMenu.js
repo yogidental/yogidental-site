@@ -1,13 +1,10 @@
 import React from 'react';
-import Link from '@docusaurus/Link';
+import NestedMenu from './NestedMenu';
 
-/**
- * Services navbar item — a nested (flyout) mega-menu matching yogidental.com:
- * hovering "Services" reveals the three categories, and hovering a category
- * flies its child services out beside it. Registered as a custom navbar item
- * type via src/theme/NavbarItem/ComponentTypes.js so it keeps real SPA links.
- */
-const CATEGORIES = [
+// Services flyout data — "All Services" lead, then three categories that each
+// fly out their child services on hover (matches yogidental.com).
+const MENU_ITEMS = [
+  {label: 'All Services', to: '/services', header: true},
   {
     label: 'Preventive Dentistry',
     to: '/preventive-dentistry',
@@ -48,68 +45,8 @@ const CATEGORIES = [
   },
 ];
 
-export default function ServicesMenu({mobile}) {
-  // Mobile drawer: no hover, so render the full tree expanded and indented.
-  if (mobile) {
-    return (
-      <>
-        <li className="menu__list-item">
-          <Link className="menu__link" to="/services">
-            Services
-          </Link>
-        </li>
-        {CATEGORIES.map((cat) => (
-          <React.Fragment key={cat.to}>
-            <li className="menu__list-item">
-              <Link className="menu__link yd-svc__m-cat" to={cat.to}>
-                {cat.label}
-              </Link>
-            </li>
-            {cat.items.map((item) => (
-              <li className="menu__list-item" key={item.to}>
-                <Link className="menu__link yd-svc__m-sub" to={item.to}>
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </React.Fragment>
-        ))}
-      </>
-    );
-  }
-
-  // Desktop: hoverable dropdown with a flyout submenu per category.
+export default function ServicesMenu(props) {
   return (
-    <div className="navbar__item dropdown dropdown--hoverable yd-svc">
-      <Link className="navbar__link" to="/services">
-        Services
-      </Link>
-      <div className="dropdown__menu yd-svc__menu">
-        <Link className="yd-svc__all" to="/services">
-          All Services
-        </Link>
-        <ul className="yd-svc__cats">
-          {CATEGORIES.map((cat) => (
-            <li className="yd-svc__cat" key={cat.to}>
-              <Link className="yd-svc__cat-link" to={cat.to}>
-                <span>{cat.label}</span>
-                <span className="yd-svc__arrow" aria-hidden="true">
-                  ›
-                </span>
-              </Link>
-              <ul className="yd-svc__flyout">
-                {cat.items.map((item) => (
-                  <li key={item.to}>
-                    <Link className="yd-svc__sub" to={item.to}>
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    <NestedMenu {...props} label="Services" to="/services" menuItems={MENU_ITEMS} />
   );
 }

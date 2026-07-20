@@ -195,13 +195,14 @@
   font-weight: 700;
 }
 
-/* Child services fly out to the right of the hovered category. */
+/* Child links fly out to the left of the hovered category (as on the source,
+   and it keeps the right-most menu's flyout on screen). */
 .yd-svc__flyout {
   display: none;
   position: absolute;
   top: -0.75rem;
-  left: 100%;
-  min-width: 260px;
+  right: 100%;
+  min-width: 264px;
   margin: 0;
   padding: 0.6rem 0;
   list-style: none;
