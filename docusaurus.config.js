@@ -95,10 +95,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/logo.jpeg',
+      // The source site is light-only; hide the theme toggle to match.
       colorMode: {
         defaultMode: 'light',
-        disableSwitch: false,
-        respectPrefersColorScheme: true,
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'Yogi Dental Center',

@@ -970,8 +970,17 @@
   display: block;
   width: 100%;
   max-width: 100%;
+  height: 450px;
   margin: 0;
   border-radius: 14px;
+}
+
+/* Location maps stack full-width, one above the other, as on the source. */
+.yd-maps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1.5rem 0 0;
 }
 
 /* ==========================================================================
