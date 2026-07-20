@@ -1889,3 +1889,258 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   25. Interior page: Services — service-card grid, before/after caption,
+       feature icons, avatar testimonials, FAQ accordion, social band.
+   ========================================================================== */
+
+/* Service cards — 3-col grid; every first-in-row card gets a mint tint. */
+.yd-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2.5rem 0 3rem;
+}
+
+.yd-service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.75rem;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--yd-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.yd-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--yd-shadow-hover);
+}
+
+.yd-services-grid > .yd-service-card:nth-child(3n + 1) {
+  background: var(--yd-band);
+  box-shadow: none;
+}
+
+.yd-service-card__head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.yd-service-card__ico {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.yd-service-card__head h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.yd-service-card p {
+  color: var(--yd-body);
+  margin-bottom: 1.25rem;
+}
+
+.yd-readmore {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--yd-teal-text);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.yd-readmore:hover {
+  color: var(--yd-brand-dark);
+}
+
+/* Before/after caption. */
+.yd-caption {
+  text-align: center;
+  color: var(--yd-body);
+  margin-top: 0.75rem;
+}
+
+/* Three trust features — centered teal icon + heading + copy. */
+.yd-features {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.yd-feature__ico {
+  display: inline-flex;
+  margin-bottom: 1rem;
+}
+
+.yd-feature__ico svg {
+  width: 58px;
+  height: 58px;
+  fill: none;
+  stroke: var(--yd-brand);
+  stroke-width: 1.6;
+}
+
+.yd-feature h3 {
+  margin-bottom: 0.6rem;
+}
+
+.yd-feature p {
+  color: var(--yd-body);
+}
+
+/* Avatar testimonials — gray placeholder avatar + name + role, quote mark. */
+.yd-quote--avatar {
+  position: relative;
+  background: #fff;
+}
+
+.yd-quote__author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.yd-avatar-circle {
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d7dde5, #eef1f5);
+}
+
+/* FAQ — native <details> accordion beside an image. */
+.yd-faq {
+  align-items: center;
+}
+
+.yd-faq__item {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: var(--yd-shadow);
+  overflow: hidden;
+}
+
+.yd-faq__item > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  color: var(--yd-ink);
+  text-decoration: underline;
+}
+
+.yd-faq__item > summary::-webkit-details-marker {
+  display: none;
+}
+
+.yd-faq__item > summary::after {
+  content: '⌄';
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--yd-brand);
+  transition: transform 0.2s ease;
+}
+
+.yd-faq__item[open] > summary {
+  background: var(--yd-brand);
+  color: #fff;
+}
+
+.yd-faq__item[open] > summary::after {
+  transform: rotate(180deg);
+  color: #fff;
+}
+
+.yd-faq__body {
+  padding: 1.25rem;
+  color: var(--yd-body);
+}
+
+/* FAQ image with a soft mint shape behind it. */
+.yd-faq__media {
+  position: relative;
+}
+
+.yd-faq__media::before {
+  content: '';
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  width: 55%;
+  height: 60%;
+  border-radius: 18px;
+  background: var(--yd-band);
+  z-index: 0;
+}
+
+.yd-faq__media img {
+  position: relative;
+  z-index: 1;
+  border-radius: 18px;
+}
+
+/* Stay-Connected social band. */
+.yd-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.yd-social h2 {
+  margin: 0;
+}
+
+.yd-social__icons {
+  display: flex;
+  gap: 0.85rem;
+}
+
+.yd-social__icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--yd-brand);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.yd-social__icons a:hover {
+  background: var(--yd-brand-dark);
+  transform: translateY(-2px);
+}
+
+.yd-social__icons svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+@media (max-width: 996px) {
+  .yd-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .yd-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
