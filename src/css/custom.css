@@ -1861,3 +1861,31 @@
     gap: 2rem 1.5rem;
   }
 }
+
+/* ==========================================================================
+   24. Interior page: Contact Us — team banner + side-by-side embeds.
+   ========================================================================== */
+/* Banner image override for the Contact page (team portrait). */
+.yd-page-banner--team {
+  background-image:
+    linear-gradient(rgba(240, 245, 250, 0.7), rgba(240, 245, 250, 0.7)),
+    url('/img/site/freepik__male-and-female-dentist-team-portrait-friendly-smi__54456-1024x1024.jpeg');
+}
+
+/* Contact form widget beside the location map. */
+.yd-contact-embeds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
+
+.yd-contact-embeds .embed-frame {
+  height: 560px;
+}
+
+@media (max-width: 996px) {
+  .yd-contact-embeds {
+    grid-template-columns: 1fr;
+  }
+}
