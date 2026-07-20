@@ -1825,3 +1825,39 @@
   flex-direction: column;
   gap: 1.25rem;
 }
+
+/* ==========================================================================
+   23. Interior page: Dental Insurance — accepted-carrier logo grid.
+   ========================================================================== */
+.yd-insurance-logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 2rem;
+  align-items: center;
+  justify-items: center;
+  max-width: 1040px;
+  margin: 2.5rem auto 3.5rem;
+}
+
+.yd-insurance-logos p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yd-insurance-logos img {
+  max-width: 230px;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  .yd-insurance-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+}
