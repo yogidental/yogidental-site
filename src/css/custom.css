@@ -1594,3 +1594,209 @@
     padding-block: 3.5rem;
   }
 }
+
+/* ==========================================================================
+   21. Interior page: About Us — hero banner, eyebrow, numbered approach
+       steps, doctor bios, value cards. Reuses .yd-band / .yd-split / stats.
+   ========================================================================== */
+
+/* Page hero: title, full-bleed tinted banner with breadcrumb, Book Online. */
+.yd-about-hero {
+  margin-bottom: 2.5rem;
+}
+
+.yd-about-hero h1 {
+  font-size: clamp(1.9rem, 3.5vw, 2.4rem);
+  margin: 0 0 1.25rem;
+}
+
+.yd-about-hero__banner {
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem clamp(1.5rem, 6vw, 6rem);
+  background-image:
+    linear-gradient(rgba(233, 251, 247, 0.78), rgba(233, 251, 247, 0.78)),
+    url('/img/site/female-patient-receiving-dental-treatment-from-male-dentist-clinic.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.yd-about-hero__banner .yd-breadcrumb {
+  max-width: 1200px;
+}
+
+.yd-about-hero__cta {
+  margin-top: -1.6rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Teal title-case eyebrow used across the interior sections. */
+.yd-eyebrow {
+  color: var(--yd-teal-text);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.yd-section-head .yd-eyebrow {
+  margin-bottom: 0.25rem;
+}
+
+/* Left-aligned CTA variant (inside split columns). */
+.yd-cta--left {
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+/* "Our Approach" header row: heading left, button right. */
+.yd-approach__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.yd-approach__head > div:first-child > :first-child {
+  margin-top: 0;
+}
+
+.yd-approach__head h2 {
+  margin: 0;
+}
+
+/* Numbered check-up steps joined by a horizontal line. */
+.yd-steps {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+.yd-steps::before {
+  content: '';
+  position: absolute;
+  top: 34px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: rgba(1, 211, 190, 0.3);
+}
+
+.yd-step {
+  position: relative;
+  text-align: left;
+}
+
+.yd-step__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  margin-bottom: 1.25rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: var(--yd-shadow);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--yd-ink);
+}
+
+.yd-step h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.yd-step p {
+  color: var(--yd-body);
+  font-size: 0.95rem;
+}
+
+/* Doctor bios: heading + round photo on the left, bio on the right. */
+.yd-doctor {
+  align-items: start;
+  margin-block: 3rem;
+}
+
+.yd-doctor__intro {
+  text-align: center;
+}
+
+.yd-doctor__intro h3 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  margin-bottom: 1.5rem;
+}
+
+.yd-doctor__photo img {
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.yd-doctor p:first-child {
+  margin-top: 0;
+}
+
+.yd-doctor strong {
+  color: var(--yd-ink);
+}
+
+/* Value cards — full-width rows, tooth icon left, copy right, on mint tint. */
+.yd-values {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.yd-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 16px;
+  background: var(--yd-band);
+}
+
+.yd-value__ico {
+  flex: none;
+}
+
+.yd-value__ico img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.yd-value h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.yd-value p {
+  margin: 0;
+  color: var(--yd-body);
+}
+
+@media (max-width: 996px) {
+  .yd-about-hero__banner {
+    min-height: 240px;
+  }
+  .yd-steps::before {
+    display: none;
+  }
+  .yd-doctor__photo img {
+    width: 220px;
+    height: 220px;
+  }
+}
