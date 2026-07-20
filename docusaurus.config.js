@@ -120,70 +120,9 @@ const config = {
               {to: '/dental-insurance', label: 'Dental Insurance'},
             ],
           },
-          {
-            type: 'dropdown',
-            label: 'Services',
-            position: 'left',
-            className: 'yd-mega-toggle',
-            // Grouped mega-menu matching yogidental.com: three service
-            // categories, each heading its own column of child services.
-            // The category / child classNames drive the multi-column CSS.
-            items: [
-              {to: '/services', label: 'All Services', className: 'yd-cat-all'},
-              {
-                to: '/preventive-dentistry',
-                label: 'Preventive Dentistry',
-                className: 'yd-cat',
-              },
-              {to: '/teeth-cleaning', label: 'Teeth Cleaning', className: 'yd-sub'},
-              {to: '/dental-exams', label: 'Exams', className: 'yd-sub'},
-              {to: '/xrays', label: 'Xrays', className: 'yd-sub'},
-              {
-                to: '/fluoride-treatments',
-                label: 'Fluoride Treatments',
-                className: 'yd-sub',
-              },
-              {
-                to: '/oral-cancer-screening',
-                label: 'Oral Cancer Screening',
-                className: 'yd-sub',
-              },
-              {
-                to: '/general-family-dentistry',
-                label: 'General Family Dentistry',
-                className: 'yd-cat',
-              },
-              {
-                to: '/periodontal-gum-disease-treatment',
-                label: 'Periodontal Gum Disease Treatment',
-                className: 'yd-sub',
-              },
-              {to: '/invisalign-braces', label: 'Invisalign Braces', className: 'yd-sub'},
-              {
-                to: '/dentures-teeth-in-a-day',
-                label: 'Dentures / Teeth-in-a-day',
-                className: 'yd-sub',
-              },
-              {to: '/root-canals-2', label: 'Root Canals', className: 'yd-sub'},
-              {to: '/dental-implants', label: 'Dental Implants', className: 'yd-sub'},
-              {
-                to: '/cosmetic-dentistry-2',
-                label: 'Cosmetic Dentistry',
-                className: 'yd-cat',
-              },
-              {
-                to: '/zoom-teeth-whitening',
-                label: 'ZOOM Teeth Whitening',
-                className: 'yd-sub',
-              },
-              {to: '/porcelain-veneers', label: 'Porcelain Veneers', className: 'yd-sub'},
-              {to: '/porcelain-bridges', label: 'Porcelain Bridges', className: 'yd-sub'},
-              {to: '/porcelain-crowns', label: 'Porcelain Crowns', className: 'yd-sub'},
-              {to: '/tooth-fillings', label: 'Tooth Fillings', className: 'yd-sub'},
-              {to: '/snap-on-smile', label: 'Snap on Smile', className: 'yd-sub'},
-              {to: '/drill-free-cavities', label: 'Drill-Free Cavities', className: 'yd-sub'},
-            ],
-          },
+          // Nested Services flyout (custom navbar item — see
+          // src/components/ServicesMenu.js).
+          {type: 'custom-servicesMenu', position: 'left'},
           {to: '/smile-gallery', label: 'Smile Gallery', position: 'left'},
           {
             type: 'dropdown',

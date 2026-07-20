@@ -136,60 +136,106 @@
   overflow-y: auto;
 }
 
-/* Services mega-menu — a wide multi-column panel where each service category
-   heads its own column of child links, matching the source site's dropdown.
-   Scoped to the menu that contains a category link so the small About/Resources
-   dropdowns are untouched. */
-.dropdown__menu:has(.yd-cat) {
-  min-width: 760px;
-  max-width: 92vw;
+/* --------------------------------------------------------------------------
+   Services nested flyout menu (custom navbar item, src/components/ServicesMenu).
+   Hovering "Services" opens the category list; hovering a category flies its
+   child services out beside it — a true dropdown-inside-dropdown.
+   -------------------------------------------------------------------------- */
+.yd-svc .yd-svc__menu {
+  min-width: 288px;
   max-height: none;
   overflow: visible;
-  columns: 3;
-  column-gap: 1.75rem;
-  padding: 1.25rem 1.5rem 1.5rem;
+  padding: 0.75rem 0;
   border-radius: 14px;
 }
 
-/* "All Services" sits across the top of the panel. */
-.dropdown__menu:has(.yd-cat) li:has(> .yd-cat-all) {
-  column-span: all;
+.yd-svc__all {
+  display: block;
   margin-bottom: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.35rem 1.35rem 0.85rem;
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
-}
-
-/* Each category starts a fresh column, keeping its children beneath it. */
-.dropdown__menu:has(.yd-cat) li:has(> .yd-cat) {
-  break-before: column;
-}
-
-.dropdown__menu:has(.yd-cat) li {
-  break-inside: avoid;
-}
-
-.dropdown__menu .yd-cat-all,
-.dropdown__menu .yd-cat {
   font-weight: 700;
   color: var(--yd-teal-text);
 }
 
-.dropdown__menu .yd-cat {
-  margin-top: 0.35rem;
-  font-size: 0.95rem;
+.yd-svc__all:hover {
+  text-decoration: none;
+  color: var(--yd-brand-dark);
 }
 
-.dropdown__menu .yd-sub {
-  color: #64748b;
-  font-size: 0.9rem;
-  padding-left: 0.75rem;
+.yd-svc__cats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.dropdown__menu .yd-sub:hover,
-.dropdown__menu .yd-cat:hover,
-.dropdown__menu .yd-cat-all:hover {
+.yd-svc__cat {
+  position: relative;
+}
+
+.yd-svc__cat-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 0.55rem 1.35rem;
+  color: var(--yd-ink);
+  font-weight: 600;
+}
+
+.yd-svc__cat-link:hover,
+.yd-svc__cat:hover > .yd-svc__cat-link {
   color: var(--yd-teal-text);
   background: var(--yd-band);
+  text-decoration: none;
+}
+
+.yd-svc__arrow {
+  color: var(--yd-brand);
+  font-weight: 700;
+}
+
+/* Child services fly out to the right of the hovered category. */
+.yd-svc__flyout {
+  display: none;
+  position: absolute;
+  top: -0.75rem;
+  left: 100%;
+  min-width: 260px;
+  margin: 0;
+  padding: 0.6rem 0;
+  list-style: none;
+  background: var(--ifm-dropdown-background-color, #fff);
+  border-radius: 14px;
+  box-shadow: 0 14px 34px rgba(30, 41, 59, 0.16);
+}
+
+.yd-svc__cat:hover > .yd-svc__flyout {
+  display: block;
+}
+
+.yd-svc__sub {
+  display: block;
+  padding: 0.45rem 1.35rem;
+  color: #475569;
+  font-size: 0.92rem;
+}
+
+.yd-svc__sub:hover {
+  color: var(--yd-teal-text);
+  background: var(--yd-band);
+  text-decoration: none;
+}
+
+/* Mobile drawer: indent the expanded category/child links. */
+.yd-svc__m-cat {
+  font-weight: 700;
+  color: var(--yd-teal-text);
+}
+
+.yd-svc__m-sub {
+  padding-left: 2rem !important;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 996px) {
