@@ -1800,3 +1800,28 @@
     height: 220px;
   }
 }
+
+/* ==========================================================================
+   22. Interior page: Guarantee — small helpers (reuses banner, split,
+       band, appointment). Most layout comes from sections 20/21.
+   ========================================================================== */
+.yd-section-head h1 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+/* Wide, centered feature list under a centered heading. */
+.yd-fin-list--wide {
+  max-width: 1040px;
+  margin: 0.5rem auto 2.5rem;
+}
+
+.yd-fin-list--wide li {
+  margin-bottom: 1rem;
+}
+
+/* Stack the contact items (phone above email) for the guarantee layout. */
+.yd-contact--stack {
+  flex-direction: column;
+  gap: 1.25rem;
+}
