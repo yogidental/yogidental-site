@@ -1259,3 +1259,338 @@
     grid-template-columns: 120px 1fr;
   }
 }
+
+/* ==========================================================================
+   20. Interior page: Financing (dental-financing) — banner, carousel,
+       payment splits, appointment section. Reuses .yd-band / .yd-split.
+   ========================================================================== */
+
+/* Full-bleed page-title banner over a faded clinical photo. */
+.yd-page-banner {
+  position: relative;
+  margin: -2rem -50vw 2.5rem;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 5.5rem clamp(1.5rem, 6vw, 6rem);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)),
+    url('/img/site/female-patient-receiving-dental-treatment-from-male-dentist-clinic.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.yd-page-banner__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.yd-page-banner__title {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  color: var(--yd-ink);
+}
+
+.yd-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+}
+
+.yd-breadcrumb a {
+  color: var(--yd-ink);
+  text-decoration: underline;
+}
+
+.yd-breadcrumb a:hover {
+  color: var(--yd-teal-text);
+}
+
+.yd-breadcrumb__sep {
+  color: var(--yd-brand);
+}
+
+/* Centered intro block. */
+.yd-fin-intro {
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+.yd-fin-intro h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.yd-fin-intro h3 {
+  color: var(--yd-ink);
+  margin-bottom: 1.25rem;
+}
+
+.yd-fin-intro p {
+  color: var(--yd-body);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* "Trusted Financing Options" heading is teal on the source. */
+.yd-fin-heading h2 {
+  color: var(--yd-teal-text);
+}
+
+/* Logo carousel. */
+.yd-carousel {
+  position: relative;
+  max-width: 720px;
+  margin: 1.5rem auto 3rem;
+  padding: 1.5rem 3.5rem 2.5rem;
+  text-align: center;
+}
+
+.yd-carousel__viewport {
+  position: relative;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yd-carousel__logo {
+  position: absolute;
+  max-width: 260px;
+  max-height: 130px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.yd-carousel__logo.is-active {
+  opacity: 1;
+  position: relative;
+}
+
+.yd-carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-70%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #cbd5e1;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.yd-carousel__arrow:hover {
+  color: var(--yd-brand);
+}
+
+.yd-carousel__arrow--prev {
+  left: 0;
+}
+
+.yd-carousel__arrow--next {
+  right: 0;
+}
+
+.yd-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.yd-carousel__dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #d1d5db;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.yd-carousel__dot.is-active {
+  background: var(--yd-brand);
+  transform: scale(1.2);
+}
+
+/* Payment-method / benefits lists — teal bullets. */
+.yd-fin-list {
+  list-style: none;
+  margin: 1.25rem 0;
+  padding: 0;
+}
+
+.yd-fin-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.6rem;
+  color: var(--yd-body);
+}
+
+.yd-fin-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--yd-brand);
+}
+
+.yd-fin-list li strong {
+  color: var(--yd-ink);
+}
+
+/* CareCredit promo image. */
+.yd-fin-cc-img img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 16px;
+}
+
+/* Insurance-questions band — centered with a teal call line. */
+.yd-fin-insurance {
+  text-align: center;
+}
+
+.yd-fin-insurance .yd-section-head h2 {
+  color: var(--yd-ink);
+}
+
+.yd-fin-call {
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.yd-fin-call a {
+  color: var(--yd-teal-text);
+}
+
+/* Make-An-Appointment section: info column + form card. */
+.yd-appt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.yd-appt-info > :first-child {
+  margin-top: 0;
+}
+
+.yd-appt-info h5 {
+  color: var(--yd-teal-text);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.yd-appt-info h4 {
+  margin: 1.75rem 0 0.75rem;
+}
+
+.yd-hours {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+}
+
+.yd-hours__time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--yd-body);
+}
+
+.yd-hours__time svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--yd-brand);
+}
+
+.yd-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.yd-contact__item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.yd-contact__ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex: none;
+  border-radius: 12px;
+  background: rgba(1, 211, 190, 0.12);
+}
+
+.yd-contact__ico svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--yd-brand);
+}
+
+.yd-contact__item a {
+  color: var(--yd-body);
+}
+
+.yd-contact__item a:hover {
+  color: var(--yd-teal-text);
+}
+
+/* Form sits in a white card; fields stack in the right column. */
+.yd-appt-form {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: var(--yd-shadow);
+  padding: 2.5rem 2rem;
+}
+
+.yd-appt-form .yd-form {
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 0;
+}
+
+.yd-req {
+  color: #e11d48;
+}
+
+@media (max-width: 996px) {
+  .yd-appt {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .yd-page-banner {
+    padding-block: 3.5rem;
+  }
+}
