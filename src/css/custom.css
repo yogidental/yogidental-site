@@ -2237,3 +2237,53 @@
 .yd-case .yd-caption {
   margin-top: 1rem;
 }
+
+/* ==========================================================================
+   28. Treatment pages: teal section heading + icon-feature rows.
+   ========================================================================== */
+.yd-teal-heading h2 {
+  color: var(--yd-teal-text);
+}
+
+.yd-icofeat {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+
+.yd-icofeat__ico {
+  flex: none;
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--yd-brand);
+}
+
+/* Lighter mint variant — a white icon reads faint on it, as on the source. */
+.yd-icofeat__ico--light {
+  background: rgba(1, 211, 190, 0.4);
+}
+
+.yd-icofeat__ico svg {
+  width: 38px;
+  height: 38px;
+  fill: #fff;
+}
+
+.yd-icofeat > div:last-child > :first-child {
+  margin-top: 0;
+}
+
+.yd-icofeat h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.yd-icofeat p {
+  margin-bottom: 0;
+  color: var(--yd-body);
+}

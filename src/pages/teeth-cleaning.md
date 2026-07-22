@@ -22,19 +22,35 @@ hide_table_of_contents: true
 
 <p className="yd-eyebrow">About Us</p>
 
+<div className="yd-teal-heading">
+
 ## Teeth Cleanings and Dental Check-Ups Help Prevent Cavities and Gum Disease
+
+</div>
 
 Keep your smile healthy with professional teeth cleaning. Remove plaque, prevent gum disease, and enjoy fresher breath. Regular cleanings help detect early dental issues, saving you time, money, and discomfort later.
 
+<div className="yd-icofeat">
+<div className="yd-icofeat__ico yd-icofeat__ico--light"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.5 2 6 4.5 6 8c0 2 .5 3.5 1 5.5.4 1.7.7 3.4 1 5.1.2 1.2.4 2.4 1.3 2.4.8 0 1-1 1.2-2.1.2-1.3.4-2.9 1.2-2.9s1 1.6 1.2 2.9c.2 1.1.4 2.1 1.2 2.1.9 0 1.1-1.2 1.3-2.4.3-1.7.6-3.4 1-5.1C17.5 11.5 18 10 18 8c0-3.5-2.5-6-6-6z"/></svg></div>
+<div>
+
 ### Regular Teeth Cleanings Offer You Many Advantages
 
-1. Cavity Prevention
-2. Gum Disease Prevention
-3. Prevention can save you precious time and money
+1.Cavity Prevention 2.Gum Disease Prevention 3.Prevention can save you precious time and money
+
+</div>
+</div>
+
+<div className="yd-icofeat">
+<div className="yd-icofeat__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.5 2 6 4.5 6 8c0 2 .5 3.5 1 5.5.4 1.7.7 3.4 1 5.1.2 1.2.4 2.4 1.3 2.4.8 0 1-1 1.2-2.1.2-1.3.4-2.9 1.2-2.9s1 1.6 1.2 2.9c.2 1.1.4 2.1 1.2 2.1.9 0 1.1-1.2 1.3-2.4.3-1.7.6-3.4 1-5.1C17.5 11.5 18 10 18 8c0-3.5-2.5-6-6-6z"/></svg></div>
+<div>
 
 ### How Teeth Cleanings & Dental Check-Ups Work
 
 Preventing dental disease starts at home with good oral hygiene and a balanced diet. It is continued in the dental office by the efforts of your dentist and dental hygienist to promote, restore, and maintain your oral health. Prevention also includes regular dental exams, cleanings, and x-rays. Sealants and fluoride are also great preventive treatments that help protect the teeth. Prevention helps avoid serious and costly dental problems and is the key to having a healthy, confident, beautiful smile.
+
+</div>
+</div>
 
 </div>
 <div className="yd-media">
