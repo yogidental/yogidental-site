@@ -1,43 +1,63 @@
 /**
- * Global styles for the Yogi Dental Center site.
- * Bundles Infima, the Docusaurus default CSS framework.
- */
-
-/**
- * Brand colours taken from yogidental.com: buttons and accents are #01d3be,
- * service headings #22e0ca, and the services band #eefffd.
+ * Yogi Dental Center — theme styles.
  *
- * That vivid teal is a background colour on the source site, not a text colour:
- * against white it measures 1.9:1, well under the WCAG AA minimum of 4.5:1. So
- * --ifm-color-primary (which Infima also uses for every inline link) is set to a
- * darker teal that reads at 5.3:1, while --yd-brand keeps the exact source teal
- * for button fills, bars and bands.
+ * Rebuilt to match the live yogidental.com (Astra + Elementor) homepage design:
+ * teal brand accents, pale-mint section bands, a photo hero with left-aligned
+ * copy, transparent teal-titled service cards, horizontal blog cards, a split
+ * testimonial and a light footer. Layered on the Docusaurus classic theme.
  */
-:root {
-  --yd-brand: #01d3be;
-  --yd-brand-dark: #00b8a6;
-  /* Source site sets card headings in #22e0ca, which reads at 1.6:1 on the band.
-     This is the nearest teal that clears 3:1 for large text. */
-  --yd-brand-heading: #0d9488;
-  --yd-band: #eefffd;
 
-  --ifm-color-primary: #00796b;
-  --ifm-color-primary-dark: #006d60;
-  --ifm-color-primary-darker: #00665a;
-  --ifm-color-primary-darkest: #00544a;
-  --ifm-color-primary-light: #008574;
-  --ifm-color-primary-lighter: #008c7b;
-  --ifm-color-primary-lightest: #00a392;
+/* ==========================================================================
+   1. Palette & base tokens
+   ========================================================================== */
+:root {
+  /* Teal brand — button/pill fills, bars, accents (source: #01D3BE). */
+  --yd-brand: #01d3be;
+  --yd-brand-dark: #0ec9ac;
+  /* Bright teal used for eyebrows and service/section accent headings.
+     Decorative large text on white/mint, matching the source site. */
+  --yd-teal-text: #11c3b0;
+  /* Pale mint section band (the source's tinted section background). */
+  --yd-band: #e9fbf7;
+  --yd-band-line: rgba(1, 211, 190, 0.16);
+
+  /* Ink — near-black headings, slate body copy (source Astra palette). */
+  --yd-ink: #111827;
+  --yd-body: #5b6675;
+
+  /* Inline links / Infima primary — a readable teal that clears WCAG AA. */
+  --ifm-color-primary: #0b8f81;
+  --ifm-color-primary-dark: #0a8172;
+  --ifm-color-primary-darker: #097a6c;
+  --ifm-color-primary-darkest: #076459;
+  --ifm-color-primary-light: #0c9d8d;
+  --ifm-color-primary-lighter: #0da493;
+  --ifm-color-primary-lightest: #0fbaa7;
+
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-heading-color: var(--yd-ink);
+  --ifm-font-color-base: #334155;
+  --ifm-h1-font-size: 3rem;
+  --ifm-navbar-height: 4.75rem;
+  --ifm-navbar-shadow: 0 1px 0 rgba(17, 24, 39, 0.06);
   --ifm-code-font-size: 95%;
-  --ifm-navbar-item-padding-horizontal: 0.6rem;
+
+  --yd-shadow: 0 12px 34px rgba(17, 24, 39, 0.08);
+  --yd-shadow-hover: 0 20px 44px rgba(17, 24, 39, 0.14);
+  --yd-radius: 18px;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='dark'] {
   --yd-brand: #01d3be;
   --yd-brand-dark: #22e0ca;
-  --yd-brand-heading: #4fded0;
+  --yd-teal-text: #4fded0;
   --yd-band: #10312e;
+  --yd-band-line: rgba(79, 222, 208, 0.25);
+  --yd-ink: #f5f7fa;
+  --yd-body: #b8c2ce;
 
   --ifm-color-primary: #4fded0;
   --ifm-color-primary-dark: #33d8c7;
@@ -49,74 +69,425 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* Migrated pages are marketing content, not docs: give them room to breathe. */
+/* Marketing content, not docs — match the source Elementor container width. */
 .main-wrapper .container {
-  max-width: 1100px;
+  max-width: 1200px;
 }
 
-/* Maps and the booking widget embedded from the source site. */
-.embed-frame {
-  border: 0;
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  margin: 1.5rem 0;
-  border-radius: 8px;
+/* Full-bleed hero breaks out to the viewport edges; clip prevents the
+   scrollbar-width horizontal overflow without breaking sticky positioning. */
+.main-wrapper {
+  overflow-x: clip;
 }
 
-/* Migrated images should never overflow their column. */
 .markdown img {
   max-width: 100%;
   height: auto;
+  border-radius: 12px;
+}
+
+/* ==========================================================================
+   2. Navbar — light bar, centered links, two teal pills on the right
+   ========================================================================== */
+.navbar {
+  box-shadow: var(--ifm-navbar-shadow);
+}
+
+.navbar__logo {
+  height: 2.6rem;
+}
+
+.navbar__logo img {
   border-radius: 8px;
+  object-fit: contain;
 }
 
-/* Source images range from 790px to 2048px wide. Left at natural size they stack
-   at ragged widths, so full-width section images are pinned to the column via
-   .yd-media; icons keep their natural size. */
-.yd-media img,
-.yd-card img,
-.yd-split img {
+.navbar__link {
+  font-weight: 600;
+  color: #64748b;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--yd-teal-text);
+}
+
+/* "Make Appointment" + phone: teal pills. */
+.navbar-cta,
+.navbar-phone {
+  color: #fff !important;
+  background-color: var(--yd-brand);
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-cta:hover,
+.navbar-phone:hover {
+  background-color: var(--yd-brand-dark);
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+.navbar__items .dropdown__menu {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Services nested flyout menu (custom navbar item, src/components/ServicesMenu).
+   Hovering "Services" opens the category list; hovering a category flies its
+   child services out beside it — a true dropdown-inside-dropdown.
+   -------------------------------------------------------------------------- */
+.yd-svc .yd-svc__menu {
+  min-width: 288px;
+  max-height: none;
+  overflow: visible;
+  padding: 0.75rem 0;
+  border-radius: 14px;
+}
+
+.yd-svc__all {
   display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.35rem 1.35rem 0.85rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  font-weight: 700;
+  color: var(--yd-teal-text);
+}
+
+.yd-svc__all:hover {
+  text-decoration: none;
+  color: var(--yd-brand-dark);
+}
+
+.yd-svc__cats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.yd-svc__cat {
+  position: relative;
+}
+
+.yd-svc__cat-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 0.55rem 1.35rem;
+  color: var(--yd-ink);
+  font-weight: 600;
+}
+
+.yd-svc__cat-link:hover,
+.yd-svc__cat:hover > .yd-svc__cat-link {
+  color: var(--yd-teal-text);
+  background: var(--yd-band);
+  text-decoration: none;
+}
+
+.yd-svc__arrow {
+  color: var(--yd-brand);
+  font-weight: 700;
+}
+
+/* Child links fly out to the left of the hovered category (as on the source,
+   and it keeps the right-most menu's flyout on screen). */
+.yd-svc__flyout {
+  display: none;
+  position: absolute;
+  top: -0.75rem;
+  right: 100%;
+  min-width: 264px;
+  margin: 0;
+  padding: 0.6rem 0;
+  list-style: none;
+  background: var(--ifm-dropdown-background-color, #fff);
+  border-radius: 14px;
+  box-shadow: 0 14px 34px rgba(30, 41, 59, 0.16);
+}
+
+.yd-svc__cat:hover > .yd-svc__flyout {
+  display: block;
+}
+
+.yd-svc__sub {
+  display: block;
+  padding: 0.45rem 1.35rem;
+  color: #475569;
+  font-size: 0.92rem;
+}
+
+.yd-svc__sub:hover {
+  color: var(--yd-teal-text);
+  background: var(--yd-band);
+  text-decoration: none;
+}
+
+/* Mobile drawer: indent the expanded category/child links. */
+.yd-svc__m-cat {
+  font-weight: 700;
+  color: var(--yd-teal-text);
+}
+
+.yd-svc__m-sub {
+  padding-left: 2rem !important;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 996px) {
+  .navbar-cta,
+  .navbar-phone {
+    display: inline-block;
+    margin: 0.35rem 0;
+  }
+}
+
+/* ==========================================================================
+   3. Buttons / pills
+   ========================================================================== */
+.yd-btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  background: var(--yd-brand);
+  color: #fff !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  box-shadow: 0 10px 22px rgba(1, 211, 190, 0.32);
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.yd-btn:hover {
+  background: var(--yd-brand-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(1, 211, 190, 0.42);
+}
+
+.yd-cta {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* ==========================================================================
+   4. Hero — full-bleed clinical photo with left-aligned copy
+   ========================================================================== */
+.yd-hero {
+  position: relative;
+  width: 100vw;
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 0;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  background-image:
+    linear-gradient(
+      100deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0.92) 34%,
+      rgba(255, 255, 255, 0.45) 52%,
+      rgba(255, 255, 255, 0) 68%
+    ),
+    url('/img/site/Regular-Dental-Check-ups-2048x1365.jpg');
+  background-size: cover, cover;
+  background-position: center, center right;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.yd-hero-inner {
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: left;
 }
 
-.yd-icon img {
-  width: auto;
-  max-width: 96px;
+.yd-hero-inner > :first-child {
+  margin-top: 0;
 }
 
-/* Paired portraits are 1333x2000 and 1146x1518; without a shared ratio they end
-   at different heights side by side. */
-.yd-portraits img {
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+.yd-hero-eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--yd-teal-text);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-/* Layout primitives reproducing the Elementor column arrangement of the source
-   site. Section content is a flat markdown stream, so these wrap it back into
-   the rows it is laid out in on yogidental.com. */
+.yd-hero h1 {
+  max-width: 12ch;
+  font-size: clamp(2.4rem, 4.6vw, 3.4rem);
+  line-height: 1.12;
+  color: var(--yd-ink);
+  margin-bottom: 1.25rem;
+}
+
+.yd-hero-inner p {
+  max-width: 46ch;
+  font-size: 1.08rem;
+  color: var(--yd-body);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .yd-hero {
+    min-height: 0;
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.75) 100%
+      ),
+      url('/img/site/Regular-Dental-Check-ups-2048x1365.jpg');
+  }
+
+  .yd-hero-inner {
+    padding: 3rem 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   5. Booking form section
+   ========================================================================== */
+.yd-form-section {
+  margin: 0 auto 1rem;
+  padding: 2.5rem 2rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: 22px;
+  box-shadow: var(--yd-shadow);
+}
+
+.yd-form {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  align-items: end;
+  margin: 0;
+}
+
+.yd-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.yd-field label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--yd-ink);
+}
+
+.yd-field input,
+.yd-field select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
+  padding: 0 0.85rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 2px rgba(17, 24, 39, 0.04);
+}
+
+.yd-field input:focus,
+.yd-field select:focus {
+  outline: none;
+  border-color: var(--yd-brand);
+  box-shadow: 0 0 0 3px rgba(1, 211, 190, 0.18);
+}
+
+/* ==========================================================================
+   6. Section headings & eyebrows (centered teal label + dark title)
+   ========================================================================== */
+.yd-section-head {
+  text-align: center;
+  margin: 3.5rem auto 1.5rem;
+  max-width: 760px;
+}
+
+.yd-section-head h5 {
+  color: var(--yd-teal-text);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.yd-section-head h2 {
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  margin-bottom: 0.75rem;
+}
+
+.yd-section-head h3 {
+  color: var(--yd-teal-text);
+  font-size: 1.6rem;
+}
+
+.yd-section-head p {
+  color: #8a94a3;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.yd-band .yd-section-head {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   7. Mint band (services, stats, testimonial, social sit on this)
+   ========================================================================== */
+.yd-band {
+  background: var(--yd-band);
+  padding: 3.5rem 2rem;
+  margin: 3.5rem -2rem;
+  border-radius: 24px;
+}
+
+@media (max-width: 996px) {
+  .yd-band {
+    margin-inline: 0;
+    padding: 2.5rem 1.25rem;
+  }
+}
+
+.yd-band > :first-child {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   8. Grids
+   ========================================================================== */
 .yd-grid {
   display: grid;
   gap: 2rem;
   align-items: start;
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 }
 
 .yd-grid--2 {
   grid-template-columns: repeat(2, 1fr);
 }
-
 .yd-grid--3 {
   grid-template-columns: repeat(3, 1fr);
 }
-
 .yd-grid--4 {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* Service / blog cards: image, heading, copy, then a button pinned to the
-   bottom so buttons line up across the row regardless of copy length. */
+/* ==========================================================================
+   9. Service cards — transparent on the mint band, teal titles, See More pill
+   ========================================================================== */
 .yd-card {
   display: flex;
   flex-direction: column;
@@ -125,99 +496,692 @@
 }
 
 .yd-card img {
+  width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-/* Icon-led cards (the service listings) use a small glyph rather than a
-   cropped photo, so the square photo treatment above must not apply. */
-.yd-card--icon img {
-  width: auto;
-  max-width: 72px;
-  margin-inline: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .yd-card h2,
 .yd-card h3 {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--yd-brand-heading);
+  color: var(--yd-teal-text);
+  margin-bottom: 0.75rem;
 }
 
-/* Blog cards keep their linked headings in the normal link colour. */
 .yd-card h3 > a {
-  color: var(--yd-brand-heading);
-}
-
-.yd-card--icon h3,
-.yd-card--icon h4 {
-  font-size: 1.25rem;
+  color: var(--yd-teal-text);
+  text-decoration: none;
 }
 
 .yd-card p {
-  margin-bottom: 1rem;
+  color: var(--yd-body);
+  margin-bottom: 1.25rem;
 }
 
-/* Push the trailing link of a card to the bottom edge of the grid row, and give
-   it the pill treatment the source site's card buttons use. */
+/* Trailing card link pinned to the bottom, rendered as a teal pill. */
 .yd-card > p:last-child {
   margin-top: auto;
   margin-bottom: 0;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .yd-card > p:last-child > a {
   display: inline-block;
-  padding: 0.6rem 1.5rem;
+  padding: 0.7rem 1.9rem;
   border-radius: 999px;
   background: var(--yd-brand);
   color: #fff !important;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none !important;
+  box-shadow: 0 10px 22px rgba(1, 211, 190, 0.3);
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .yd-card > p:last-child > a:hover {
   background: var(--yd-brand-dark);
+  transform: translateY(-2px);
 }
 
-/* The "New Patient Special" offer is a compact icon-beside-text card, not a
-   half-and-half split. Qualified with .yd-split so it outranks the generic
-   split rule defined below it. */
-.yd-split.yd-offer {
-  grid-template-columns: auto 1fr;
-  gap: 1.5rem;
-  max-width: 720px;
-  margin: 2.5rem auto;
-  padding: 1.75rem;
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 12px;
-  background: var(--ifm-background-surface-color);
-}
-
-/* Image-beside-text rows (team members, feature sections). */
+/* ==========================================================================
+   10. Split rows (image + text): features, team, drill-free, equipment
+   ========================================================================== */
 .yd-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  gap: 3rem;
   align-items: center;
-  margin: 2.5rem 0;
+  margin: 3.5rem 0;
 }
 
 .yd-split img {
-  border-radius: 12px;
+  width: 100%;
+  border-radius: var(--yd-radius);
 }
 
 .yd-split > div > :first-child {
   margin-top: 0;
 }
 
-/* Insurance / financing logo walls. The source logos range from 206x218 to
-   1084x160, so each is contained in a uniform box rather than laid out at its
-   natural size, which would stack them ragged down the page. */
+.yd-split h2 {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+}
+
+.yd-split p {
+  color: var(--yd-body);
+}
+
+/* Team rows: portrait sits in a narrower column beside the bio. */
+.yd-split.yd-team {
+  grid-template-columns: 360px 1fr;
+  align-items: start;
+  gap: 2.5rem;
+  margin: 2rem 0;
+}
+
+/* New Patient Special offer card. */
+.yd-split.yd-offer {
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  max-width: 860px;
+  margin: 3rem auto;
+  padding: 2rem 2.25rem;
+  border-radius: var(--yd-radius);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--yd-shadow);
+  text-align: left;
+}
+
+.yd-offer h3 {
+  margin: 0 0 0.4rem;
+  color: var(--yd-ink);
+}
+
+.yd-offer p {
+  margin: 0;
+}
+
+/* About Us: two staggered images on the right. */
+.yd-portraits {
+  gap: 1.5rem;
+}
+
+.yd-portraits img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--yd-radius);
+}
+
+.yd-portraits > div:nth-child(2) {
+  margin-top: 2.5rem;
+}
+
+/* Icon glyphs (offer / about feature / stat). */
+.yd-icon img {
+  width: auto;
+  max-width: 84px;
+  border-radius: 0;
+}
+
+/* ==========================================================================
+   11. Feature cells & About feature items (icon beside heading)
+   ========================================================================== */
+.yd-features {
+  text-align: center;
+}
+
+.yd-features .yd-icon img {
+  margin-bottom: 1rem;
+}
+
+.yd-features h3 {
+  font-size: 1.25rem;
+  color: var(--yd-ink);
+}
+
+.yd-features p {
+  color: var(--yd-body);
+}
+
+/* Inline teal line icons (features, stats, about). */
+.yd-ic {
+  display: block;
+  width: 52px;
+  height: 52px;
+  color: var(--yd-teal-text);
+  margin: 0 auto 1rem;
+}
+
+/* About feature items: icon in a rounded tile beside heading + copy. */
+.yd-about-feat {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.1rem;
+  align-items: start;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.yd-about-feat .yd-ic {
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--yd-band);
+  box-shadow: 0 6px 16px rgba(1, 211, 190, 0.15);
+}
+
+.yd-about-feat.is-primary .yd-ic {
+  background: var(--yd-brand);
+  color: #fff;
+}
+
+.yd-about-feat h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+  color: var(--yd-ink);
+}
+
+.yd-about-feat p {
+  margin: 0;
+  color: var(--yd-body);
+}
+
+/* ==========================================================================
+   12. Stats — teal figure on the mint band
+   ========================================================================== */
+.yd-stat {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.yd-stat .yd-ic {
+  width: 48px;
+  height: 48px;
+}
+
+.yd-stat-value {
+  display: block;
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--yd-ink);
+}
+
+.yd-stat-label {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--yd-body);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   13. Equipment proficiency bars
+   ========================================================================== */
+.yd-bar + .yd-bar {
+  margin-top: 1.4rem;
+}
+
+.yd-bar-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--yd-ink);
+}
+
+.yd-bar-track {
+  height: 12px;
+  border-radius: 999px;
+  background: #e6ebf1;
+  overflow: hidden;
+}
+
+.yd-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--yd-brand);
+}
+
+/* ==========================================================================
+   14. Testimonial — photo left, mint quote panel right
+   ========================================================================== */
+.yd-testimonial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 0;
+  margin: 3.5rem -2rem 0;
+  border-radius: 24px 24px 0 0;
+  overflow: hidden;
+}
+
+.yd-testimonial .yd-testimonial-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.yd-testimonial-quote {
+  background: var(--yd-band);
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.yd-testimonial-quote h3 {
+  color: var(--yd-teal-text);
+  margin-bottom: 1.25rem;
+}
+
+.yd-testimonial-quote::before {
+  content: '\201C';
+  display: block;
+  margin: 0 auto 1rem;
+  width: 68px;
+  height: 68px;
+  line-height: 96px;
+  border: 2px solid var(--yd-brand);
+  border-radius: 50%;
+  color: var(--yd-brand);
+  font-size: 3.4rem;
+}
+
+.yd-testimonial-quote p {
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--yd-body);
+  margin: 0;
+}
+
+/* Text-quote fallback grid (below the split). */
+.yd-quote {
+  height: 100%;
+  padding: 1.75rem;
+  border-radius: var(--yd-radius);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--yd-shadow);
+}
+
+.yd-quote::before {
+  content: '\201C';
+  display: block;
+  font-size: 3rem;
+  line-height: 0.6;
+  color: var(--yd-brand);
+  margin-bottom: 0.5rem;
+}
+
+.yd-quote p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .yd-testimonial {
+    grid-template-columns: 1fr;
+    margin-inline: 0;
+  }
+  .yd-testimonial .yd-testimonial-photo img {
+    height: 320px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Video testimonial strip — mint band, row of vertical (9:16) players,
+   matching the source layout (two live clips, the rest blank on the source).
+   -------------------------------------------------------------------------- */
+.yd-videos {
+  margin: 0 -2rem 3rem;
+  padding: 1.5rem;
+  background: var(--yd-band);
+  border-radius: 0 0 24px 24px;
+}
+
+.yd-videos-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(180px, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+}
+
+.yd-video {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1f2328;
+}
+
+.yd-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Blank slots (source videos that 404) rendered as a dark player shell. */
+.yd-video--empty {
+  background: linear-gradient(180deg, #23272e 0%, #15181c 100%);
+}
+
+.yd-video--empty::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  bottom: 14px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid rgba(255, 255, 255, 0.55);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+@media (max-width: 996px) {
+  .yd-videos {
+    margin-inline: 0;
+  }
+}
+
+/* ==========================================================================
+   15. Promo buttons — solid teal rectangles
+   ========================================================================== */
+.yd-promos {
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.yd-promos .yd-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 92px;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  box-shadow: none;
+}
+
+.yd-promos .yd-btn:hover {
+  box-shadow: 0 8px 20px rgba(1, 211, 190, 0.28);
+}
+
+/* ==========================================================================
+   16. Blog — horizontal cards (image left, copy right), 2 per row
+   ========================================================================== */
+.yd-blog {
+  gap: 2.5rem;
+  margin: 2.5rem 0;
+}
+
+.yd-blog .yd-post {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  text-align: left;
+}
+
+.yd-blog .yd-post img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  margin: 0;
+}
+
+.yd-blog .yd-post h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+}
+
+.yd-blog .yd-post h3 > a {
+  color: var(--yd-ink);
+  text-decoration: underline;
+}
+
+.yd-blog .yd-post h3 > a:hover {
+  color: var(--yd-teal-text);
+}
+
+.yd-blog .yd-post p {
+  color: var(--yd-body);
+  font-size: 0.95rem;
+  margin: 0 0 0.6rem;
+}
+
+.yd-blog .yd-post-body > p:last-child > a {
+  color: var(--yd-teal-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   17. Stay Connected — mint band with heading + social row
+   ========================================================================== */
+.yd-connect {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background: var(--yd-band);
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  margin: 3.5rem 0 1.5rem;
+}
+
+.yd-connect h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.yd-connect .yd-social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.yd-connect .yd-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--yd-brand);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.yd-connect .yd-social a:hover {
+  background: var(--yd-brand-dark);
+  transform: translateY(-2px);
+}
+
+/* Maps and booking iframes. */
+.embed-frame {
+  border: 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 450px;
+  margin: 0;
+  border-radius: 14px;
+}
+
+/* Location maps stack full-width, one above the other, as on the source. */
+.yd-maps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1.5rem 0 0;
+}
+
+/* ==========================================================================
+   18. Light footer with teal accents
+   ========================================================================== */
+.footer--dark,
+.footer {
+  --ifm-footer-background-color: #ffffff;
+  --ifm-footer-color: var(--yd-body);
+  --ifm-footer-link-color: #475569;
+  --ifm-footer-title-color: var(--yd-ink);
+  background: #ffffff;
+  border-top: 1px solid #eef1f5;
+  padding-top: 3.5rem;
+}
+
+.footer .container {
+  max-width: 1200px;
+}
+
+.footer__links {
+  margin-bottom: 1rem;
+}
+
+/* Four columns: brand/locations, two link lists, appointment blurb. */
+.footer__col {
+  --ifm-footer-padding-vertical: 0;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--yd-ink);
+  margin-bottom: 1.25rem;
+}
+
+/* Link lists (Quick Links / Useful Links) get a teal chevron bullet. */
+.footer__link-item {
+  font-weight: 500;
+  color: #475569;
+  transition: color 0.15s ease;
+}
+
+.footer__link-item::before {
+  content: '›';
+  margin-right: 0.5rem;
+  color: var(--yd-brand);
+  font-weight: 700;
+}
+
+.footer__link-item:hover {
+  color: var(--yd-teal-text);
+  text-decoration: none;
+}
+
+.footer__item {
+  margin-bottom: 0.65rem;
+}
+
+/* Brand + location column. */
+.footer__brand-logo {
+  width: 190px;
+  max-width: 80%;
+  margin-bottom: 1.5rem;
+}
+
+.footer__loc {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.footer__loc strong {
+  color: var(--yd-ink);
+}
+
+.footer__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--yd-teal-text);
+  font-weight: 500;
+}
+
+.footer__email:hover {
+  text-decoration: none;
+  color: var(--yd-brand-dark);
+}
+
+.footer__ico {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  fill: var(--yd-brand);
+}
+
+/* Appointment column — blurb plus a teal phone pill. */
+.footer__appt {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.footer__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: var(--yd-teal-text);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.footer__phone:hover {
+  text-decoration: none;
+  color: var(--yd-brand-dark);
+}
+
+.footer__phone-ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  background: var(--yd-brand);
+}
+
+.footer__phone-ico svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.footer__copyright {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eef1f5;
+  color: var(--yd-teal-text);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   19. Shared / legacy helpers retained from the migration
+   ========================================================================== */
+.yd-media img,
+.yd-split img {
+  display: block;
+  width: 100%;
+}
+
 .yd-logos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -237,30 +1201,22 @@
   border-radius: 0;
 }
 
-/* Smile-gallery cases: notes in a narrow column beside the wide before/after
-   photo, as on the source site (380px / 760px). */
 .yd-split.yd-case {
   grid-template-columns: 1fr 2fr;
   align-items: center;
 }
 
-.yd-case h4 {
-  margin-bottom: 0.5rem;
-}
-
-/* Heading + copy feature cells (service lists with no icon). */
 .yd-feature > :first-child {
   margin-top: 0;
 }
 
 .yd-feature h3 {
-  color: var(--yd-brand-heading);
+  color: var(--yd-teal-text);
 }
 
-/* Numbered "how a check-up works" steps. */
 .yd-step h2 {
   font-size: 2.25rem;
-  color: var(--yd-brand-heading);
+  color: var(--yd-teal-text);
   margin-bottom: 0.25rem;
 }
 
@@ -268,198 +1224,27 @@
   font-size: 1.15rem;
 }
 
-/* Counter row. */
-.yd-stat {
-  text-align: center;
-}
-
-.yd-stat-value {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--ifm-color-primary);
-}
-
-.yd-stat-label {
-  display: block;
-  margin-top: 0.25rem;
-  font-weight: 500;
-}
-
-/* Equipment proficiency bars. */
-.yd-bar + .yd-bar {
-  margin-top: 1rem;
-}
-
-.yd-bar-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 0.35rem;
-  font-weight: 500;
-}
-
-.yd-bar-track {
-  height: 10px;
-  border-radius: 999px;
-  background: var(--ifm-color-emphasis-200);
-  overflow: hidden;
-}
-
-.yd-bar-fill {
-  height: 100%;
-  border-radius: 999px;
-  background: var(--yd-brand);
-}
-
-/* Booking form: one row of fields, as on the source site. */
-.yd-form {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  align-items: end;
-  margin: 2rem 0 1rem;
-}
-
-.yd-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.yd-field label {
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-/* Inputs and selects have different intrinsic heights; pin them so the fields
-   sit on a common baseline across the row. */
-.yd-field input,
-.yd-field select {
-  box-sizing: border-box;
-  width: 100%;
-  height: 42px;
-  padding: 0 0.75rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 6px;
-  background: var(--ifm-background-color);
-  color: var(--ifm-font-color-base);
-  font: inherit;
-  font-size: 0.95rem;
-}
-
-/* Centred pill call-to-action, matching the source site's buttons. */
-.yd-cta {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-
-.yd-btn {
-  display: inline-block;
-  padding: 0.7rem 1.75rem;
-  border-radius: 999px;
-  background: var(--yd-brand);
-  color: #fff !important;
-  font-weight: 600;
-  text-decoration: none !important;
-}
-
-.yd-btn:hover {
-  background: var(--yd-brand-dark);
-}
-
-/* Promo buttons sit in an even row and stay level regardless of label length. */
-.yd-promos .yd-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100%;
-  padding: 1rem 1.5rem;
-}
-
-/* Testimonials. */
-.yd-quote {
-  height: 100%;
-  padding: 1.5rem;
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 12px;
-  background: var(--ifm-background-surface-color);
-}
-
-.yd-quote p:last-child {
-  margin-bottom: 0;
-}
-
-/* Testimonial avatars are small round portraits, not full-bleed images. */
-.yd-avatar img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 0.5rem;
-}
-
-.yd-role {
-  display: block;
-  margin-top: 0.15rem;
-  font-size: 0.875rem;
-  color: var(--ifm-color-emphasis-600);
-}
-
-/* The services section sits on a tinted full-width band on the source site.
-   The negative margin widens it past the container, so it must never exceed the
-   container's own horizontal padding or the page scrolls sideways; below 996px
-   that padding shrinks, so the bleed is dropped there. */
-.yd-band {
-  background: var(--yd-band);
-  padding: 2.5rem 2rem;
-  margin: 3rem -2rem;
-  border-radius: 16px;
-}
-
-@media (max-width: 996px) {
-  .yd-band {
-    margin-inline: 0;
-    padding: 2rem 1.25rem;
-  }
-}
-
-.yd-band > :first-child {
-  margin-top: 0;
-}
-
-/* Section eyebrow + heading blocks are centred on the source site. */
-.yd-section-head {
-  text-align: center;
-  margin: 3rem 0 1rem;
-}
-
-.yd-band .yd-section-head {
-  margin-top: 0;
-}
-
-.yd-section-head > * {
-  margin-bottom: 0.5rem;
-}
-
+/* ==========================================================================
+   20. Responsive
+   ========================================================================== */
 @media (max-width: 996px) {
   .yd-grid--4 {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .yd-grid--3 {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .yd-form {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .yd-split {
+  .yd-split,
+  .yd-split.yd-team,
+  .yd-blog {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  .yd-portraits > div:nth-child(2) {
+    margin-top: 0;
   }
 }
 
@@ -470,36 +1255,985 @@
   .yd-form {
     grid-template-columns: 1fr;
   }
+  .yd-blog .yd-post {
+    grid-template-columns: 120px 1fr;
+  }
 }
 
-.navbar__logo img {
-  border-radius: 50%;
-  object-fit: cover;
+/* ==========================================================================
+   20. Interior page: Financing (dental-financing) — banner, carousel,
+       payment splits, appointment section. Reuses .yd-band / .yd-split.
+   ========================================================================== */
+
+/* Full-bleed page-title banner over a faded clinical photo. */
+.yd-page-banner {
+  position: relative;
+  margin: -2rem -50vw 2.5rem;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 5.5rem clamp(1.5rem, 6vw, 6rem);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)),
+    url('/img/site/female-patient-receiving-dental-treatment-from-male-dentist-clinic.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-/* "Make an Appointment" call to action in the navbar. */
-.navbar-cta {
-  background-color: var(--yd-brand);
-  color: #fff !important;
-  border-radius: 999px;
-  padding: 0.35rem 0.9rem;
+.yd-page-banner__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.yd-page-banner__title {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  color: var(--yd-ink);
+}
+
+.yd-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-weight: 600;
 }
 
-.navbar-cta:hover {
-  background-color: var(--yd-brand-dark);
-  color: #fff !important;
+.yd-breadcrumb a {
+  color: var(--yd-ink);
+  text-decoration: underline;
 }
 
-/* The Services dropdown carries every service; keep it usable on short screens. */
-.navbar__items .dropdown__menu {
-  max-height: 70vh;
-  overflow-y: auto;
+.yd-breadcrumb a:hover {
+  color: var(--yd-teal-text);
+}
+
+.yd-breadcrumb__sep {
+  color: var(--yd-brand);
+}
+
+/* Centered intro block. */
+.yd-fin-intro {
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+.yd-fin-intro h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.yd-fin-intro h3 {
+  color: var(--yd-ink);
+  margin-bottom: 1.25rem;
+}
+
+.yd-fin-intro p {
+  color: var(--yd-body);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* "Trusted Financing Options" heading is teal on the source. */
+.yd-fin-heading h2 {
+  color: var(--yd-teal-text);
+}
+
+/* Logo carousel. */
+.yd-carousel {
+  position: relative;
+  max-width: 720px;
+  margin: 1.5rem auto 3rem;
+  padding: 1.5rem 3.5rem 2.5rem;
+  text-align: center;
+}
+
+.yd-carousel__viewport {
+  position: relative;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yd-carousel__logo {
+  position: absolute;
+  max-width: 260px;
+  max-height: 130px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.yd-carousel__logo.is-active {
+  opacity: 1;
+  position: relative;
+}
+
+.yd-carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-70%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #cbd5e1;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.yd-carousel__arrow:hover {
+  color: var(--yd-brand);
+}
+
+.yd-carousel__arrow--prev {
+  left: 0;
+}
+
+.yd-carousel__arrow--next {
+  right: 0;
+}
+
+.yd-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.yd-carousel__dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #d1d5db;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.yd-carousel__dot.is-active {
+  background: var(--yd-brand);
+  transform: scale(1.2);
+}
+
+/* Payment-method / benefits lists — teal bullets. */
+.yd-fin-list {
+  list-style: none;
+  margin: 1.25rem 0;
+  padding: 0;
+}
+
+.yd-fin-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.6rem;
+  color: var(--yd-body);
+}
+
+.yd-fin-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--yd-brand);
+}
+
+.yd-fin-list li strong {
+  color: var(--yd-ink);
+}
+
+/* CareCredit promo image. */
+.yd-fin-cc-img img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 16px;
+}
+
+/* Insurance-questions band — centered with a teal call line. */
+.yd-fin-insurance {
+  text-align: center;
+}
+
+.yd-fin-insurance .yd-section-head h2 {
+  color: var(--yd-ink);
+}
+
+.yd-fin-call {
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.yd-fin-call a {
+  color: var(--yd-teal-text);
+}
+
+/* Make-An-Appointment section: info column + form card. */
+.yd-appt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.yd-appt-info > :first-child {
+  margin-top: 0;
+}
+
+.yd-appt-info h5 {
+  color: var(--yd-teal-text);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.yd-appt-info h4 {
+  margin: 1.75rem 0 0.75rem;
+}
+
+.yd-hours {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+}
+
+.yd-hours__time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--yd-body);
+}
+
+.yd-hours__time svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--yd-brand);
+}
+
+.yd-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.yd-contact__item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.yd-contact__ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex: none;
+  border-radius: 12px;
+  background: rgba(1, 211, 190, 0.12);
+}
+
+.yd-contact__ico svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--yd-brand);
+}
+
+.yd-contact__item a {
+  color: var(--yd-body);
+}
+
+.yd-contact__item a:hover {
+  color: var(--yd-teal-text);
+}
+
+/* Form sits in a white card; fields stack in the right column. */
+.yd-appt-form {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: var(--yd-shadow);
+  padding: 2.5rem 2rem;
+}
+
+.yd-appt-form .yd-form {
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 0;
+}
+
+.yd-req {
+  color: #e11d48;
 }
 
 @media (max-width: 996px) {
-  .navbar-cta {
-    display: inline-block;
-    margin: 0.5rem 0;
+  .yd-appt {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
+  .yd-page-banner {
+    padding-block: 3.5rem;
+  }
+}
+
+/* ==========================================================================
+   21. Interior page: About Us — hero banner, eyebrow, numbered approach
+       steps, doctor bios, value cards. Reuses .yd-band / .yd-split / stats.
+   ========================================================================== */
+
+/* Page hero: title, full-bleed tinted banner with breadcrumb, Book Online. */
+.yd-about-hero {
+  margin-bottom: 2.5rem;
+}
+
+.yd-about-hero h1 {
+  font-size: clamp(1.9rem, 3.5vw, 2.4rem);
+  margin: 0 0 1.25rem;
+}
+
+.yd-about-hero__banner {
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem clamp(1.5rem, 6vw, 6rem);
+  background-image:
+    linear-gradient(rgba(233, 251, 247, 0.78), rgba(233, 251, 247, 0.78)),
+    url('/img/site/female-patient-receiving-dental-treatment-from-male-dentist-clinic.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.yd-about-hero__banner .yd-breadcrumb {
+  max-width: 1200px;
+}
+
+.yd-about-hero__cta {
+  margin-top: -1.6rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Teal title-case eyebrow used across the interior sections. */
+.yd-eyebrow {
+  color: var(--yd-teal-text);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.yd-section-head .yd-eyebrow {
+  margin-bottom: 0.25rem;
+}
+
+/* Left-aligned CTA variant (inside split columns). */
+.yd-cta--left {
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+/* "Our Approach" header row: heading left, button right. */
+.yd-approach__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.yd-approach__head > div:first-child > :first-child {
+  margin-top: 0;
+}
+
+.yd-approach__head h2 {
+  margin: 0;
+}
+
+/* Numbered check-up steps joined by a horizontal line. */
+.yd-steps {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+.yd-steps::before {
+  content: '';
+  position: absolute;
+  top: 34px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: rgba(1, 211, 190, 0.3);
+}
+
+.yd-step {
+  position: relative;
+  text-align: left;
+}
+
+.yd-step__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  margin-bottom: 1.25rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: var(--yd-shadow);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--yd-ink);
+}
+
+.yd-step h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.yd-step p {
+  color: var(--yd-body);
+  font-size: 0.95rem;
+}
+
+/* Doctor bios: heading + round photo on the left, bio on the right. */
+.yd-doctor {
+  align-items: start;
+  margin-block: 3rem;
+}
+
+.yd-doctor__intro {
+  text-align: center;
+}
+
+.yd-doctor__intro h3 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  margin-bottom: 1.5rem;
+}
+
+.yd-doctor__photo img {
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.yd-doctor p:first-child {
+  margin-top: 0;
+}
+
+.yd-doctor strong {
+  color: var(--yd-ink);
+}
+
+/* Value cards — full-width rows, tooth icon left, copy right, on mint tint. */
+.yd-values {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.yd-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 16px;
+  background: var(--yd-band);
+}
+
+.yd-value__ico {
+  flex: none;
+}
+
+.yd-value__ico img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.yd-value h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.yd-value p {
+  margin: 0;
+  color: var(--yd-body);
+}
+
+@media (max-width: 996px) {
+  .yd-about-hero__banner {
+    min-height: 240px;
+  }
+  .yd-steps::before {
+    display: none;
+  }
+  .yd-doctor__photo img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* ==========================================================================
+   22. Interior page: Guarantee — small helpers (reuses banner, split,
+       band, appointment). Most layout comes from sections 20/21.
+   ========================================================================== */
+.yd-section-head h1 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+/* Wide, centered feature list under a centered heading. */
+.yd-fin-list--wide {
+  max-width: 1040px;
+  margin: 0.5rem auto 2.5rem;
+}
+
+.yd-fin-list--wide li {
+  margin-bottom: 1rem;
+}
+
+/* Stack the contact items (phone above email) for the guarantee layout. */
+.yd-contact--stack {
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ==========================================================================
+   23. Interior page: Dental Insurance — accepted-carrier logo grid.
+   ========================================================================== */
+.yd-insurance-logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 2rem;
+  align-items: center;
+  justify-items: center;
+  max-width: 1040px;
+  margin: 2.5rem auto 3.5rem;
+}
+
+.yd-insurance-logos p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yd-insurance-logos img {
+  max-width: 230px;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  .yd-insurance-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   24. Interior page: Contact Us — team banner + side-by-side embeds.
+   ========================================================================== */
+/* Banner image override for the Contact page (team portrait). */
+.yd-page-banner--team {
+  background-image:
+    linear-gradient(rgba(240, 245, 250, 0.7), rgba(240, 245, 250, 0.7)),
+    url('/img/site/freepik__male-and-female-dentist-team-portrait-friendly-smi__54456-1024x1024.jpeg');
+}
+
+/* Contact form widget beside the location map. */
+.yd-contact-embeds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
+
+.yd-contact-embeds .embed-frame {
+  height: 560px;
+}
+
+@media (max-width: 996px) {
+  .yd-contact-embeds {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   25. Interior page: Services — service-card grid, before/after caption,
+       feature icons, avatar testimonials, FAQ accordion, social band.
+   ========================================================================== */
+
+/* Service cards — 3-col grid; every first-in-row card gets a mint tint. */
+.yd-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2.5rem 0 3rem;
+}
+
+.yd-service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.75rem;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--yd-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.yd-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--yd-shadow-hover);
+}
+
+.yd-services-grid > .yd-service-card:nth-child(3n + 1) {
+  background: var(--yd-band);
+  box-shadow: none;
+}
+
+.yd-service-card__head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.yd-service-card__ico {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.yd-service-card__head h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.yd-service-card p {
+  color: var(--yd-body);
+  margin-bottom: 1.25rem;
+}
+
+.yd-readmore {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--yd-teal-text);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.yd-readmore:hover {
+  color: var(--yd-brand-dark);
+}
+
+/* Before/after caption. */
+.yd-caption {
+  text-align: center;
+  color: var(--yd-body);
+  margin-top: 0.75rem;
+}
+
+/* Three trust features — centered teal icon + heading + copy. */
+.yd-features {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.yd-feature__ico {
+  display: inline-flex;
+  margin-bottom: 1rem;
+}
+
+.yd-feature__ico svg {
+  width: 58px;
+  height: 58px;
+  fill: none;
+  stroke: var(--yd-brand);
+  stroke-width: 1.6;
+}
+
+.yd-feature h3 {
+  margin-bottom: 0.6rem;
+}
+
+.yd-feature p {
+  color: var(--yd-body);
+}
+
+/* Avatar testimonials — gray placeholder avatar + name + role, quote mark. */
+.yd-quote--avatar {
+  position: relative;
+  background: #fff;
+}
+
+.yd-quote__author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.yd-avatar-circle {
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d7dde5, #eef1f5);
+}
+
+/* FAQ — native <details> accordion beside an image. */
+.yd-faq {
+  align-items: center;
+}
+
+.yd-faq__item {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: var(--yd-shadow);
+  overflow: hidden;
+}
+
+.yd-faq__item > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  color: var(--yd-ink);
+  text-decoration: underline;
+}
+
+.yd-faq__item > summary::-webkit-details-marker {
+  display: none;
+}
+
+.yd-faq__item > summary::after {
+  content: '⌄';
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--yd-brand);
+  transition: transform 0.2s ease;
+}
+
+.yd-faq__item[open] > summary {
+  background: var(--yd-brand);
+  color: #fff;
+}
+
+.yd-faq__item[open] > summary::after {
+  transform: rotate(180deg);
+  color: #fff;
+}
+
+.yd-faq__body {
+  padding: 1.25rem;
+  color: var(--yd-body);
+}
+
+/* FAQ image with a soft mint shape behind it. */
+.yd-faq__media {
+  position: relative;
+}
+
+.yd-faq__media::before {
+  content: '';
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  width: 55%;
+  height: 60%;
+  border-radius: 18px;
+  background: var(--yd-band);
+  z-index: 0;
+}
+
+.yd-faq__media img {
+  position: relative;
+  z-index: 1;
+  border-radius: 18px;
+}
+
+/* Stay-Connected social band. */
+.yd-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.yd-social h2 {
+  margin: 0;
+}
+
+.yd-social__icons {
+  display: flex;
+  gap: 0.85rem;
+}
+
+.yd-social__icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--yd-brand);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.yd-social__icons a:hover {
+  background: var(--yd-brand-dark);
+  transform: translateY(-2px);
+}
+
+.yd-social__icons svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+@media (max-width: 996px) {
+  .yd-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .yd-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   26. Testimonial marquee — continuously scrolling review cards.
+   ========================================================================== */
+.yd-marquee {
+  overflow: hidden;
+  margin: 2rem 0 1rem;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.yd-marquee__track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  padding: 1rem 0.5rem;
+  animation: yd-marquee-scroll 55s linear infinite;
+}
+
+.yd-marquee:hover .yd-marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes yd-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yd-marquee__track { animation: none; }
+}
+
+.yd-tcard {
+  position: relative;
+  flex: 0 0 380px;
+  max-width: 84vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--yd-shadow);
+}
+
+.yd-tcard__mark {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 3.5rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4rem;
+  line-height: 0;
+  color: rgba(1, 211, 190, 0.35);
+  pointer-events: none;
+}
+
+.yd-tcard__quote {
+  color: var(--yd-body);
+  margin-bottom: 1.5rem;
+}
+
+.yd-tcard__author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: auto;
+}
+
+.yd-tcard__avatar {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eef1f5;
+}
+
+/* ==========================================================================
+   27. Interior page: Smile Gallery — bold intro heading (cases reuse
+       .yd-split.yd-case + .yd-caption).
+   ========================================================================== */
+.yd-gallery-intro {
+  margin: 2rem 0 1rem;
+}
+
+.yd-gallery-intro h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2.15rem);
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.yd-case .yd-caption {
+  margin-top: 1rem;
 }

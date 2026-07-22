@@ -1,243 +1,55 @@
 ---
 title: "Services"
-description: "Services Home Services Our Services What Service We Offer We offer comprehensive dental care including implants, Invisalign, dentures, preventive, cosmetic, and family dentistry for all ages. Diagnostic ExamA detailed exam using digital tools to assess your teeth, gums, and bite—creating a personalized treatment plan for optimal oral health. Read More CleaningGentle, thorough cleanings remove plaque"
+description: "Yogi Dental offers comprehensive dental care including implants, Invisalign, dentures, preventive, cosmetic, and family dentistry for all ages in Orange, NJ."
 format: md
 slug: /services
 hide_table_of_contents: true
 ---
 
-## Services
+<div className="yd-page-banner">
+<div className="yd-page-banner__inner">
+<span className="yd-page-banner__title">Services</span>
+<nav className="yd-breadcrumb">
+<a href="/">Home</a>
+<span className="yd-breadcrumb__sep">›</span>
+<a href="/services">Services</a>
+</nav>
+</div>
+</div>
 
--   [Home](/)
--   [Services](/services)
+<div className="yd-section-head">
 
-##### Our Services
+<p className="yd-eyebrow">Our Services</p>
 
 ## What Service We Offer
 
 **We offer comprehensive dental care including implants, Invisalign, dentures, preventive, cosmetic, and family dentistry for all ages.**
 
-<div className="yd-grid yd-grid--3">
-<div className="yd-card yd-card--icon">
-
-![Diagnostic Exam](/img/site/whitee.png)
-
-### Diagnostic Exam
-
-A detailed exam using digital tools to assess your teeth, gums, and bite—creating a personalized treatment plan for optimal oral health.
-
-[Read More](/exams)
-
 </div>
-<div className="yd-card yd-card--icon">
 
-![Cleaning](/img/site/check.png)
+<ServicesGrid />
 
-### Cleaning
-
-Gentle, thorough cleanings remove plaque and tartar to prevent cavities, gum disease, and bad breath—keeping your smile fresh and healthy.
-
-[Read More](/teeth-cleaning)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Periodontal Scaling](/img/site/filling.png)
-
-### Periodontal Scaling
-
-Deep cleaning below the gumline to remove buildup and treat early-stage gum disease, protecting your teeth and bone health.
-
-[Read More](/periodontal-gum-disease-treatment)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Laser-Assisted Gum Treatments](/img/site/whitee.png)
-
-### Laser-Assisted Gum Treatments
-
-Minimally invasive laser therapy treats gum disease, reduces bacteria, and promotes healing with less discomfort and faster recovery.
-
-[Read More](/contact)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Extraction](/img/site/check.png)
-
-### Extraction
-
-Gentle tooth removal when damage or infection is too severe—always focused on comfort and future restoration options.
-
-[Read More](/contact)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Socket Preservation](/img/site/filling.png)
-
-### Socket Preservation
-
-Preserves bone structure after extraction, preparing the area for future implants and supporting long-term dental health.
-
-[Read More](/preventive-dentistry)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Implants (Single and Multiple Teeth)](/img/site/whitee.png)
-
-### Implants (Single and Multiple Teeth)
-
-Permanent replacements for missing teeth using titanium roots and custom crowns—restoring full function and natural aesthetics.
-
-[Read More](/dental-implants)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![All-on-4 Hybrid Dentures](/img/site/check.png)
-
-### All-on-4 Hybrid Dentures
-
-All-on-4 Hybrid Dentures offer a secure, full-arch tooth replacement using just four implants—delivering stability, a natural look, and a life-changing smile transformation.
-
-[Read More](/dentures-teeth-in-a-day)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Snap-On Smile](/img/site/filling.png)
-
-### Snap-On Smile
-
-Snap-On Smile is a removable arch that fits over your teeth to instantly transform your smile—no drilling, no pain, just a quick, comfortable way to boost your confidence and appearance.
-
-[Read More](/snap-on-smile)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Zoom Whitening](/img/site/whitee.png)
-
-### Zoom Whitening
-
-In-office whitening that lifts stains and brightens your teeth by several shades in one visit—safe, fast, and effective.
-
-[Read More](/zoom-teeth-whitening)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Resin Restoration](/img/site/check.png)
-
-### Resin Restoration
-
-Tooth-colored fillings that repair decay or damage while blending seamlessly with your natural teeth for a flawless look.
-
-[Read More](/contact)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Veneers (Porcelain)](/img/site/filling.png)
-
-### Veneers (Porcelain)
-
-Porcelain veneers are thin, durable shells that cover chips, stains, or gaps—enhancing your smile with a flawless, natural-looking finish.
-
-[Read More](/porcelain-veneers)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Same-Day Crowns](/img/site/whitee.png)
-
-### Same-Day Crowns
-
-Get high-quality crowns crafted and placed in a single visit—no temporary crowns or multiple appointments needed.
-
-[Read More](/porcelain-crowns)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Root Canals](/img/site/check.png)
-
-### Root Canals
-
-Save infected teeth with a root canal—relieves pain, removes infection, and restores your natural tooth’s strength.
-
-[Read More](/root-canals-2)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Cosmetic Dentistry](/img/site/filling.png)
-
-### Cosmetic Dentistry
-
-From whitening to veneers, we enhance your smile’s look and feel with treatments tailored to your goals and features.
-
-[Read More](/cosmetic-dentistry-2)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Sinus Augmentation](/img/site/whitee.png)
-
-### Sinus Augmentation
-
-Boosts bone volume in the upper jaw to prepare for implants—ideal for patients with bone loss near the sinus area.
-
-[Read More](/contact)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Invisalign](/img/site/check.png)
-
-### Invisalign
-
-Clear, removable aligners straighten your teeth discreetly—no wires, no brackets, just a confident, aligned smile.
-
-[Read More](/invisalign-braces)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![Preventive Dentistry](/img/site/whitee.png)
-
-### Preventive Dentistry
-
-Keep your smile healthy with our Preventive Dentistry services, including cleanings, exams, and early detection to stop dental issues before they start.
-
-[Read More](/preventive-dentistry)
-
-</div>
-<div className="yd-card yd-card--icon">
-
-![General & Family Dentistry](/img/site/check.png)
-
-### General & Family Dentistry
-
-Complete dental care for all ages! From check-ups to fillings, we keep your family's smiles healthy, bright, and pain-free.
-
-[Read More](/genereral-family-dentistry)
-
-</div>
-</div>
+<div className="yd-split">
+<div>
 
 #### Client:
 
 Transform your smile with laser gum contouring at Yogi Dental. This precise, painless procedure reshapes uneven gums, enhances aesthetics, and boosts confidence. Enjoy minimal bleeding, quick healing, and stunning results.
 
-![Services](/img/site/laser-gum-contouring-before-and-after-s.webp)
+</div>
+<div className="yd-media">
 
-Before And After
+![Before and after laser gum contouring](/img/site/laser-gum-contouring-before-and-after-s.webp)
 
-##### Book Now
+<p className="yd-caption">Before And After</p>
+
+</div>
+</div>
+
+<div className="yd-band yd-appt">
+<div className="yd-appt-info">
+
+<p className="yd-eyebrow">Book Now</p>
 
 ## Make An Appointment
 
@@ -245,9 +57,14 @@ Booking your visit at Yogi Dental is quick and easy. Whether you’re due for a 
 
 #### Opening Hours
 
-Monday - Thursday
+<div className="yd-hours">
+<span>Monday - Thursday</span>
+<span className="yd-hours__time"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16zm.5-13H11v6l5.2 3.1.8-1.3-4.5-2.7V7z"/></svg> 09.30 AM - 05.30 PM</span>
+</div>
 
--   09.30 AM - 05.30 PM
+</div>
+
+<div className="yd-appt-form">
 
 <div className="yd-form">
   <div className="yd-field">
@@ -255,11 +72,11 @@ Monday - Thursday
     <input id="sv-name" type="text" placeholder="Enter your name" />
   </div>
   <div className="yd-field">
-    <label htmlFor="sv-email">Email</label>
+    <label htmlFor="sv-email">Email <span className="yd-req">*</span></label>
     <input id="sv-email" type="email" placeholder="Enter your email" />
   </div>
   <div className="yd-field">
-    <label htmlFor="sv-phone">Contact Number</label>
+    <label htmlFor="sv-phone">Contact Number <span className="yd-req">*</span></label>
     <input id="sv-phone" type="tel" placeholder="Enter your contact number" />
   </div>
   <div className="yd-field">
@@ -274,7 +91,7 @@ Monday - Thursday
     </select>
   </div>
   <div className="yd-field">
-    <label htmlFor="sv-type">Patient Type</label>
+    <label htmlFor="sv-type">Patient Type <span className="yd-req">*</span></label>
     <select id="sv-type" defaultValue="">
       <option value="">Select</option>
       <option>New Patient</option>
@@ -287,153 +104,93 @@ Monday - Thursday
   <a className="yd-btn" href="https://calendly.com/yogidental/new-patient">Make Appointment</a>
 </div>
 
+</div>
+</div>
+
+<div className="yd-grid yd-grid--3 yd-features">
+<div className="yd-feature">
+<span className="yd-feature__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l3 2.5 3.9-.3.6 3.8 3 2.5-1.7 3.5 1.7 3.5-3 2.5-.6 3.8-3.9-.3L12 23l-3-2.5-3.9.3-.6-3.8-3-2.5L3.2 11 1.5 7.5l3-2.5.6-3.8L9 1.5 12 1zm-1.2 14.2l5.5-5.5-1.4-1.4-4.1 4.1-2-2-1.4 1.4 3.4 3.4z"/></svg></span>
+
 ### Satisfaction Guarantee
 
 Certified professionals providing quality dental care with a satisfaction guarantee and a commitment to your comfort and safety.
 
-Read More
+</div>
+<div className="yd-feature">
+<span className="yd-feature__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l6-6m0 0l2 2 6-6-4-4-6 6 2 2zm7-9l4 4m1-9l4 4-2 2-4-4 2-2z"/></svg></span>
 
 ### Awesome Technology
 
 We use cutting-edge dental technology for accurate diagnosis, efficient treatments, and a comfortable, high-quality experience every visit.
 
-Read More
+</div>
+<div className="yd-feature">
+<span className="yd-feature__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm-8 9a8 8 0 0116 0v1H4v-1z"/></svg></span>
 
 ### Professional Dentist
 
 Experienced and caring dentists providing quality dental care with advanced technology in a friendly, comfortable environment for all ages.
 
-Read More
+</div>
+</div>
 
-##### Testimonial
+<div className="yd-band">
+<div className="yd-section-head">
+
+<p className="yd-eyebrow">Testimonial</p>
 
 ## What Customer Says
 
-“Excellent care, friendly team, and comfortable visits. Truly the best dental experience I’ve ever had!
-
-<div className="yd-grid yd-grid--3">
-<div className="yd-quote yd-quote--avatar">
-
-What I like most is the warmth and professionalism of the staff. The doctors are open, down to earth and truly phenomenal. I have been a client for years and I have no immediate plans to switch.
-
-<div className="yd-avatar">
-
-![— Ms. Delrose Robinson](/img/site/testimonial-Q8JDNBT.png)
+**“Excellent care, friendly team, and comfortable visits. Truly the best dental experience I’ve ever had!”**
 
 </div>
 
-**— Ms. Delrose Robinson**
-
-<span className="yd-role">Entrepreneur</span>
-
-</div>
-<div className="yd-quote yd-quote--avatar">
-
-The teeth fit perfectly in my mouth. I am very satisfied with the results. I have nothing but promise for the doctors. They do perfect follow up work.
-
-<div className="yd-avatar">
-
-![— Mr. Frank Reid](/img/site/testimonial-YV9ABZR.png)
-
+<Testimonials />
 </div>
 
-**— Mr. Frank Reid**
+<div className="yd-split yd-faq">
+<div>
 
-<span className="yd-role">Manager</span>
-
-</div>
-<div className="yd-quote yd-quote--avatar">
-
-I was very well accommodated. I didn’t feel any pain throughout any of my visits. I trust Dr. Patel and her staff. I feel like I have been treated like a number one patient.
-
-<div className="yd-avatar">
-
-![—Mr. Jeffery Mathurin](/img/site/testimonial-83S5W35.jpg)
-
-</div>
-
-**—Mr. Jeffery Mathurin**
-
-<span className="yd-role">HR Manager</span>
-
-</div>
-<div className="yd-quote yd-quote--avatar">
-
-I submit this letter to express my great satisfaction with your combine efforts and commitment towards making me a happy patient. It truly does not go unrecognized. I am genuinely happy with my results, measured in the look of my teeth, but also measured in the fact that I can have great relationship with my dentists.
-
-<div className="yd-avatar">
-
-![— Ms. Camille Wilkinson](/img/site/testimonial-M6NJPEF.png)
-
-</div>
-
-**— Ms. Camille Wilkinson**
-
-<span className="yd-role">HR Manager</span>
-
-</div>
-<div className="yd-quote yd-quote--avatar">
-
-Firstly, I must thank each and every one of you for making me feel safe and secure. I was always so nervous and scared of needles but after have Dr. Patel speak to me and explain, I felt so relaxed to do the work in the office. I have three implants done and very happy with the work. I will recommend many people as I can.
-
-**— Mrs. Dhanrajie Sonnylal**
-
-</div>
-<div className="yd-quote yd-quote--avatar">
-
-When I first came in to get my teeth whitened, I was very optimistic about getting it done because I needed to enhance my already big smile with pearly whites. I thought it was going to be a quick job, so wrong I was, but I was willing to stay as long as needed to for my new smile. Dr. Patel did a great job with whitening my teeth that now I find myself blinding my eyes every time I smile in the mirror. I would highly recommend Dr. Patel to any one looking for a bigger and better smile.
-
-**— Emmanuel Freeman**
-
-</div>
-<div className="yd-quote yd-quote--avatar">
-
-I am satisfied so far with my implants. My doctors have done a good job no disappointment and I thank the staff also for helping. Thank You all so much
-
-**— Charel Matthews**
-
-</div>
-<div className="yd-quote yd-quote--avatar">
-
-Thank You Dr. Patel and your staff for a wonderful job. I am pain free and confident when I smile. I have learned the importance of regular teeth brushing and regular dental visits. Thank You again
-
-**— Susana Martinez**
-
-</div>
-</div>
-
-##### FAQ
+<p className="yd-eyebrow">FAQ</p>
 
 ## General Question
 
 **Frequently Asked Questions – Yogi Dental Patient Guide**
 
-[What types of dental services do you offer?
+<details className="yd-faq__item">
+<summary>What types of dental services do you offer?</summary>
+<div className="yd-faq__body">We provide preventive, cosmetic, restorative, implant, and family dentistry services for all ages.</div>
+</details>
 
-](#expand-8fab880)
+<details className="yd-faq__item">
+<summary>Do you accept new patients and families?</summary>
+<div className="yd-faq__body">Yes! We welcome new patients and offer personalized care for children, adults, and seniors.</div>
+</details>
 
-We provide preventive, cosmetic, restorative, implant, and family dentistry services for all ages.
+<details className="yd-faq__item" open>
+<summary>What is the benefit of preventive dental care?</summary>
+<div className="yd-faq__body">Preventive care helps avoid cavities, gum disease, and costly treatments by maintaining oral health through regular checkups and cleanings.</div>
+</details>
 
-[Do you accept new patients and families?
+<details className="yd-faq__item">
+<summary>What are dental implants and who are they for?</summary>
+<div className="yd-faq__body">Dental implants are permanent tooth replacements that look and function like natural teeth, ideal for patients with missing teeth.</div>
+</details>
 
-](#expand-34c3ab0)
+</div>
+<div className="yd-media yd-faq__media">
 
-Yes! We welcome new patients and offer personalized care for children, adults, and seniors.
+![Dentist consulting a patient](/img/site/young-man-visiting-dentist-BEUGEF6.jpg)
 
-[What is the benefit of preventive dental care?
+</div>
+</div>
 
-](#expand-e457e03)
-
-Preventive care helps avoid cavities, gum disease, and costly treatments by maintaining oral health through regular checkups and cleanings.
-
-[What are dental implants and who are they for?
-
-](#expand-6bc327d)
-
-Dental implants are permanent tooth replacements that look and function like natural teeth, ideal for patients with missing teeth.
-
-![Services](/img/site/young-man-visiting-dentist-BEUGEF6.jpg)
-
-## Stay Connected with Yogi Dental
-
-Facebook-f Twitter Instagram Youtube
+<div className="yd-band yd-social">
+<h2>Stay Connected with Yogi Dental</h2>
+<div className="yd-social__icons">
+<a href="https://www.facebook.com/profile.php?id=61585606553659" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 22v-8h2.7l.4-3H13V9c0-.9.3-1.5 1.6-1.5H16V4.8c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.4-3.7 3.9V11H7.5v3H10v8h3z"/></svg></a>
+<a href="https://x.com/" aria-label="Twitter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 3H22l-7 8 8.2 10h-6.4l-5-6.1L6 21H3l7.4-8.5L2.5 3h6.6l4.5 5.6L18.9 3zm-1.1 16h1.7L7.3 4.8H5.5L17.8 19z"/></svg></a>
+<a href="https://www.instagram.com/yogi_dental_center_/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.4a4.6 4.6 0 100 9.2 4.6 4.6 0 000-9.2zm0 7.6a3 3 0 110-6 3 3 0 010 6zm4.8-7.8a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0zM20 7c-.1-1.4-.4-2.6-1.4-3.6S16.4 2.1 15 2c-1.4-.1-5.6-.1-7 0-1.4.1-2.6.4-3.6 1.4S2.1 5.6 2 7c-.1 1.4-.1 5.6 0 7 .1 1.4.4 2.6 1.4 3.6S5.6 21.9 7 22c1.4.1 5.6.1 7 0 1.4-.1 2.6-.4 3.6-1.4s1.3-2.2 1.4-3.6c.1-1.4.1-5.6 0-7zm-1.9 8.5a3 3 0 01-1.7 1.7c-1.2.5-4 .4-5.4.4s-4.2.1-5.4-.4a3 3 0 01-1.7-1.7c-.5-1.2-.4-4-.4-5.4s-.1-4.2.4-5.4a3 3 0 011.7-1.7c1.2-.5 4-.4 5.4-.4s4.2-.1 5.4.4a3 3 0 011.7 1.7c.5 1.2.4 4 .4 5.4s.1 4.2-.4 5.4z"/></svg></a>
+<a href="https://www.youtube.com/@YogiDentalCenter/" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 001 7.5C.5 9.4.5 12 .5 12s0 2.6.5 4.5a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1c.5-1.9.5-4.5.5-4.5s0-2.6-.5-4.5zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
+</div>
+</div>

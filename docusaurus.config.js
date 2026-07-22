@@ -95,10 +95,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/logo.jpeg',
+      // The source site is light-only; hide the theme toggle to match.
       colorMode: {
         defaultMode: 'light',
-        disableSwitch: false,
-        respectPrefersColorScheme: true,
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'Yogi Dental Center',
@@ -119,119 +120,97 @@ const config = {
               {to: '/dental-insurance', label: 'Dental Insurance'},
             ],
           },
-          {
-            type: 'dropdown',
-            label: 'Services',
-            position: 'left',
-            items: [
-              {to: '/services', label: 'All Services'},
-              {to: '/preventive-dentistry', label: 'Preventive Dentistry'},
-              {to: '/teeth-cleaning', label: '— Teeth Cleaning'},
-              {to: '/dental-exams', label: '— Exams'},
-              {to: '/xrays', label: '— Xrays'},
-              {to: '/fluoride-treatments', label: '— Fluoride Treatments'},
-              {
-                to: '/oral-cancer-screening',
-                label: '— Oral Cancer Screening',
-              },
-              {
-                to: '/general-family-dentistry',
-                label: 'General Family Dentistry',
-              },
-              {
-                to: '/periodontal-gum-disease-treatment',
-                label: '— Periodontal Gum Disease Treatment',
-              },
-              {to: '/invisalign-braces', label: '— Invisalign Braces'},
-              {
-                to: '/dentures-teeth-in-a-day',
-                label: '— Dentures / Teeth-in-a-day',
-              },
-              {to: '/root-canals-2', label: '— Root Canals'},
-              {to: '/dental-implants', label: '— Dental Implants'},
-              {to: '/cosmetic-dentistry-2', label: 'Cosmetic Dentistry'},
-              {
-                to: '/zoom-teeth-whitening',
-                label: '— ZOOM Teeth Whitening',
-              },
-              {to: '/porcelain-veneers', label: '— Porcelain Veneers'},
-              {to: '/porcelain-bridges', label: '— Porcelain Bridges'},
-              {to: '/porcelain-crowns', label: '— Porcelain Crowns'},
-              {to: '/tooth-fillings', label: '— Tooth Fillings'},
-              {to: '/snap-on-smile', label: '— Snap on Smile'},
-              {to: '/drill-free-cavities', label: '— Drill-Free Cavities'},
-            ],
-          },
+          // Nested Services flyout (custom navbar item — see
+          // src/components/ServicesMenu.js).
+          {type: 'custom-servicesMenu', position: 'left'},
           {to: '/smile-gallery', label: 'Smile Gallery', position: 'left'},
-          {
-            type: 'dropdown',
-            label: 'Resources',
-            position: 'left',
-            items: [
-              {to: '/resource', label: 'Resources'},
-              {to: '/patient-education', label: 'Patient Education'},
-              {to: '/blogs', label: 'Blogs'},
-              {to: '/reviews-page', label: 'Reviews'},
-              {to: '/testimonials', label: 'Testimonials'},
-              {to: '/survey-link', label: 'Survey Link'},
-            ],
-          },
-          {to: '/contact', label: 'Contact', position: 'right'},
+          // Nested Resources flyout (Patient Education flies out its pages —
+          // see src/components/ResourcesMenu.js).
+          {type: 'custom-resourcesMenu', position: 'left'},
           {
             to: '/appointment',
-            label: 'Make an Appointment',
+            label: 'Make Appointment',
             position: 'right',
             className: 'navbar-cta',
+          },
+          {
+            href: 'tel:9736731311',
+            label: '📞 973-673-1311',
+            position: 'right',
+            className: 'navbar-phone',
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
+        // Rebuilt to mirror the source footer: brand + locations column,
+        // two chevron link lists, and an appointment blurb with a phone pill.
         links: [
           {
-            title: 'Services',
             items: [
-              {label: 'Preventive Dentistry', to: '/preventive-dentistry'},
               {
-                label: 'General Family Dentistry',
-                to: '/general-family-dentistry',
+                html: '<img class="footer__brand-logo" src="/img/logo.jpeg" alt="Yogi Dental Center" />',
               },
-              {label: 'Cosmetic Dentistry', to: '/cosmetic-dentistry-2'},
-              {label: 'Dental Implants', to: '/dental-implants'},
-              {label: 'Invisalign Braces', to: '/invisalign-braces'},
+              {
+                html:
+                  '<div class="footer__loc">' +
+                  '<svg class="footer__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>' +
+                  '<span><strong>Yogi Dental Center</strong><br/>30 Scotland Road, Orange, NJ 07050</span></div>',
+              },
+              {
+                html:
+                  '<div class="footer__loc">' +
+                  '<svg class="footer__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>' +
+                  '<span><strong>Smile Center of Denville</strong><br/>9 Mount Pleasant TPKE, STE 203, Denville, NJ 07834</span></div>',
+              },
+              {
+                html:
+                  '<a class="footer__email" href="mailto:yogidental@gmail.com">' +
+                  '<svg class="footer__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>' +
+                  '<span>yogidental@gmail.com</span></a>',
+              },
+            ],
+          },
+          {
+            title: 'Quick Links',
+            items: [
+              {label: 'About Us', to: '/about-us'},
+              {label: 'Services', to: '/services'},
+              {label: 'Contact', to: '/contact'},
+              {label: 'Smile Gallery', to: '/smile-gallery'},
+              {label: 'Reviews', to: '/reviews-page'},
             ],
           },
           {
             title: 'Useful Links',
             items: [
-              {label: 'About Us', to: '/about-us'},
-              {label: 'Smile Gallery', to: '/smile-gallery'},
-              {label: 'Patient Education', to: '/patient-education'},
-              {label: 'Blogs', to: '/blogs'},
-              {label: 'Dental Insurance', to: '/dental-insurance'},
-            ],
-          },
-          {
-            title: 'Contact',
-            items: [
-              {
-                label: '30 Scotland Road, Orange, NJ 07050',
-                href: 'https://maps.google.com/?q=30+Scotland+Road+Orange+NJ+07050',
-              },
-              {label: '973-673-1311', href: 'tel:9736731311'},
-              {label: 'Make an Appointment', to: '/appointment'},
-              {label: 'Contact Us', to: '/contact'},
-            ],
-          },
-          {
-            title: 'Legal',
-            items: [
               {label: 'Privacy Policy', to: '/privacy-policy'},
               {label: 'Terms and Conditions', to: '/terms-and-conditions'},
+              {label: 'Disclaimer', to: '/terms-and-conditions'},
+              {label: 'Support', to: '/contact'},
+            ],
+          },
+          {
+            title: 'Make an Appointment',
+            items: [
+              {
+                html:
+                  '<p class="footer__appt">Booking your visit at Yogi Dental is quick and easy. ' +
+                  'Whether you&rsquo;re due for a checkup, need a consultation, or want to explore ' +
+                  'cosmetic treatments, our friendly team is ready to help. Simply call us or book ' +
+                  'online to choose a convenient time that fits your schedule. Your journey to a ' +
+                  'healthier, brighter smile starts here!</p>',
+              },
+              {
+                html:
+                  '<a class="footer__phone" href="tel:9736731311">' +
+                  '<span class="footer__phone-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>' +
+                  '<span>973-673-1311</span></a>',
+              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Yogi Dental Center. All rights reserved.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Yogi Dental. All rights reserved. Rajal Patel DDS — Orange New Jersey Dentist`,
       },
       prism: {
         theme: prismThemes.github,

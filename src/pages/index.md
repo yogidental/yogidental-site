@@ -6,23 +6,32 @@ slug: /
 hide_table_of_contents: true
 ---
 
+<div className="yd-hero">
+<div className="yd-hero-inner">
+
+<span className="yd-hero-eyebrow">Gentle Family &amp; Cosmetic Dentistry in Orange, NJ</span>
+
 # Yogi Dental – Your Smile, Our Passion
 
 At Yogi Dental, we blend state-of-the-art technology with compassionate, personalized care to deliver healthy, confident smiles. Located in NJ, we offer comprehensive general, cosmetic, and restorative dental services tailored for the whole family.
 
-### Book Your Treatment Now
+<a className="yd-btn" href="#book">Book Your Treatment Now</a>
 
+</div>
+</div>
+
+<div className="yd-form-section" id="book">
 <div className="yd-form">
   <div className="yd-field">
     <label htmlFor="bk-name">Name</label>
     <input id="bk-name" type="text" placeholder="Enter your name" />
   </div>
   <div className="yd-field">
-    <label htmlFor="bk-email">Email</label>
+    <label htmlFor="bk-email">Email *</label>
     <input id="bk-email" type="email" placeholder="Enter your email" />
   </div>
   <div className="yd-field">
-    <label htmlFor="bk-phone">Contact Number</label>
+    <label htmlFor="bk-phone">Contact Number *</label>
     <input id="bk-phone" type="tel" placeholder="Enter your contact number" />
   </div>
   <div className="yd-field">
@@ -37,7 +46,7 @@ At Yogi Dental, we blend state-of-the-art technology with compassionate, persona
     </select>
   </div>
   <div className="yd-field">
-    <label htmlFor="bk-type">Patient Type</label>
+    <label htmlFor="bk-type">Patient Type *</label>
     <select id="bk-type" defaultValue="">
       <option value="">Select</option>
       <option>New Patient</option>
@@ -48,6 +57,7 @@ At Yogi Dental, we blend state-of-the-art technology with compassionate, persona
 
 <div className="yd-cta">
   <a className="yd-btn" href="https://calendly.com/yogidental/new-patient">Make Appointment</a>
+</div>
 </div>
 
 <div className="yd-split yd-offer">
@@ -81,7 +91,7 @@ Panoramic x-ray, Dental exam, Cleaning, Gum evaluation, only $99
 <div className="yd-grid yd-grid--4">
 <div className="yd-card">
 
-![Yogi Dental Center – Gentle Family & Cosmetic Dentistry NJ](/img/site/pros-and-cons-of-invisalign-1-1.jpg)
+![Invisalign](/img/site/pros-and-cons-of-invisalign-1-1.jpg)
 
 ### Invisalign
 
@@ -92,7 +102,7 @@ We offer Invisalign services to straighten teeth using clear, custom aligners—
 </div>
 <div className="yd-card">
 
-![Yogi Dental Center – Gentle Family & Cosmetic Dentistry NJ](/img/site/teeth-whitening-difference-442568_1200x-1024x683.webp)
+![Zoom Whitening](/img/site/teeth-whitening-difference-442568_1200x-1024x683.webp)
 
 ### Zoom Whitening
 
@@ -103,7 +113,7 @@ Brighten your smile fast with Zoom Whitening! Safe, comfy, and delivers instant 
 </div>
 <div className="yd-card">
 
-![Yogi Dental Center – Gentle Family & Cosmetic Dentistry NJ](/img/site/Cavity-Treatment-Without-Drilling.jpg)
+![Drill-Free Cavities](/img/site/Cavity-Treatment-Without-Drilling.jpg)
 
 ### DRILL-FREE CAVITIES
 
@@ -114,7 +124,7 @@ Say goodbye to drills! Fotona Laser fills cavities with no shots or noise—gent
 </div>
 <div className="yd-card">
 
-![Yogi Dental Center – Gentle Family & Cosmetic Dentistry NJ](/img/site/Same-Day-Dental-Crowns1.jpg)
+![Same-Day Root Canal and Crown](/img/site/Same-Day-Dental-Crowns1.jpg)
 
 ### Same-Day Root Canal and Crown
 
@@ -133,7 +143,7 @@ Need a root canal and crown? Get both in one visit! Fotona Laser removes infecti
 <div className="yd-split">
 <div className="yd-media">
 
-![Yogi Dental Center – Gentle Family & Cosmetic Dentistry NJ](/img/site/Laser-Dentistry-in-New-York.jpg)
+![Gentle, Drill-Free, Injection-Free Cavity Treatment](/img/site/Laser-Dentistry-in-New-York.jpg)
 
 </div>
 <div>
@@ -142,52 +152,64 @@ Need a root canal and crown? Get both in one visit! Fotona Laser removes infecti
 
 Treat cavities comfortably with our drill-free, injection-free laser technology. This gentle method removes decay with precision, no noise or numbness—just a stress-free, pain-free experience for healthier teeth and happier visits.
 
-[Transform Your Smile](/services)
+<a className="yd-btn" href="/services">Transform Your Smile</a>
 
 </div>
 </div>
 
 <div className="yd-grid yd-grid--3">
-<div>
+<div className="yd-features">
+
+<svg className="yd-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"></path><path d="M9 12l2 2 4-4"></path></svg>
 
 ### Comprehensive Care Under One Roof
 
 From routine cleanings to advanced treatments like implants and Invisalign, Yogi Dental offers a full range of services tailored for all ages—saving you time and ensuring continuity of care.
 
 </div>
-<div>
+<div className="yd-features">
+
+<svg className="yd-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3.2"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"></path></svg>
 
 ### Advanced Technology for Better Results
 
 With tools like ZOOM teeth whitening and digital imaging, patients receive faster, more accurate, and more comfortable treatments.
 
 </div>
-<div>
+<div className="yd-features">
 
-### Personalized & Preventive Approach
+<svg className="yd-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20s-6.5-4.2-8.5-8.4A4 4 0 0 1 12 6a4 4 0 0 1 8.5 5.6C18.5 15.8 12 20 12 20z"></path></svg>
+
+### Personalized &amp; Preventive Approach
 
 The team prioritizes early detection (like oral cancer screenings) and customized care plans to maintain long-term oral health and minimize future dental issues.
 
 </div>
 </div>
 
+<div className="yd-band">
 <div className="yd-grid yd-grid--4">
   <div className="yd-stat">
+    <svg className="yd-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="8" r="3"></circle><path d="M15.5 5.5a3 3 0 0 1 0 5"></path><path d="M3.5 20a5.5 5.5 0 0 1 11 0"></path><path d="M16 14.5a5.5 5.5 0 0 1 4.5 5.5"></path></svg>
     <span className="yd-stat-value">17000+</span>
     <span className="yd-stat-label">Happy Smile</span>
   </div>
   <div className="yd-stat">
+    <svg className="yd-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg>
     <span className="yd-stat-value">35/per day</span>
     <span className="yd-stat-label">Online Appointments</span>
   </div>
   <div className="yd-stat">
+    <svg className="yd-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="9" r="6"></circle><path d="M9 14l-1.5 7 4.5-2.6 4.5 2.6L17 14"></path></svg>
     <span className="yd-stat-value">30+</span>
     <span className="yd-stat-label">Years Of Experience</span>
   </div>
   <div className="yd-stat">
+    <svg className="yd-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"></path><path d="M10 13v2.5a5 5 0 0 0 10 0V14"></path><circle cx="20" cy="12" r="2"></circle></svg>
     <span className="yd-stat-value">15</span>
     <span className="yd-stat-label">Doctors and Staff</span>
   </div>
+</div>
 </div>
 
 <div className="yd-section-head">
@@ -196,7 +218,7 @@ The team prioritizes early detection (like oral cancer screenings) and customize
 
 </div>
 
-<div className="yd-split">
+<div className="yd-split yd-team">
 <div className="yd-media">
 
 ![Dr Rajal Patel](/img/site/WhatsApp-Image-2026-03-13-at-14.59.29-4-1024x862.jpeg)
@@ -209,7 +231,7 @@ The team prioritizes early detection (like oral cancer screenings) and customize
 </div>
 </div>
 
-<div className="yd-split">
+<div className="yd-split yd-team">
 <div className="yd-media">
 
 ![Dr Niraj Patel](/img/site/WhatsApp-Image-2026-03-13-at-14.59.29-3-1-1024x856.jpeg)
@@ -222,10 +244,10 @@ The team prioritizes early detection (like oral cancer screenings) and customize
 </div>
 </div>
 
-<div className="yd-split">
+<div className="yd-split yd-team">
 <div className="yd-media">
 
-![Yogi Dental Center](/img/site/copy_966E6C97-AAC1-4C59-BD53-C2BDD694F5E2-2-1024x637.jpg)
+![Yogi Dental Center Team](/img/site/copy_966E6C97-AAC1-4C59-BD53-C2BDD694F5E2-2-1024x637.jpg)
 
 </div>
 <div>
@@ -233,12 +255,6 @@ The team prioritizes early detection (like oral cancer screenings) and customize
 Meet the team behind Yogi Dental Center. From your first call to the moment you leave, we are here to make your visit feel easy, calm, and taken care of. Our front desk and clinical staff work together to keep you comfortable, answer your questions, and guide you through every step without rushing you. If you have been nervous about the dentist or had a bad experience before, you will feel the difference with our team.
 
 </div>
-</div>
-
-<div className="yd-media">
-
-![Yogi Dental Center – Gentle Family & Cosmetic Dentistry NJ](/img/site/Regular-Dental-Check-ups-2048x1365.jpg)
-
 </div>
 
 <div className="yd-split">
@@ -250,38 +266,52 @@ Meet the team behind Yogi Dental Center. From your first call to the moment you 
 
 At Yogi Dental, trust is the foundation of everything we do. With a team of skilled professionals, advanced dental technology, and a commitment to personalized care, we ensure every patient feels heard, respected, and confident in their treatment. From routine checkups to complete smile makeovers, our goal is to provide reliable, comfortable, and high-quality dental care you can count on—every visit.
 
+<div className="yd-about-feat is-primary">
+<svg className="yd-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3c3 0 5 1.5 5 4 0 4-2 6-2 10 0 2-6 2-6 0 0-4-2-6-2-10 0-2.5 2-4 5-4z"></path></svg>
+<div>
+
 ### Complete Dental Care
 
 Complete dental care for all ages—cleanings, implants, whitening, and more—all under one roof with expert care you can trust at Yogi Dental.
+
+</div>
+</div>
+
+<div className="yd-about-feat">
+<svg className="yd-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 13a4 4 0 0 1 4-4h5l4-2 5 2v3l-5 2H9"></path><circle cx="9" cy="6" r="2.5"></circle></svg>
+<div>
 
 ### Affordable Pricing
 
 Get quality dental care without breaking the bank. At Yogi Dental, we offer transparent, budget-friendly pricing and flexible payment options for every smile.
 
-<div className="yd-icon">
-
-![Yogi Dental Center – Gentle Family & Cosmetic Dentistry NJ](/img/site/Asset-11-2x.png)
-
+</div>
 </div>
 
-[Learn About Us](/contact)
+<a className="yd-btn" href="/contact">Learn About Us</a>
 
 </div>
 <div className="yd-grid yd-grid--2 yd-portraits">
 <div className="yd-media">
 
-[![Yogi Dental Center – Gentle Family & Cosmetic Dentistry NJ](/img/site/new-teeth-for-patient.jpg)](/img/site/new-teeth-for-patient.jpg)
+![Yogi Dental Center](/img/site/new-teeth-for-patient.jpg)
 
 </div>
 <div className="yd-media">
 
-![Yogi Dental Center – Gentle Family & Cosmetic Dentistry NJ](/img/site/professional-female-dentist-at-work-9SDJLQ4-e1616852692593.jpg)
+![Yogi Dental Center](/img/site/professional-female-dentist-at-work-9SDJLQ4-e1616852692593.jpg)
 
 </div>
 </div>
 </div>
 
-<div className="yd-section-head">
+<div className="yd-split">
+<div className="yd-media">
+
+![High End Equipments](/img/site/beautiful-woman-happy-dentist-768x513.jpg)
+
+</div>
+<div>
 
 ##### Best Of The Best
 
@@ -289,10 +319,6 @@ Get quality dental care without breaking the bank. At Yogi Dental, we offer tran
 
 Yogi Dental is equipped with the latest dental technology to ensure precise, efficient, and comfortable treatments for every patient—because your smile deserves the best.
 
-</div>
-
-<div className="yd-grid yd-grid--2">
-<div>
   <div className="yd-bar">
     <div className="yd-bar-head"><span>CEREC Same-Day Crowns</span><span>86%</span></div>
     <div className="yd-bar-track"><div className="yd-bar-fill" style={{width: '86%'}}></div></div>
@@ -313,8 +339,6 @@ Yogi Dental is equipped with the latest dental technology to ensure precise, eff
     <div className="yd-bar-head"><span>No-Drill, No-Numbing Cavity Fillings</span><span>90%</span></div>
     <div className="yd-bar-track"><div className="yd-bar-fill" style={{width: '90%'}}></div></div>
   </div>
-</div>
-<div>
   <div className="yd-bar">
     <div className="yd-bar-head"><span>Laser-Assisted Painless Root Canal</span><span>90%</span></div>
     <div className="yd-bar-track"><div className="yd-bar-fill" style={{width: '90%'}}></div></div>
@@ -327,10 +351,7 @@ Yogi Dental is equipped with the latest dental technology to ensure precise, eff
     <div className="yd-bar-head"><span>Zoom Whitening</span><span>90%</span></div>
     <div className="yd-bar-track"><div className="yd-bar-fill" style={{width: '90%'}}></div></div>
   </div>
-  <div className="yd-bar">
-    <div className="yd-bar-head"><span>Implants &amp; Crowns</span><span>90%</span></div>
-    <div className="yd-bar-track"><div className="yd-bar-fill" style={{width: '90%'}}></div></div>
-  </div>
+
 </div>
 </div>
 
@@ -338,75 +359,43 @@ Yogi Dental is equipped with the latest dental technology to ensure precise, eff
   <a className="yd-btn" href="/services">Learn More</a>
 </div>
 
-<div className="yd-section-head">
+<div className="yd-testimonial">
+<div className="yd-testimonial-photo">
+
+![Happy Yogi Dental patient](/img/site/young-man-visiting-dentist-BEUGEF6.jpg)
+
+</div>
+<div className="yd-testimonial-quote">
 
 ### Testimonial
 
-</div>
-
-<div className="yd-grid yd-grid--3">
-<div className="yd-quote">
-
-What I like most is the warmth and professionalism of the staff. The doctors are open, down to earth and truly phenomenal. I have been a client for years and I have no immediate plans to switch
-
-**— Ms. Delrose Robinson**
-
-</div>
-<div className="yd-quote">
-
-The teeth fit perfectly in my mouth. I am very satisfied with the results. I have nothing but promise for the doctors. They do perfect follow up work
-
-**— Mr. Frank Reid**
-
-</div>
-<div className="yd-quote">
-
-I was very well accommodated. I didn’t feel any pain throughout any of my visits. I trust Dr. Patel and her staff. I feel like I have been treated like a number one patient
+I was very well accommodated. I didn’t feel any pain throughout any of my visits. I trust Dr. Patel and her staff. I feel like I have been treated like a number one patient.
 
 **—Mr. Jeffery Mathurin**
 
 </div>
-<div className="yd-quote">
-
-Firstly, I must thank each and every one of you for making me feel safe and secure. I was always so nervous and scared of needles but after have Dr. Patel speak to me and explain, I felt so relaxed to do the work in the office. I have three implants done and very happy with the work. I will recommend many people as I can
-
-**— Mrs. Dhanrajie Sonnylal**
-
 </div>
-<div className="yd-quote">
 
-I am satisfied so far with my implants. My doctors have done a good job no disappointment and I thank the staff also for helping. Thank You all so much.
-
-**— Charel Matthews**
-
-</div>
-<div className="yd-quote">
-
-Thank You Dr. Patel and your staff for a wonderful job. I am pain free and confident when I smile. I have learned the importance of regular teeth brushing and regular dental visits. Thank You again.
-
-**— Susana Martinez**
-
-</div>
-<div className="yd-quote">
-
-What I like about coming to Dr. Patel’s dental office is everyone is very friendly and nice. They have patience with their patients. Clean environment up to date with keeping up with appointments
-
-**— C. Eze**
-
-</div>
-<div className="yd-quote">
-
-During my visits for my root canal I was very pleased with the outcome of the process. Nothing went wrong and I was very pleased.
-
-**— G. Bernard**
-
+<div className="yd-videos">
+<div className="yd-videos-row">
+  <div className="yd-video yd-video--empty"></div>
+  <div className="yd-video yd-video--empty"></div>
+  <div className="yd-video yd-video--empty"></div>
+  <div className="yd-video">
+    <video src="/videos/testimonial-2.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
+  <div className="yd-video">
+    <video src="/videos/testimonial-1.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
+  <div className="yd-video yd-video--empty"></div>
+  <div className="yd-video yd-video--empty"></div>
 </div>
 </div>
 
 <div className="yd-grid yd-grid--3 yd-promos">
-  <a className="yd-btn" href="/xrays">Free Consultation — $350 worth of x-ray free</a>
+  <a className="yd-btn" href="/xrays">Free Consultation<br/>$350 worth of x-ray free</a>
   <a className="yd-btn" href="/dental-insurance">Dental Insurance</a>
-  <a className="yd-btn" href="/financing">Financing</a>
+  <a className="yd-btn" href="/dental-financing">Financing</a>
 </div>
 
 <div className="yd-section-head">
@@ -419,23 +408,32 @@ During my visits for my root canal I was very pleased with the outcome of the pr
 
 </div>
 
-<div className="yd-grid yd-grid--4">
-<div className="yd-card">
+<div className="yd-grid yd-grid--2 yd-blog">
+<div className="yd-post">
+<div className="yd-post-img">
 
-[![Yogi Dental Center – Gentle Family & Cosmetic Dentistry NJ](/img/site/ChatGPT-Image-Jun-18-2026-10_08_34-PM.jpg)](/why-does-tooth-pain-come-and-go)
+[![Why Does Tooth Pain Come and Go?](/img/site/ChatGPT-Image-Jun-18-2026-10_08_34-PM.jpg)](/why-does-tooth-pain-come-and-go)
+
+</div>
+<div className="yd-post-body">
 
 ### [Why Does Tooth Pain Come and Go?](/why-does-tooth-pain-come-and-go)
 
 June 20, 2026
 
-Understanding Intermittent Tooth Pain Tooth pain that comes and goes can be frustrating and confusing.
+Understanding Intermittent Tooth Pain — tooth pain that comes and goes can be frustrating and confusing.
 
-[Read More](/why-does-tooth-pain-come-and-go "Why Does Tooth Pain Come and Go?")
+[Read More →](/why-does-tooth-pain-come-and-go "Why Does Tooth Pain Come and Go?")
 
 </div>
-<div className="yd-card">
+</div>
+<div className="yd-post">
+<div className="yd-post-img">
 
-[![Yogi Dental Center – Gentle Family & Cosmetic Dentistry NJ](/img/site/file_00000000690071fd80db5fc54f52f21c.jpg)](/can-invisalign-fix-crowded-teeth-and-bite-problems)
+[![Can Invisalign Fix Crowded Teeth and Bite Problems?](/img/site/file_00000000690071fd80db5fc54f52f21c.jpg)](/can-invisalign-fix-crowded-teeth-and-bite-problems)
+
+</div>
+<div className="yd-post-body">
 
 ### [Can Invisalign Fix Crowded Teeth and Bite Problems?](/can-invisalign-fix-crowded-teeth-and-bite-problems)
 
@@ -443,12 +441,17 @@ June 18, 2026
 
 Many people feel self-conscious about crowded teeth or an uneven bite. Besides affecting your smile,
 
-[Read More](/can-invisalign-fix-crowded-teeth-and-bite-problems "Can Invisalign Fix Crowded Teeth and Bite Problems?")
+[Read More →](/can-invisalign-fix-crowded-teeth-and-bite-problems "Can Invisalign Fix Crowded Teeth and Bite Problems?")
 
 </div>
-<div className="yd-card">
+</div>
+<div className="yd-post">
+<div className="yd-post-img">
 
-[![Porcelain Veneer](/img/site/dentist-whiting-teeth.jpg)](/dream-smile-with-porcelain-veneers)
+[![Dream Smile with Porcelain Veneers](/img/site/dentist-whiting-teeth.jpg)](/dream-smile-with-porcelain-veneers)
+
+</div>
+<div className="yd-post-body">
 
 ### [Dream Smile with Porcelain Veneers](/dream-smile-with-porcelain-veneers)
 
@@ -456,34 +459,44 @@ February 25, 2026
 
 Have you ever looked in the mirror and wished your smile was just a little
 
-[Read More](/dream-smile-with-porcelain-veneers "Dream Smile with Porcelain Veneers")
+[Read More →](/dream-smile-with-porcelain-veneers "Dream Smile with Porcelain Veneers")
 
 </div>
+</div>
+<div className="yd-post">
+<div className="yd-post-img">
 
-<div className="yd-card">
+[![Drill-free Cavity Treatment](/img/site/Screenshot-2025-12-18-183552.png)](/drill-free-cavity-treatment)
 
-[![drill free cavity](/img/site/Screenshot-2025-12-18-183552.png)](/drill-free-cavity-treatment)
+</div>
+<div className="yd-post-body">
 
 ### [Drill-free Cavity Treatment](/drill-free-cavity-treatment)
 
 January 29, 2026
 
-Welcome to the future of painless, drill-free cavity treatment. What is Drill-Free Cavity Treatment? Drill-free
+Welcome to the future of painless, drill-free cavity treatment. What is Drill-Free Cavity Treatment?
 
-[Read More](/drill-free-cavity-treatment "Drill-free Cavity Treatment")
+[Read More →](/drill-free-cavity-treatment "Drill-free Cavity Treatment")
 
 </div>
 </div>
+</div>
 
-<div className="yd-section-head">
+<div className="yd-connect">
 
 ## Stay Connected with Yogi Dental.
 
-Facebook-f Twitter Instagram Youtube
+<div className="yd-social">
+  <a href="https://www.facebook.com/profile.php?id=61585606553659" title="Facebook" target="_blank" rel="noopener">f</a>
+  <a href="https://twitter.com/" title="Twitter" target="_blank" rel="noopener">𝕏</a>
+  <a href="https://www.instagram.com/yogi_dental_center_/" title="Instagram" target="_blank" rel="noopener">◎</a>
+  <a href="https://www.youtube.com/@YogiDentalCenter/" title="YouTube" target="_blank" rel="noopener">▶</a>
+</div>
 
 </div>
 
-<div className="yd-grid yd-grid--2">
+<div className="yd-maps">
 <iframe className="embed-frame" src="https://maps.google.com/maps?q=Yogi%20Dental%20Center%2030%20Scotland%20Road%20Orange%2C%20NJ%2007050&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
 <iframe className="embed-frame" src="https://maps.google.com/maps?q=Smile%20Care%20of%20Denville%209%20Mount%20Pleasant%20%E2%80%93%20Turnpike%2C%20Suite%20203%20Denville%2C%20NJ%2007834&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
 </div>
