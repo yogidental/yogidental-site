@@ -2287,3 +2287,107 @@
   margin-bottom: 0;
   color: var(--yd-body);
 }
+
+/* ==========================================================================
+   29. Appointment page — booking form card.
+   ========================================================================== */
+.yd-book {
+  margin: 2.5rem 0;
+}
+
+.yd-book-card {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: #fff;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 20px;
+  box-shadow: var(--yd-shadow);
+}
+
+.yd-book-card > .yd-eyebrow {
+  margin-bottom: 0.25rem;
+}
+
+.yd-book-card h2 {
+  margin-top: 0;
+  margin-bottom: 1.75rem;
+}
+
+.yd-book-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 1.5rem;
+}
+
+.yd-book-full {
+  grid-column: 1 / -1;
+}
+
+/* Textarea matches the input styling. */
+.yd-book-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  resize: vertical;
+}
+
+.yd-book-form textarea:focus,
+.yd-book-form input:focus,
+.yd-book-form select:focus {
+  outline: none;
+  border-color: var(--yd-brand);
+  box-shadow: 0 0 0 3px rgba(1, 211, 190, 0.15);
+}
+
+/* Patient-category pills. */
+.yd-radio-group {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.yd-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.yd-radio:has(input:checked) {
+  border-color: var(--yd-brand);
+  background: var(--yd-band);
+  color: var(--yd-teal-text);
+}
+
+.yd-radio input {
+  accent-color: var(--yd-brand);
+}
+
+.yd-book-submit {
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+.yd-book-submit .yd-btn {
+  padding: 0.8rem 3rem;
+}
+
+@media (max-width: 640px) {
+  .yd-book-form {
+    grid-template-columns: 1fr;
+  }
+  .yd-book-card {
+    padding: 1.5rem;
+  }
+}
