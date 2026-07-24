@@ -15,11 +15,11 @@ Tooth wear happens when enamel the hard outer surface of your teeth erodes due t
 **Key benefits** of managing tooth wear:
 
 <ul className="yd-edu-list">
-  <li><strong>Prevents Tooth Sensitivity</strong><br/>Protects the inner layers of your teeth from exposure, reducing pain from hot, cold, or sweet foods.</li>
-  <li><strong>Preserves Natural Tooth Structure</strong><br/>Early treatment stops further enamel loss and helps you avoid more invasive procedures later.</li>
-  <li><strong>Enhances Smile Aesthetics</strong><br/>Restorative treatments improve the appearance of worn or chipped teeth, giving you a more confident smile.</li>
-  <li><strong>Maintains Proper Bite Function</strong><br/>Prevents bite misalignment and jaw discomfort caused by uneven wear.</li>
-  <li><strong>Reduces the Need for Complex Dental Work</strong><br/>Timely care helps avoid future costs and complications from advanced tooth damage.</li>
+  <li><strong>Prevents Tooth Sensitivity</strong>Protects the inner layers of your teeth from exposure, reducing pain from hot, cold, or sweet foods.</li>
+  <li><strong>Preserves Natural Tooth Structure</strong>Early treatment stops further enamel loss and helps you avoid more invasive procedures later.</li>
+  <li><strong>Enhances Smile Aesthetics</strong>Restorative treatments improve the appearance of worn or chipped teeth, giving you a more confident smile.</li>
+  <li><strong>Maintains Proper Bite Function</strong>Prevents bite misalignment and jaw discomfort caused by uneven wear.</li>
+  <li><strong>Reduces the Need for Complex Dental Work</strong>Timely care helps avoid future costs and complications from advanced tooth damage.</li>
 </ul>
 
 <div className="yd-edu-figure">
