@@ -2,6 +2,7 @@
 title: "Drill-free Cavity Treatment"
 description: "Avoid dental anxiety at Yogi Dental Center. Our Fotona Laser offers painless, drill-free cavity treatment without the noise or needles. Book your visit!"
 format: md
+image: /img/site/Screenshot-2025-12-18-183552.png
 date: 2026-01-29T14:21:37
 slug: /drill-free-cavity-treatment
 authors: [yogidental]

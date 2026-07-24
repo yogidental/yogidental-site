@@ -1,25 +1,32 @@
 ---
-title: "Causes of Tooth Pain"
-description: "Causes of Tooth Pain Toothaches can stem from cavities, gum infections, trauma, grinding, or sinus pressure. At Yogi Dental, we accurately diagnose the cause using through exams and advanced imaging. Our personalised treatments like fillings, root canals, or night guards provide fast, lasting relief and protect your smile. Benefits of choosing Yogi Dental: Precise diagnosis"
+title: "Consequences of Bone Loss"
+description: "Jaw bone loss can lead to loose teeth, facial sagging, and denture difficulties. At Yogi Dental we monitor bone health and provide effective, lasting treatments."
 format: md
 slug: /consequences-of-bone-loss
 hide_table_of_contents: true
 ---
 
-## Causes of Tooth Pain
+<div className="yd-edu">
 
-Toothaches can stem from cavities, gum infections, trauma, grinding, or sinus pressure. At **Yogi Dental**, we accurately diagnose the cause using through exams and advanced imaging. Our personalised treatments like fillings, root canals, or night guards provide fast, lasting relief and protect your smile.
+# Consequences of Bone Loss
 
-#### **Benefits of choosing Yogi Dental:**
+Jaw bone loss, caused by untreated gum disease or missing teeth, can lead to loose teeth, facial sagging, and denture difficulties. At **Yogi Dental**, we use advanced digital X-rays and 3D imaging to monitor bone health and provide effective treatments like deep cleaning, bone grafting, and implants.
 
--   Precise diagnosis for effective treatment
+**Benefits of choosing Yogi Dental:**
 
--   Quick pain relief tailored to your needs
+<ul className="yd-edu-list yd-edu-list--plain">
+  <li>Early detection to prevent severe damage</li>
+  <li>Personalized treatment plans</li>
+  <li>Preservation of jaw structure and facial appearance</li>
+  <li>Improved comfort and function with dentures or implants</li>
+</ul>
 
--   Prevention of further dental issues
+Protect your smile and jaw health schedule your visit today!
 
--   Compassionate, expert care in a comfortable setting
+<div className="yd-edu-figure">
 
-Don’t wait schedule your appointment today for lasting comfort and healthier teeth!
+![Dentist reviewing a dental X-ray with a patient](/img/site/young-female-dentist-showing-patient-dental-xray-dentistry-concept-768x512.webp)
 
-![Causes of Tooth Pain](/img/site/close-up-woman-has-toothache-touches-her-teeth-frowns-from-painful-discomfort-stands-768x512.jpg)
+</div>
+
+</div>

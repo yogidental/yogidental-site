@@ -2,6 +2,7 @@
 title: "How We Make Every Dental Visit Painless and Comfortable"
 description: "Learn how our dental clinic makes every visit painless and comfortable through advanced treatments, gentle care, and a calming patient-first approach for all."
 format: md
+image: /img/site/female-patient-receiving-dental-treatment-from-male-dentist-clinic.jpg
 date: 2025-12-15T07:08:59
 slug: /how-we-make-every-dental-visit-painless-and-comfortable
 authors: [yogidental]

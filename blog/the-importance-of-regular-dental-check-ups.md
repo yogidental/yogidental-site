@@ -2,6 +2,7 @@
 title: "Top Reasons to Never Skip Your Regular Dental Check-ups"
 description: "Discover why regular dental check-ups are vital for your oral health. Prevent issues early and keep your smile healthy with expert care."
 format: md
+image: /img/site/Importance-of-dental-check-ups.jpg
 date: 2025-06-02T07:12:35
 slug: /the-importance-of-regular-dental-check-ups
 authors: [yogidental]

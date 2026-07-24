@@ -2391,3 +2391,334 @@
     padding: 1.5rem;
   }
 }
+
+/* ==========================================================================
+   30. Patient Education articles — large heading, benefits list, centered
+       figure. Simple content page (no banner / appointment sections).
+   ========================================================================== */
+.yd-edu {
+  margin: 2.5rem 0;
+}
+
+.yd-edu > h1:first-child {
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.yd-edu > p {
+  color: var(--yd-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  max-width: 1180px;
+}
+
+.yd-edu-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.5rem;
+  max-width: 1180px;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.yd-edu-list li {
+  margin-bottom: 0.65rem;
+  color: var(--yd-body);
+}
+
+.yd-edu-list li strong {
+  display: block;
+  margin-bottom: 0.1rem;
+  color: var(--yd-ink);
+}
+
+/* Plain bullet list (no block labels) sits tighter; any bold labels
+   stay inline with their following text. */
+.yd-edu-list--plain li {
+  margin-bottom: 0.3rem;
+}
+
+.yd-edu-list--plain li strong {
+  display: inline;
+  margin-bottom: 0;
+}
+
+.yd-edu-figure {
+  text-align: center;
+  margin: 2.5rem 0 0;
+}
+
+.yd-edu-figure img {
+  display: inline-block;
+  width: 100%;
+  max-width: 720px;
+  border-radius: 12px;
+}
+
+/* ==========================================================================
+   31. Blog list — 3-column "Resource" card grid (swizzled BlogPostItems).
+   ========================================================================== */
+.yd-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin: 1rem 0 2rem;
+}
+
+.yd-blog-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(30, 41, 59, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: inherit;
+}
+
+.yd-blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 42px rgba(30, 41, 59, 0.15);
+  color: inherit;
+  text-decoration: none;
+}
+
+.yd-blog-card__img {
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+}
+
+.yd-blog-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.yd-blog-card__body {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.75rem 2rem;
+}
+
+.yd-blog-card__label {
+  color: var(--yd-teal-text);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.yd-blog-card__title {
+  color: var(--yd-teal-text);
+  font-size: 1.55rem;
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.yd-blog-card__excerpt {
+  color: var(--yd-body);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Soft blue-gray page background behind the cards. */
+.blog-list-page {
+  background: #eef2f6;
+  padding-bottom: 2rem;
+}
+
+/* Full-width grid on a soft blue-gray page, no blog sidebar or title. */
+.blog-list-page .container .row {
+  --ifm-spacing-horizontal: 0;
+}
+
+.blog-list-page aside[class*='blogSidebar'],
+.blog-list-page .col--3 {
+  display: none;
+}
+
+.blog-list-page .col--7,
+.blog-list-page main[class*='col'] {
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+.blog-list-page header h1 {
+  display: none;
+}
+
+@media (max-width: 996px) {
+  .yd-blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .yd-blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   32. Reviews page — reviews auto-scroll UP in a left column; large
+       stacked video testimonials below.
+   ========================================================================== */
+.yd-reviews-page > h1:first-child {
+  margin-bottom: 1.5rem;
+}
+
+/* Vertical marquee: a fixed window the review column scrolls up through. */
+.yd-reviews {
+  overflow: hidden;
+  max-width: 620px;
+  height: 620px;
+  margin: 1rem 0 0;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 7%, #000 90%, transparent);
+          mask-image: linear-gradient(180deg, transparent, #000 7%, #000 90%, transparent);
+}
+
+.yd-reviews .yd-marquee__track {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  gap: 0;
+  padding: 0;
+  animation: yd-review-vscroll 40s linear infinite;
+}
+
+.yd-reviews:hover .yd-marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes yd-review-vscroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yd-reviews .yd-marquee__track { animation: none; }
+}
+
+/* Review = plain left-aligned text (no card): stars, quote, teal rule, name. */
+.yd-reviews .yd-review-card {
+  flex: none;
+  width: 100%;
+  display: block;
+  padding: 1.5rem 0 2.25rem;
+  background: transparent;
+  box-shadow: none;
+}
+
+.yd-review-card__stars {
+  color: #f5a623;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.25rem;
+}
+
+.yd-review-card__text {
+  color: var(--yd-body);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin: 0 0 1.5rem;
+}
+
+.yd-review-card__divider {
+  display: block;
+  width: 42px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--yd-brand);
+  margin: 0 0 1.25rem;
+}
+
+.yd-review-card__name {
+  color: var(--yd-ink);
+  font-size: 1.1rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Video testimonials — large landscape players stacked one per row. */
+.yd-review-videos {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 3.5rem 0 1rem;
+}
+
+.yd-review-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: var(--yd-shadow);
+}
+
+.yd-review-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .yd-reviews {
+    height: 540px;
+  }
+}
+
+/* ==========================================================================
+   33. Survey Link page — centered feedback prompt with Google logo + QR.
+   ========================================================================== */
+.yd-survey {
+  text-align: center;
+  max-width: 1180px;
+  margin: 2.5rem auto;
+}
+
+.yd-survey > p:first-child {
+  margin: 0 auto 2rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.yd-survey > p:first-child a {
+  color: var(--yd-body);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.yd-survey p {
+  margin-bottom: 1.25rem;
+}
+
+/* Google "G" logo (a bare image) sits small and centered. */
+.yd-survey p > img {
+  width: 56px;
+  height: auto;
+  border-radius: 0;
+}
+
+.yd-survey h2 {
+  font-size: 2rem;
+  margin: 0 0 1.75rem;
+}
+
+/* QR code (image wrapped in the review link). */
+.yd-survey a > img {
+  width: 168px;
+  height: auto;
+  border-radius: 6px;
+}

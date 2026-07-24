@@ -2,6 +2,7 @@
 title: "How do Invisalign work to strengthen your teeth?"
 description: "Strengthen your teeth, improves bite alignment, boosts oral hygiene and supports long-term dental health with a clear, comfortable solution."
 format: md
+image: /img/site/ur.png
 date: 2025-11-18T06:47:18
 slug: /how-do-invisalign-work-to-strengthen-your-teeth
 authors: [yogidental]

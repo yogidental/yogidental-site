@@ -2,6 +2,7 @@
 title: "Dream Smile with Porcelain Veneers"
 description: "Stop hiding your smile and start sharing it! If you’re looking for porcelain veneers in Orange, NJ, the team at Yogi Dental Center is ready to help you."
 format: md
+image: /img/site/dentist-whiting-teeth.jpg
 date: 2026-02-25T14:13:53
 slug: /dream-smile-with-porcelain-veneers
 authors: [yogidental]
