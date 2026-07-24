@@ -2,6 +2,7 @@
 title: "Fast Dental Treatments That Work to Improve Your Smile"
 description: "Discover fast dental treatments that work to improve your smile, - reduce pain, fix cavities, and deliver safe, effective results in less time."
 format: md
+image: /img/site/Screenshot-2025-12-18-181719.png
 date: 2025-12-18T12:38:39
 slug: /fast-dental-treatments-that-work-to-improve-your-smile
 authors: [yogidental]

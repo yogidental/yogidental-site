@@ -2,6 +2,7 @@
 title: "Bright Smile Dental Hygiene Tips from Yogi Dental Experts"
 description: "Discover expert dental hygiene tips from Yogi Dental to maintain a bright, healthy smile. Ideal for families seeking better oral care."
 format: md
+image: /img/site/dental-hygiene-tips-for-a-bright-smile.jpg
 date: 2025-06-02T07:44:32
 slug: /dental-hygiene-tips-for-a-bright-smile
 authors: [yogidental]

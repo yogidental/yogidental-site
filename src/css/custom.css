@@ -2455,3 +2455,116 @@
   max-width: 720px;
   border-radius: 12px;
 }
+
+/* ==========================================================================
+   31. Blog list — 3-column "Resource" card grid (swizzled BlogPostItems).
+   ========================================================================== */
+.yd-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin: 1rem 0 2rem;
+}
+
+.yd-blog-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(30, 41, 59, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: inherit;
+}
+
+.yd-blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 42px rgba(30, 41, 59, 0.15);
+  color: inherit;
+  text-decoration: none;
+}
+
+.yd-blog-card__img {
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+}
+
+.yd-blog-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.yd-blog-card__body {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.75rem 2rem;
+}
+
+.yd-blog-card__label {
+  color: var(--yd-teal-text);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.yd-blog-card__title {
+  color: var(--yd-teal-text);
+  font-size: 1.55rem;
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.yd-blog-card__excerpt {
+  color: var(--yd-body);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Soft blue-gray page background behind the cards. */
+.blog-list-page {
+  background: #eef2f6;
+  padding-bottom: 2rem;
+}
+
+/* Full-width grid on a soft blue-gray page, no blog sidebar or title. */
+.blog-list-page .container .row {
+  --ifm-spacing-horizontal: 0;
+}
+
+.blog-list-page aside[class*='blogSidebar'],
+.blog-list-page .col--3 {
+  display: none;
+}
+
+.blog-list-page .col--7,
+.blog-list-page main[class*='col'] {
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+.blog-list-page header h1 {
+  display: none;
+}
+
+@media (max-width: 996px) {
+  .yd-blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .yd-blog-grid {
+    grid-template-columns: 1fr;
+  }
+}

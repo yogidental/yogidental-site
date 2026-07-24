@@ -2,6 +2,7 @@
 title: "Can Invisalign Fix Crowded Teeth and Bite Problems?"
 description: "Many people feel self-conscious about crowded teeth or an uneven bite. Besides affecting your smile, these invisalign issues can make it harder to clean your teeth"
 format: md
+image: /img/site/file_00000000690071fd80db5fc54f52f21c.jpg
 date: 2026-06-18T16:09:23
 slug: /can-invisalign-fix-crowded-teeth-and-bite-problems
 authors: [yogidental]

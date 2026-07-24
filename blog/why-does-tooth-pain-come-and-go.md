@@ -2,6 +2,7 @@
 title: "Why Does Tooth Pain Come and Go?"
 description: "Why does tooth pain come and go? Learn common causes, from cavities to infections, and when recurring toothaches signal it's time to see a dentist. Read now"
 format: md
+image: /img/site/ChatGPT-Image-Jun-18-2026-10_08_34-PM.jpg
 date: 2026-06-20T17:09:35
 slug: /why-does-tooth-pain-come-and-go
 authors: [yogidental]
