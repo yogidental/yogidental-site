@@ -2403,7 +2403,6 @@
 .yd-edu > h1:first-child {
   font-size: clamp(2.4rem, 5.5vw, 4rem);
   line-height: 1.1;
-  text-transform: uppercase;
   margin-bottom: 1.75rem;
 }
 
