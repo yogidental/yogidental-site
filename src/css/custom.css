@@ -2403,7 +2403,6 @@
 .yd-edu > h1:first-child {
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   line-height: 1.2;
-  text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
 
@@ -2432,6 +2431,11 @@
   display: block;
   margin-bottom: 0.1rem;
   color: var(--yd-ink);
+}
+
+/* Plain bullet list (no bold labels) sits tighter. */
+.yd-edu-list--plain li {
+  margin-bottom: 0.3rem;
 }
 
 .yd-edu-figure {

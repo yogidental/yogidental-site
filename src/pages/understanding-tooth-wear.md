@@ -8,7 +8,7 @@ hide_table_of_contents: true
 
 <div className="yd-edu">
 
-# Understanding Tooth Wear:
+# UNDERSTANDING TOOTH WEAR:
 
 Tooth wear happens when enamel the hard outer surface of your teeth erodes due to friction (bruxism/grinding), acidic foods, or aging. Over time, this can lead to flattened or chipped teeth, sensitivity, and bite changes. Early diagnosis is essential to prevent long-term damage and protect your smile with solutions like bite guards or bonding.
 

@@ -1,25 +1,32 @@
 ---
-title: "Consequences of Bone Loss"
-description: "Consequences of Bone Loss Jaw bone loss, caused by untreated gum disease or missing teeth, can lead to loose teeth, facial sagging, and denture difficulties. At Yogi Dental, we use advanced digital X-rays and 3D imaging to monitor bone health and provide effective treatments like deep cleaning, bone grafting, and implants. Benefits of choosing Yogi"
+title: "Causes of Tooth Pain"
+description: "Toothaches can stem from cavities, gum infections, trauma, grinding, or sinus pressure. At Yogi Dental we diagnose the cause and provide fast, lasting relief."
 format: md
 slug: /causes-of-tooth-pain
 hide_table_of_contents: true
 ---
 
-# Consequences of Bone Loss
+<div className="yd-edu">
 
-Jaw bone loss, caused by untreated gum disease or missing teeth, can lead to loose teeth, facial sagging, and denture difficulties. At **Yogi Dental**, we use advanced digital X-rays and 3D imaging to monitor bone health and provide effective treatments like deep cleaning, bone grafting, and implants.
+# Causes of Tooth Pain
 
-#### **Benefits of choosing Yogi Dental:**
+Toothaches can stem from cavities, gum infections, trauma, grinding, or sinus pressure. At **Yogi Dental**, we accurately diagnose the cause using through exams and advanced imaging. Our personalised treatments like fillings, root canals, or night guards provide fast, lasting relief and protect your smile.
 
--   Early detection to prevent severe damage
+**Benefits of choosing Yogi Dental:**
 
--   Personalized treatment plans
+<ul className="yd-edu-list yd-edu-list--plain">
+  <li>Precise diagnosis for effective treatment</li>
+  <li>Quick pain relief tailored to your needs</li>
+  <li>Prevention of further dental issues</li>
+  <li>Compassionate, expert care in a comfortable setting</li>
+</ul>
 
--   Preservation of jaw structure and facial appearance
+Don’t wait schedule your appointment today for lasting comfort and healthier teeth!
 
--   Improved comfort and function with dentures or implants
+<div className="yd-edu-figure">
 
-Protect your smile and jaw health schedule your visit today!
+![Woman experiencing tooth pain](/img/site/close-up-woman-has-toothache-touches-her-teeth-frowns-from-painful-discomfort-stands-768x512.jpg)
 
-![Consequences of Bone Loss](/img/site/young-female-dentist-showing-patient-dental-xray-dentistry-concept-768x512.webp)
+</div>
+
+</div>
