@@ -2570,39 +2570,67 @@
 }
 
 /* ==========================================================================
-   32. Reviews page — moving star-review marquee + video testimonials.
+   32. Reviews page — reviews auto-scroll UP in a left column; large
+       stacked video testimonials below.
    ========================================================================== */
 .yd-reviews-page > h1:first-child {
   margin-bottom: 1.5rem;
 }
 
-/* Reuses the .yd-marquee scroller; review cards are wider than testimonials. */
-.yd-reviews .yd-review-card {
-  position: relative;
-  flex: 0 0 400px;
-  max-width: 86vw;
+/* Vertical marquee: a fixed window the review column scrolls up through. */
+.yd-reviews {
+  overflow: hidden;
+  max-width: 620px;
+  height: 620px;
+  margin: 1rem 0 0;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 7%, #000 90%, transparent);
+          mask-image: linear-gradient(180deg, transparent, #000 7%, #000 90%, transparent);
+}
+
+.yd-reviews .yd-marquee__track {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: var(--yd-shadow);
+  width: auto;
+  gap: 0;
+  padding: 0;
+  animation: yd-review-vscroll 40s linear infinite;
+}
+
+.yd-reviews:hover .yd-marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes yd-review-vscroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yd-reviews .yd-marquee__track { animation: none; }
+}
+
+/* Review = plain left-aligned text (no card): stars, quote, teal rule, name. */
+.yd-reviews .yd-review-card {
+  flex: none;
+  width: 100%;
+  display: block;
+  padding: 1.5rem 0 2.25rem;
+  background: transparent;
+  box-shadow: none;
 }
 
 .yd-review-card__stars {
   color: #f5a623;
-  font-size: 1.15rem;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.25rem;
 }
 
 .yd-review-card__text {
   color: var(--yd-body);
-  margin: 0 0 1.25rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 7;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin: 0 0 1.5rem;
 }
 
 .yd-review-card__divider {
@@ -2611,24 +2639,27 @@
   height: 3px;
   border-radius: 3px;
   background: var(--yd-brand);
-  margin: auto 0 1rem;
+  margin: 0 0 1.25rem;
 }
 
 .yd-review-card__name {
   color: var(--yd-ink);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-/* Video testimonials — vertical (9:16) YouTube shorts in a responsive grid. */
+/* Video testimonials — large landscape players stacked one per row. */
 .yd-review-videos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin: 3rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 3.5rem 0 1rem;
 }
 
 .yd-review-video {
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 16 / 9;
+  width: 100%;
   border-radius: 14px;
   overflow: hidden;
   background: #000;
@@ -2642,16 +2673,8 @@
   display: block;
 }
 
-@media (max-width: 996px) {
-  .yd-review-videos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 640px) {
-  .yd-review-videos {
-    grid-template-columns: 1fr;
-    max-width: 360px;
-    margin-inline: auto;
+  .yd-reviews {
+    height: 540px;
   }
 }
