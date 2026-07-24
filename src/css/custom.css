@@ -2391,3 +2391,49 @@
     padding: 1.5rem;
   }
 }
+
+/* ==========================================================================
+   30. Patient Education articles — large heading, benefits list, centered
+       figure. Simple content page (no banner / appointment sections).
+   ========================================================================== */
+.yd-edu {
+  margin: 2.5rem 0;
+}
+
+.yd-edu > h1:first-child {
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.yd-edu > p {
+  color: var(--yd-body);
+  max-width: 1080px;
+}
+
+.yd-edu-list {
+  margin: 1.25rem 0 0;
+  padding-left: 1.25rem;
+  max-width: 1080px;
+}
+
+.yd-edu-list li {
+  margin-bottom: 1rem;
+  color: var(--yd-body);
+}
+
+.yd-edu-list li strong {
+  color: var(--yd-ink);
+}
+
+.yd-edu-figure {
+  text-align: center;
+  margin: 2.5rem 0 0;
+}
+
+.yd-edu-figure img {
+  display: inline-block;
+  width: 100%;
+  max-width: 680px;
+  border-radius: 12px;
+}
