@@ -2433,9 +2433,15 @@
   color: var(--yd-ink);
 }
 
-/* Plain bullet list (no bold labels) sits tighter. */
+/* Plain bullet list (no block labels) sits tighter; any bold labels
+   stay inline with their following text. */
 .yd-edu-list--plain li {
   margin-bottom: 0.3rem;
+}
+
+.yd-edu-list--plain li strong {
+  display: inline;
+  margin-bottom: 0;
 }
 
 .yd-edu-figure {
