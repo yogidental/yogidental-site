@@ -2685,13 +2685,13 @@
 .yd-survey {
   text-align: center;
   max-width: 1180px;
-  margin: 3rem auto;
+  margin: 2.5rem auto;
 }
 
 .yd-survey > p:first-child {
-  margin: 0 auto 2.5rem;
-  font-size: 1.05rem;
-  line-height: 1.75;
+  margin: 0 auto 2rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .yd-survey > p:first-child a {
@@ -2701,24 +2701,24 @@
 }
 
 .yd-survey p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 /* Google "G" logo (a bare image) sits small and centered. */
 .yd-survey p > img {
-  width: 64px;
+  width: 56px;
   height: auto;
   border-radius: 0;
 }
 
 .yd-survey h2 {
-  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
-  margin: 0 0 2rem;
+  font-size: 2rem;
+  margin: 0 0 1.75rem;
 }
 
 /* QR code (image wrapped in the review link). */
 .yd-survey a > img {
-  width: 190px;
+  width: 168px;
   height: auto;
-  border-radius: 8px;
+  border-radius: 6px;
 }
