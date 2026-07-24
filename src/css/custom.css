@@ -2397,50 +2397,51 @@
        figure. Simple content page (no banner / appointment sections).
    ========================================================================== */
 .yd-edu {
-  margin: 3rem 0;
+  margin: 2.5rem 0;
 }
 
 .yd-edu > h1:first-child {
-  font-size: clamp(2.4rem, 5.5vw, 4rem);
-  line-height: 1.1;
-  margin-bottom: 1.75rem;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
 }
 
 .yd-edu > p {
   color: var(--yd-body);
-  font-size: 1.2rem;
-  line-height: 1.75;
-  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
   max-width: 1180px;
 }
 
 .yd-edu-list {
-  margin: 0.75rem 0 0;
+  margin: 0.5rem 0 0;
   padding-left: 1.5rem;
   max-width: 1180px;
-  font-size: 1.2rem;
-  line-height: 1.75;
+  font-size: 1.05rem;
+  line-height: 1.55;
 }
 
 .yd-edu-list li {
-  margin-bottom: 1.9rem;
+  margin-bottom: 0.65rem;
   color: var(--yd-body);
 }
 
 .yd-edu-list li strong {
   display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.1rem;
   color: var(--yd-ink);
 }
 
 .yd-edu-figure {
   text-align: center;
-  margin: 3rem 0 0;
+  margin: 2.5rem 0 0;
 }
 
 .yd-edu-figure img {
   display: inline-block;
   width: 100%;
-  max-width: 760px;
+  max-width: 720px;
   border-radius: 12px;
 }
