@@ -93,13 +93,21 @@
   box-shadow: var(--ifm-navbar-shadow);
 }
 
+/* The source logo.jpeg is a square file with the mark padded off-center;
+   crop that whitespace out so only the mark shows, cropped to its own
+   aspect ratio rather than stretched into a visible white square. */
 .navbar__logo {
   height: 2.6rem;
+  width: 6.4rem;
+  overflow: hidden;
 }
 
 .navbar__logo img {
-  border-radius: 8px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 48% 45%;
+  border-radius: 0;
 }
 
 .navbar__link {
@@ -129,6 +137,12 @@
   background-color: var(--yd-brand-dark);
   color: #fff !important;
   transform: translateY(-1px);
+}
+
+/* Docusaurus auto-appends an external-link icon to tel: links; the
+   source's phone pill has no such icon. */
+.navbar-phone svg {
+  display: none;
 }
 
 .navbar__items .dropdown__menu {
