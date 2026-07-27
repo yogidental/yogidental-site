@@ -93,12 +93,13 @@
   box-shadow: var(--ifm-navbar-shadow);
 }
 
-/* The source logo.jpeg is a square file with the mark padded off-center;
-   crop that whitespace out so only the mark shows, cropped to its own
-   aspect ratio rather than stretched into a visible white square. */
+/* The source logo.jpeg is a square file with the full "YOGI DENTAL
+   center" wordmark padded off-center; crop the surrounding whitespace
+   so the wordmark fills the navbar slot, matching the source header
+   (which shows the full mark and no separate site-title text). */
 .navbar__logo {
-  height: 2.6rem;
-  width: 6.4rem;
+  height: 3rem;
+  width: 7.8rem;
   overflow: hidden;
 }
 
@@ -106,7 +107,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 48% 45%;
+  object-position: 51% 44%;
   border-radius: 0;
 }
 

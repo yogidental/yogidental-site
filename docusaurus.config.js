@@ -102,7 +102,8 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Yogi Dental Center',
+        // No separate title: the logo image already carries the full
+        // "YOGI DENTAL center" wordmark, matching the source header.
         logo: {
           alt: 'Yogi Dental Center',
           src: 'img/logo.jpeg',
