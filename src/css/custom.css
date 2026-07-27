@@ -2770,3 +2770,45 @@
   height: auto;
   border-radius: 6px;
 }
+
+/* ==========================================================================
+   34. Scroll-reveal entrance animations — sections fade/slide into view as
+       the user scrolls, matching the source site's Elementor animations.
+       src/clientModules/scrollReveal.js adds the directional class and
+       toggles .is-visible via IntersectionObserver. Content is only ever
+       hidden by JS right before it commits to revealing it, so nothing is
+       lost if a script fails to load, and reduced-motion users never have
+       anything hidden in the first place (the script skips them).
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  .yd-reveal {
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  .yd-reveal--up {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  .yd-reveal--left {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+
+  .yd-reveal--right {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+
+  .yd-reveal--scale {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  .yd-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}

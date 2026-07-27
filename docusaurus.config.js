@@ -29,6 +29,10 @@ const config = {
     locales: ['en'],
   },
 
+  // Site-wide scroll-reveal entrance animations (fade/slide sections into
+  // view), matching the source site's Elementor animations on every page.
+  clientModules: ['./src/clientModules/scrollReveal.js'],
+
   plugins: [
     [
       '@docusaurus/plugin-client-redirects',
