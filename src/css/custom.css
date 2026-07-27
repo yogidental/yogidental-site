@@ -21,8 +21,9 @@
   --yd-band: #e9fbf7;
   --yd-band-line: rgba(1, 211, 190, 0.16);
 
-  /* Ink — softened dark-slate headings (not harsh black), slate body copy. */
-  --yd-ink: #263449;
+  /* Ink — a lighter, genuinely blue heading tone (not near-black slate),
+     with a matching lighter blue-gray for body copy. */
+  --yd-ink: #35547a;
   --yd-body: #64748b;
 
   /* Inline links / Infima primary — a readable teal that clears WCAG AA. */
@@ -38,7 +39,7 @@
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   --ifm-heading-font-weight: 700;
   --ifm-heading-color: var(--yd-ink);
-  --ifm-font-color-base: #475569;
+  --ifm-font-color-base: #64748b;
   --ifm-h1-font-size: 3rem;
   --ifm-navbar-height: 4.75rem;
   --ifm-navbar-shadow: 0 1px 0 rgba(17, 24, 39, 0.06);
