@@ -2333,7 +2333,7 @@
 .yd-book-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem 1.5rem;
+  gap: 1.5rem 1.75rem;
 }
 
 .yd-book-full {
@@ -2371,13 +2371,17 @@
 .yd-radio {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
+  gap: 0.65rem;
+  padding: 0.65rem 1.35rem;
+  border: 1px solid #e2e8f0;
   border-radius: 999px;
   cursor: pointer;
-  font-weight: 500;
-  transition: border-color 0.15s ease, background 0.15s ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--yd-body);
+  background: #fff;
+  transition: border-color 0.15s ease, background 0.15s ease,
+    color 0.15s ease;
 }
 
 .yd-radio:has(input:checked) {
@@ -2386,8 +2390,36 @@
   color: var(--yd-teal-text);
 }
 
+/* Custom radio dot — the native control (even with accent-color) renders
+   as a heavy, mismatched ring in Chromium, so replace it entirely. */
 .yd-radio input {
-  accent-color: var(--yd-brand);
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #cbd5e1;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.yd-radio input:checked {
+  border-color: var(--yd-brand);
+}
+
+.yd-radio input:checked::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--yd-brand);
 }
 
 .yd-book-submit {
