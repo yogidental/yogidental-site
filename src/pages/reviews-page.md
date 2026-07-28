@@ -10,7 +10,7 @@ hide_table_of_contents: true
 
 # Reviews Page
 
-<Reviews />
+<ReviewsSection />
 
 <div className="yd-review-videos">
 <div className="yd-review-video"><iframe src="https://www.youtube.com/embed/gf8wqVMxzqc?feature=oembed" title="Yogi Dental patient testimonial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy"></iframe></div>

@@ -20,6 +20,11 @@ At Yogi Dental, we blend state-of-the-art technology with compassionate, persona
 </div>
 </div>
 
+<a className="yd-float-offer" href="/xrays">
+<span className="yd-float-offer__title">Free Consultation</span>
+<span className="yd-float-offer__sub">$399 worth of x-ray free</span>
+</a>
+
 <div className="yd-form-section" id="book">
 <div className="yd-form">
   <div className="yd-field">
@@ -393,94 +398,9 @@ I was very well accommodated. I didn’t feel any pain throughout any of my visi
 </div>
 
 <div className="yd-grid yd-grid--3 yd-promos">
-  <a className="yd-btn" href="/xrays">Free Consultation<br/>$350 worth of x-ray free</a>
+  <a className="yd-btn" href="/xrays">Free Consultation<br/>$399 worth of x-ray free</a>
   <a className="yd-btn" href="/dental-insurance">Dental Insurance</a>
   <a className="yd-btn" href="/dental-financing">Financing</a>
-</div>
-
-<div className="yd-section-head">
-
-##### Our Blog
-
-## Latest Blog & Articles
-
-**“Your Guide to Healthy Smiles: Dental Tips, News & Patient Insights”**
-
-</div>
-
-<div className="yd-grid yd-grid--2 yd-blog">
-<div className="yd-post">
-<div className="yd-post-img">
-
-[![Why Does Tooth Pain Come and Go?](/img/site/ChatGPT-Image-Jun-18-2026-10_08_34-PM.jpg)](/why-does-tooth-pain-come-and-go)
-
-</div>
-<div className="yd-post-body">
-
-### [Why Does Tooth Pain Come and Go?](/why-does-tooth-pain-come-and-go)
-
-June 20, 2026
-
-Understanding Intermittent Tooth Pain — tooth pain that comes and goes can be frustrating and confusing.
-
-[Read More →](/why-does-tooth-pain-come-and-go "Why Does Tooth Pain Come and Go?")
-
-</div>
-</div>
-<div className="yd-post">
-<div className="yd-post-img">
-
-[![Can Invisalign Fix Crowded Teeth and Bite Problems?](/img/site/file_00000000690071fd80db5fc54f52f21c.jpg)](/can-invisalign-fix-crowded-teeth-and-bite-problems)
-
-</div>
-<div className="yd-post-body">
-
-### [Can Invisalign Fix Crowded Teeth and Bite Problems?](/can-invisalign-fix-crowded-teeth-and-bite-problems)
-
-June 18, 2026
-
-Many people feel self-conscious about crowded teeth or an uneven bite. Besides affecting your smile,
-
-[Read More →](/can-invisalign-fix-crowded-teeth-and-bite-problems "Can Invisalign Fix Crowded Teeth and Bite Problems?")
-
-</div>
-</div>
-<div className="yd-post">
-<div className="yd-post-img">
-
-[![Dream Smile with Porcelain Veneers](/img/site/dentist-whiting-teeth.jpg)](/dream-smile-with-porcelain-veneers)
-
-</div>
-<div className="yd-post-body">
-
-### [Dream Smile with Porcelain Veneers](/dream-smile-with-porcelain-veneers)
-
-February 25, 2026
-
-Have you ever looked in the mirror and wished your smile was just a little
-
-[Read More →](/dream-smile-with-porcelain-veneers "Dream Smile with Porcelain Veneers")
-
-</div>
-</div>
-<div className="yd-post">
-<div className="yd-post-img">
-
-[![Drill-free Cavity Treatment](/img/site/Screenshot-2025-12-18-183552.png)](/drill-free-cavity-treatment)
-
-</div>
-<div className="yd-post-body">
-
-### [Drill-free Cavity Treatment](/drill-free-cavity-treatment)
-
-January 29, 2026
-
-Welcome to the future of painless, drill-free cavity treatment. What is Drill-Free Cavity Treatment?
-
-[Read More →](/drill-free-cavity-treatment "Drill-free Cavity Treatment")
-
-</div>
-</div>
 </div>
 
 <div className="yd-connect">

@@ -18,45 +18,81 @@ hide_table_of_contents: true
 </div>
 
 <div className="yd-book">
-<div className="yd-book-card">
+<div className="yd-book-panel">
+<div className="yd-book-layout">
+
+<div className="yd-book-info">
 
 <p className="yd-eyebrow">Book Now</p>
 
-## Book Your Appointment
+## Make An Appointment
+
+Booking your visit at Yogi Dental is quick and easy. Whether you're due for a checkup, need a consultation, or want to explore cosmetic treatments, our friendly team is ready to help. Simply call us or book online to choose a convenient time that fits your schedule. Your journey to a healthier, brighter smile starts here!
+
+<div className="yd-book-hours">
+
+#### Opening Hours
+
+<div className="yd-book-hours__row">
+<span>Monday - Thursday</span>
+<span className="yd-book-hours__time"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg> 09.30 AM - 05.30 PM</span>
+</div>
+
+</div>
+
+<div className="yd-book-support">
+
+#### Support
+
+Your trusted dental care provider offering gentle, advanced treatments for healthy, beautiful smiles in a warm and welcoming environment.
+
+</div>
+
+<div className="yd-book-contacts">
+
+<div className="yd-contact-item">
+<span className="yd-contact-item__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" strokeWidth="1.6"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" strokeWidth="1.6"/></svg></span>
+<div>
+<strong>Email Address</strong>
+<span>yogidental@gmail.com</span>
+</div>
+</div>
+
+<div className="yd-contact-item">
+<span className="yd-contact-item__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .5 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg></span>
+<div>
+<strong>Phone Number</strong>
+<span>+1 973-577-6540</span>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div className="yd-book-card">
 
 <div className="yd-book-form">
 
 <div className="yd-book-full yd-field">
-<label>Patient Category</label>
-<div className="yd-radio-group">
-<label className="yd-radio"><input type="radio" name="yd-patient" defaultChecked /> <span>New Patient</span></label>
-<label className="yd-radio"><input type="radio" name="yd-patient" /> <span>Existing Patient</span></label>
-</div>
-</div>
-
-<div className="yd-field">
-<label htmlFor="yd-date">Select Appointment Date</label>
-<input id="yd-date" type="date" />
-</div>
-
-<div className="yd-field">
-<label htmlFor="yd-slot">Select Time Slot</label>
-<select id="yd-slot" defaultValue="">
-<option value="">Select a time slot</option>
-<option>09:30 AM - 10:30 AM</option>
-<option>10:30 AM - 11:30 AM</option>
-<option>11:30 AM - 12:30 PM</option>
-<option>01:30 PM - 02:30 PM</option>
-<option>02:30 PM - 03:30 PM</option>
-<option>03:30 PM - 04:30 PM</option>
-<option>04:30 PM - 05:30 PM</option>
-</select>
+<label htmlFor="yd-name">Name</label>
+<input id="yd-name" type="text" placeholder="Enter your name" />
 </div>
 
 <div className="yd-book-full yd-field">
-<label htmlFor="yd-treatment">What Dental Treatment Are You Looking For?</label>
+<label htmlFor="yd-email">Email <span className="yd-required">*</span></label>
+<input id="yd-email" type="email" placeholder="Enter your email" />
+</div>
+
+<div className="yd-book-full yd-field">
+<label htmlFor="yd-phone">Contact Number <span className="yd-required">*</span></label>
+<input id="yd-phone" type="tel" placeholder="Enter your contact number" />
+</div>
+
+<div className="yd-book-full yd-field">
+<label htmlFor="yd-treatment">Service</label>
 <select id="yd-treatment" defaultValue="">
-<option value="">Select a treatment</option>
+<option value="">Select a service</option>
 <option>Braces</option>
 <option>Broken Teeth</option>
 <option>Cavity</option>
@@ -72,31 +108,23 @@ hide_table_of_contents: true
 </select>
 </div>
 
-<div className="yd-field">
-<label htmlFor="yd-name">Your Name</label>
-<input id="yd-name" type="text" placeholder="Enter your name" />
-</div>
-
-<div className="yd-field">
-<label htmlFor="yd-email">Email</label>
-<input id="yd-email" type="email" placeholder="Enter your email" />
-</div>
-
 <div className="yd-book-full yd-field">
-<label htmlFor="yd-phone">Phone</label>
-<input id="yd-phone" type="tel" placeholder="Enter your phone number" />
-</div>
-
-<div className="yd-book-full yd-field">
-<label htmlFor="yd-issue">Describe Your Dental Issue</label>
-<textarea id="yd-issue" rows="4" placeholder="Tell us briefly about your dental concern"></textarea>
+<label htmlFor="yd-patient">Patient Type <span className="yd-required">*</span></label>
+<select id="yd-patient" defaultValue="">
+<option value="">Select</option>
+<option>New Patient</option>
+<option>Existing Patient</option>
+</select>
 </div>
 
 <div className="yd-book-full yd-book-submit">
-<a className="yd-btn" href="https://calendly.com/yogidental/new-patient">Submit</a>
+<a className="yd-btn yd-btn--block" href="https://calendly.com/yogidental/new-patient">Make Appointment</a>
 </div>
 
 </div>
 
+</div>
+
+</div>
 </div>
 </div>
