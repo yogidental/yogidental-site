@@ -21,9 +21,10 @@
   --yd-band: #e9fbf7;
   --yd-band-line: rgba(1, 211, 190, 0.16);
 
-  /* Ink — near-black headings, slate body copy (source Astra palette). */
-  --yd-ink: #111827;
-  --yd-body: #5b6675;
+  /* Ink — a lighter, genuinely blue heading tone (not near-black slate),
+     with a matching lighter blue-gray for body copy. */
+  --yd-ink: #35547a;
+  --yd-body: #64748b;
 
   /* Inline links / Infima primary — a readable teal that clears WCAG AA. */
   --ifm-color-primary: #0b8f81;
@@ -38,7 +39,7 @@
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   --ifm-heading-font-weight: 700;
   --ifm-heading-color: var(--yd-ink);
-  --ifm-font-color-base: #334155;
+  --ifm-font-color-base: #64748b;
   --ifm-h1-font-size: 3rem;
   --ifm-navbar-height: 4.75rem;
   --ifm-navbar-shadow: 0 1px 0 rgba(17, 24, 39, 0.06);
@@ -93,13 +94,22 @@
   box-shadow: var(--ifm-navbar-shadow);
 }
 
+/* The source logo.jpeg is a square file with the full "YOGI DENTAL
+   center" wordmark padded off-center; crop the surrounding whitespace
+   so the wordmark fills the navbar slot, matching the source header
+   (which shows the full mark and no separate site-title text). */
 .navbar__logo {
-  height: 2.6rem;
+  height: 3rem;
+  width: 7.8rem;
+  overflow: hidden;
 }
 
 .navbar__logo img {
-  border-radius: 8px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 51% 44%;
+  border-radius: 0;
 }
 
 .navbar__link {
@@ -129,6 +139,12 @@
   background-color: var(--yd-brand-dark);
   color: #fff !important;
   transform: translateY(-1px);
+}
+
+/* Docusaurus auto-appends an external-link icon to tel: links; the
+   source's phone pill has no such icon. */
+.navbar-phone svg {
+  display: none;
 }
 
 .navbar__items .dropdown__menu {
@@ -915,6 +931,79 @@
 
 .yd-promos .yd-btn:hover {
   box-shadow: 0 8px 20px rgba(1, 211, 190, 0.28);
+}
+
+/* ==========================================================================
+   15b. Floating "Free Consultation" offer badge — pinned to a screen
+        corner, gently bobbing, independent of page scroll position.
+   ========================================================================== */
+.yd-float-offer {
+  position: fixed;
+  right: 1.75rem;
+  bottom: 1.75rem;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  background: var(--yd-brand);
+  color: #fff !important;
+  text-align: center;
+  text-decoration: none !important;
+  box-shadow: 0 14px 30px rgba(1, 211, 190, 0.4);
+  animation: yd-float-bob 3s ease-in-out infinite;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.yd-float-offer:hover {
+  box-shadow: 0 18px 36px rgba(1, 211, 190, 0.5);
+  animation-play-state: paused;
+  transform: translateY(-4px);
+}
+
+.yd-float-offer__title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.yd-float-offer__sub {
+  font-weight: 600;
+  font-size: 0.78rem;
+  line-height: 1.2;
+  opacity: 0.92;
+}
+
+@keyframes yd-float-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yd-float-offer {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .yd-float-offer {
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.7rem 1.15rem;
+  }
+  .yd-float-offer__title {
+    font-size: 0.85rem;
+  }
+  .yd-float-offer__sub {
+    font-size: 0.7rem;
+  }
 }
 
 /* ==========================================================================
@@ -2289,55 +2378,127 @@
 }
 
 /* ==========================================================================
-   29. Appointment page — booking form card.
+   29. Appointment page — two-column booking section: a mint info panel
+       (hours / support / contacts) beside a floating white form card,
+       matching the source site's layout.
    ========================================================================== */
 .yd-book {
   margin: 2.5rem 0;
 }
 
-.yd-book-card {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 2.5rem;
-  background: #fff;
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 20px;
-  box-shadow: var(--yd-shadow);
+.yd-book-panel {
+  background: var(--yd-band);
+  border-radius: 24px;
+  padding: 3rem;
 }
 
-.yd-book-card > .yd-eyebrow {
-  margin-bottom: 0.25rem;
+.yd-book-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
 }
 
-.yd-book-card h2 {
+.yd-book-info > :first-child {
   margin-top: 0;
-  margin-bottom: 1.75rem;
+}
+
+.yd-book-info p {
+  color: var(--yd-body);
+}
+
+.yd-book-hours,
+.yd-book-support {
+  margin-top: 1.75rem;
+}
+
+.yd-book-hours h4,
+.yd-book-support h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.yd-book-hours__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--yd-body);
+  font-weight: 600;
+}
+
+.yd-book-hours__time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--yd-ink);
+}
+
+.yd-book-hours__time svg {
+  width: 18px;
+  height: 18px;
+  color: var(--yd-brand-dark);
+  flex: none;
+}
+
+.yd-book-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  margin-top: 1.75rem;
+}
+
+.yd-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.yd-contact-item__ico {
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(1, 211, 190, 0.18);
+  color: var(--yd-brand-dark);
+}
+
+.yd-contact-item__ico svg {
+  width: 20px;
+  height: 20px;
+}
+
+.yd-contact-item strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--yd-ink);
+}
+
+.yd-contact-item span {
+  color: var(--yd-body);
+  font-size: 0.9rem;
+}
+
+.yd-book-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: var(--yd-shadow);
 }
 
 .yd-book-form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 1.35rem;
 }
 
 .yd-book-full {
   grid-column: 1 / -1;
 }
 
-/* Textarea matches the input styling. */
-.yd-book-form textarea {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0.65rem 0.85rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 10px;
-  background: var(--ifm-background-color);
-  color: var(--ifm-font-color-base);
-  font: inherit;
-  resize: vertical;
-}
-
-.yd-book-form textarea:focus,
 .yd-book-form input:focus,
 .yd-book-form select:focus {
   outline: none;
@@ -2345,47 +2506,29 @@
   box-shadow: 0 0 0 3px rgba(1, 211, 190, 0.15);
 }
 
-/* Patient-category pills. */
-.yd-radio-group {
-  display: flex;
-  gap: 0.85rem;
-  flex-wrap: wrap;
-}
-
-.yd-radio {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 999px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: border-color 0.15s ease, background 0.15s ease;
-}
-
-.yd-radio:has(input:checked) {
-  border-color: var(--yd-brand);
-  background: var(--yd-band);
-  color: var(--yd-teal-text);
-}
-
-.yd-radio input {
-  accent-color: var(--yd-brand);
+.yd-required {
+  color: #e11d48;
 }
 
 .yd-book-submit {
-  text-align: center;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
 }
 
-.yd-book-submit .yd-btn {
-  padding: 0.8rem 3rem;
+.yd-btn--block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .yd-book-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
-  .yd-book-form {
-    grid-template-columns: 1fr;
+  .yd-book-panel {
+    padding: 1.75rem;
   }
   .yd-book-card {
     padding: 1.5rem;
@@ -2570,83 +2713,197 @@
 }
 
 /* ==========================================================================
-   32. Reviews page — reviews auto-scroll UP in a left column; large
-       stacked video testimonials below.
+   32. Reviews page — full-width rating banner + two rows of review cards
+       sliding right to left; large stacked video testimonials below.
    ========================================================================== */
 .yd-reviews-page > h1:first-child {
   margin-bottom: 1.5rem;
 }
 
-/* Vertical marquee: a fixed window the review column scrolls up through. */
-.yd-reviews {
-  overflow: hidden;
-  max-width: 620px;
-  height: 620px;
-  margin: 1rem 0 0;
-  -webkit-mask-image: linear-gradient(180deg, transparent, #000 7%, #000 90%, transparent);
-          mask-image: linear-gradient(180deg, transparent, #000 7%, #000 90%, transparent);
+.yd-reviews-section {
+  position: relative;
 }
 
-.yd-reviews .yd-marquee__track {
+/* Rating banner — big circular score badge, clearly separated (no overlap)
+   from the stars/label/count, with a CTA filling the row's empty space. */
+.yd-rating-summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 0 2.5rem;
+  padding: 2rem 2.5rem;
+  background: linear-gradient(120deg, var(--yd-band) 0%, var(--ifm-background-surface-color) 70%);
+  border: 1px solid var(--yd-band-line);
+  border-radius: 22px;
+  box-shadow: var(--yd-shadow);
+}
+
+.yd-rating-summary__badge {
+  flex: none;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--yd-brand), var(--yd-brand-dark));
+  box-shadow: 0 14px 32px rgba(1, 211, 190, 0.45);
+  border: 5px solid #fff;
+}
+
+.yd-rating-summary__score {
+  font-size: 3.4rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.yd-rating-summary__right {
   display: flex;
   flex-direction: column;
-  width: auto;
-  gap: 0;
-  padding: 0;
-  animation: yd-review-vscroll 40s linear infinite;
+  gap: 0.4rem;
 }
 
-.yd-reviews:hover .yd-marquee__track {
+.yd-rating-summary__label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--yd-teal-text);
+}
+
+.yd-rating-summary__stars {
+  color: #f5a623;
+  font-size: 1.65rem;
+  letter-spacing: 4px;
+}
+
+.yd-rating-summary__meta {
+  margin: 0;
+  color: var(--yd-body);
+  font-size: 1.05rem;
+}
+
+.yd-rating-summary__meta strong {
+  color: var(--yd-ink);
+}
+
+.yd-rating-summary__cta {
+  margin-left: auto;
+  flex: none;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  background: #fff;
+  border: 1.5px solid var(--yd-brand);
+  color: var(--yd-brand-dark) !important;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none !important;
+  box-shadow: 0 6px 16px rgba(1, 211, 190, 0.18);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.yd-rating-summary__cta:hover {
+  background: var(--yd-brand);
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .yd-rating-summary {
+    width: 100%;
+    box-sizing: border-box;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+  .yd-rating-summary__badge {
+    width: 96px;
+    height: 96px;
+  }
+  .yd-rating-summary__score {
+    font-size: 2.2rem;
+  }
+  .yd-rating-summary__stars {
+    font-size: 1.3rem;
+  }
+  .yd-rating-summary__cta {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+/* Two horizontal rows of review cards, each sliding right to left. */
+.yd-reviews {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin: 1rem 0;
+}
+
+.yd-reviews-row {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.yd-reviews-row .yd-marquee__track--slow {
+  animation-duration: 85s;
+}
+
+.yd-reviews-row:hover .yd-marquee__track {
   animation-play-state: paused;
 }
 
-@keyframes yd-review-vscroll {
-  from { transform: translateY(0); }
-  to { transform: translateY(-50%); }
+.yd-review-box {
+  position: relative;
+  flex: 0 0 360px;
+  max-width: 82vw;
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+  border-radius: 16px;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--yd-band-line);
+  box-shadow: var(--yd-shadow);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .yd-reviews .yd-marquee__track { animation: none; }
-}
-
-/* Review = plain left-aligned text (no card): stars, quote, teal rule, name. */
-.yd-reviews .yd-review-card {
-  flex: none;
-  width: 100%;
-  display: block;
-  padding: 1.5rem 0 2.25rem;
-  background: transparent;
-  box-shadow: none;
-}
-
-.yd-review-card__stars {
+.yd-review-box__stars {
   color: #f5a623;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   letter-spacing: 3px;
-  margin-bottom: 1.25rem;
 }
 
-.yd-review-card__text {
+.yd-review-box__text {
   color: var(--yd-body);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  margin: 0 0 1.5rem;
+  margin: 0.9rem 0 1.35rem;
+  flex: 1;
 }
 
-.yd-review-card__divider {
+.yd-review-box__divider {
   display: block;
-  width: 42px;
+  width: 38px;
   height: 3px;
   border-radius: 3px;
   background: var(--yd-brand);
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.9rem;
 }
 
-.yd-review-card__name {
+.yd-review-box__name {
   color: var(--yd-ink);
-  font-size: 1.1rem;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .yd-review-box {
+    flex-basis: 280px;
+    padding: 1.35rem;
+  }
 }
 
 /* Video testimonials — large landscape players stacked one per row. */
@@ -2721,4 +2978,46 @@
   width: 168px;
   height: auto;
   border-radius: 6px;
+}
+
+/* ==========================================================================
+   34. Scroll-reveal entrance animations — sections fade/slide into view as
+       the user scrolls, matching the source site's Elementor animations.
+       src/clientModules/scrollReveal.js adds the directional class and
+       toggles .is-visible via IntersectionObserver. Content is only ever
+       hidden by JS right before it commits to revealing it, so nothing is
+       lost if a script fails to load, and reduced-motion users never have
+       anything hidden in the first place (the script skips them).
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  .yd-reveal {
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  .yd-reveal--up {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  .yd-reveal--left {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+
+  .yd-reveal--right {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+
+  .yd-reveal--scale {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  .yd-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
 }

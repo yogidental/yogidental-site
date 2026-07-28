@@ -29,6 +29,19 @@ const config = {
     locales: ['en'],
   },
 
+  // Optional live Google Reviews integration (see src/components/ReviewsSection.js).
+  // Set GOOGLE_PLACES_API_KEY / GOOGLE_PLACE_ID as environment variables before
+  // building — never commit real keys here. Without them the page falls back
+  // to the static curated review list, so the site works either way.
+  customFields: {
+    googlePlacesApiKey: process.env.GOOGLE_PLACES_API_KEY || '',
+    googlePlaceId: process.env.GOOGLE_PLACE_ID || '',
+  },
+
+  // Site-wide scroll-reveal entrance animations (fade/slide sections into
+  // view), matching the source site's Elementor animations on every page.
+  clientModules: ['./src/clientModules/scrollReveal.js'],
+
   plugins: [
     [
       '@docusaurus/plugin-client-redirects',
@@ -102,7 +115,8 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Yogi Dental Center',
+        // No separate title: the logo image already carries the full
+        // "YOGI DENTAL center" wordmark, matching the source header.
         logo: {
           alt: 'Yogi Dental Center',
           src: 'img/logo.jpeg',
