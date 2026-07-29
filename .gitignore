@@ -11,6 +11,7 @@
 # Local dev/build logs
 build.log
 dev-server.log
+serve.log
 
 # Misc
 .DS_Store

@@ -6,16 +6,63 @@ slug: /testimonials
 hide_table_of_contents: true
 ---
 
-# Testimonials & Reviews
+<div className="yd-page-banner">
+<div className="yd-page-banner__inner">
+<span className="yd-page-banner__title">Testimonials &amp; Reviews</span>
+<nav className="yd-breadcrumb">
+<a href="/">Home</a>
+<span className="yd-breadcrumb__sep">›</span>
+<a href="/about-us">About Us</a>
+</nav>
+</div>
+</div>
 
--   [Home](/)
--   [About Us](/about)
+<div className="yd-section-head">
 
-# Why Do Patients Choose Yogi Dental?
+## Why Do Patients Choose Yogi Dental?
 
-##### Testimonial
+</div>
+
+<div className="yd-testimonial">
+<div className="yd-testimonial-photo">
+
+![Happy Yogi Dental patient](/img/site/young-man-visiting-dentist-BEUGEF6.jpg)
+
+</div>
+<div className="yd-testimonial-quote">
+
+### Testimonial
+
+I was very well accommodated. I didn’t feel any pain throughout any of my visits. I trust Dr. Patel and her staff. I feel like I have been treated like a number one patient.
+
+**—Mr. Jeffery Mathurin**
+
+</div>
+</div>
+
+<div className="yd-videos">
+<div className="yd-videos-row">
+  <div className="yd-video yd-video--empty"></div>
+  <div className="yd-video yd-video--empty"></div>
+  <div className="yd-video yd-video--empty"></div>
+  <div className="yd-video">
+    <video src="/videos/testimonial-2.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
+  <div className="yd-video">
+    <video src="/videos/testimonial-1.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
+  <div className="yd-video yd-video--empty"></div>
+  <div className="yd-video yd-video--empty"></div>
+</div>
+</div>
+
+<div className="yd-section-head">
+
+<p className="yd-eyebrow">Testimonial</p>
 
 ## What Customer Says
+
+</div>
 
 <div className="yd-grid yd-grid--3">
 <div className="yd-quote">
@@ -111,30 +158,16 @@ It was a wonderful experience with Doctor It was a wonderful experience with Doc
 </div>
 </div>
 
-## Stay Connected with Yogi Dental.
+<div className="yd-cta">
+  <a className="yd-btn" href="/reviews-page">Leave Us A Review</a>
+</div>
 
-Facebook-f Twitter Instagram Youtube
-
-[LEAVE US A REVIEW](/reviews-page)
-
-##### Book Now
-
-## Make An Appointment
-
-Start your **smile makeover journey** today with a team who’s ready to support you every step of the way. Whether you’re here for a routine check-up or a complete smile transformation, we’re your dedicated partner in health.
-
-#### Opening Hours
-
-Monday - thursday
-
--   09.30 AM - 5.30 PM
-
-#### Support
-
-Schedule your appointment today, using the button below to book online, or fill out the form on our [contact page](/contact). If you have any specific questions about our New Jersey Dentist Services call us at ,
-
-### Phone Number
-
-(973-673-1311
-
-<iframe className="embed-frame" src="https://maps.google.com/maps?q=30%20Scotland%20Road%2C%20Orange%2C%20NJ%2007050%209%20Mount%20Pleasant%20TPKE%2C%20STE%20203%2C%20Denville%2C%20NJ%2007834&t=m&z=10&output=embed&iwloc=near" width="100%" height="450" allowFullScreen loading="lazy"></iframe>
+<div className="yd-band yd-social">
+<h2>Stay Connected with Yogi Dental</h2>
+<div className="yd-social__icons">
+<a href="https://www.facebook.com/profile.php?id=61585606553659" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 22v-8h2.7l.4-3H13V9c0-.9.3-1.5 1.6-1.5H16V4.8c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.4-3.7 3.9V11H7.5v3H10v8h3z"/></svg></a>
+<a href="https://x.com/" aria-label="Twitter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 3H22l-7 8 8.2 10h-6.4l-5-6.1L6 21H3l7.4-8.5L2.5 3h6.6l4.5 5.6L18.9 3zm-1.1 16h1.7L7.3 4.8H5.5L17.8 19z"/></svg></a>
+<a href="https://www.instagram.com/yogi_dental_center_/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.4a4.6 4.6 0 100 9.2 4.6 4.6 0 000-9.2zm0 7.6a3 3 0 110-6 3 3 0 010 6zm4.8-7.8a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0zM20 7c-.1-1.4-.4-2.6-1.4-3.6S16.4 2.1 15 2c-1.4-.1-5.6-.1-7 0-1.4.1-2.6.4-3.6 1.4S2.1 5.6 2 7c-.1 1.4-.1 5.6 0 7 .1 1.4.4 2.6 1.4 3.6S5.6 21.9 7 22c1.4.1 5.6.1 7 0 1.4-.1 2.6-.4 3.6-1.4s1.3-2.2 1.4-3.6c.1-1.4.1-5.6 0-7zm-1.9 8.5a3 3 0 01-1.7 1.7c-1.2.5-4 .4-5.4.4s-4.2.1-5.4-.4a3 3 0 01-1.7-1.7c-.5-1.2-.4-4-.4-5.4s-.1-4.2.4-5.4a3 3 0 011.7-1.7c1.2-.5 4-.4 5.4-.4s4.2-.1 5.4.4a3 3 0 011.7 1.7c.5 1.2.4 4 .4 5.4s.1 4.2-.4 5.4z"/></svg></a>
+<a href="https://www.youtube.com/@YogiDentalCenter/" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 001 7.5C.5 9.4.5 12 .5 12s0 2.6.5 4.5a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1c.5-1.9.5-4.5.5-4.5s0-2.6-.5-4.5zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
+</div>
+</div>

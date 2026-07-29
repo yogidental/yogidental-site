@@ -29,6 +29,77 @@ const config = {
     locales: ['en'],
   },
 
+  // Site-wide SEO tags that are identical on every page (per-page canonical
+  // URL + og:url are handled dynamically in src/theme/Root.js, since those
+  // vary by route). Mirrors the meta/schema.org setup on the live WordPress
+  // site (Organization + WebSite JSON-LD, robots, site verification, etc.).
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {rel: 'profile', href: 'https://gmpg.org/xfn/11'},
+    },
+    {
+      tagName: 'meta',
+      attributes: {name: 'robots', content: 'max-image-preview:large'},
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'google-site-verification',
+        content: 'dOxMWM3Gktj2iHd0heL47o4HSrCd0-pgdX60WlNTcr0',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {rel: 'dns-prefetch', href: '//www.googletagmanager.com'},
+    },
+    {
+      tagName: 'meta',
+      attributes: {property: 'og:site_name', content: 'Yogi Dental Center'},
+    },
+    {
+      tagName: 'meta',
+      attributes: {property: 'og:locale', content: 'en_US'},
+    },
+    {
+      tagName: 'meta',
+      attributes: {property: 'og:type', content: 'website'},
+    },
+    {
+      tagName: 'meta',
+      attributes: {name: 'twitter:card', content: 'summary_large_image'},
+    },
+    {
+      tagName: 'script',
+      attributes: {type: 'application/ld+json'},
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'Organization',
+            '@id': 'https://yogidental.com/#organization',
+            name: 'Yogi Dental Center',
+            url: 'https://yogidental.com/',
+            logo: 'https://yogidental.com/img/logo.jpeg',
+            sameAs: [
+              'https://www.facebook.com/profile.php?id=61585606553659',
+              'https://www.instagram.com/yogi_dental_center_/',
+              'https://www.youtube.com/@YogiDentalCenter/',
+            ],
+          },
+          {
+            '@type': 'WebSite',
+            '@id': 'https://yogidental.com/#website',
+            url: 'https://yogidental.com/',
+            name: 'Yogi Dental Center',
+            inLanguage: 'en-US',
+            publisher: {'@id': 'https://yogidental.com/#organization'},
+          },
+        ],
+      }),
+    },
+  ],
+
   // Optional live Google Reviews integration (see src/components/ReviewsSection.js).
   // Set GOOGLE_PLACES_API_KEY / GOOGLE_PLACE_ID as environment variables before
   // building — never commit real keys here. Without them the page falls back
@@ -99,6 +170,13 @@ const config = {
         },
         theme: {
           customCss: './src/css/custom.css',
+        },
+        // Injects the gtag.js loader + `gtag("config", trackingID)` call into
+        // every page's <head> automatically (including client-side route
+        // changes), so Google Ads/Analytics sees traffic across the whole site.
+        gtag: {
+          trackingID: 'AW-17676578946',
+          anonymizeIP: true,
         },
       }),
     ],
@@ -192,7 +270,7 @@ const config = {
               {label: 'Services', to: '/services'},
               {label: 'Contact', to: '/contact'},
               {label: 'Smile Gallery', to: '/smile-gallery'},
-              {label: 'Reviews', to: '/reviews-page'},
+              {label: 'Patient Review & Ratings', to: '/reviews-page'},
             ],
           },
           {

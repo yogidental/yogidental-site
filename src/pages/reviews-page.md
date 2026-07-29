@@ -1,5 +1,5 @@
 ---
-title: "Reviews page"
+title: "Patient Review & Ratings"
 description: "See what patients say about Yogi Dental Center — real 5-star reviews and video testimonials from the families we care for in Orange, NJ."
 format: md
 slug: /reviews-page
@@ -8,7 +8,7 @@ hide_table_of_contents: true
 
 <div className="yd-reviews-page">
 
-# Reviews Page
+# Patient Review & Ratings
 
 <ReviewsSection />
 

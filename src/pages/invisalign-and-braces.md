@@ -29,26 +29,3 @@ Invisalign aligners are clear, comfortable, and removable—no metal, no pain. T
 
 [Learn About Us](#)
 
-##### Book Now
-
-## Make An Appointment
-
-Compassionate, modern dental care for all ages—offering family, cosmetic, and restorative services to keep your smile healthy and confident.
-
-#### Opening Hours
-
-Monday - Thursday
-
--   09.30 AM - 05.30 PM
-
-#### Support
-
-Your trusted dental care provider offering gentle, advanced treatments for healthy, beautiful smiles in a warm and welcoming environment.
-
-### Email Address
-
-contact@domain.com
-
-### Phone Number
-
-973-673-1311

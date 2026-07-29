@@ -21,7 +21,8 @@ const MENU_ITEMS = [
     ],
   },
   {label: 'Blogs', to: '/blogs'},
-  {label: 'Reviews page', to: '/reviews-page'},
+  {label: 'Testimonials & Reviews', to: '/testimonials'},
+  {label: 'Patient Review & Ratings', to: '/reviews-page'},
   {label: 'Survey Link', to: '/survey-link'},
 ];
 

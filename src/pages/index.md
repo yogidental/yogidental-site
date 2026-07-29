@@ -364,39 +364,6 @@ Yogi Dental is equipped with the latest dental technology to ensure precise, eff
   <a className="yd-btn" href="/services">Learn More</a>
 </div>
 
-<div className="yd-testimonial">
-<div className="yd-testimonial-photo">
-
-![Happy Yogi Dental patient](/img/site/young-man-visiting-dentist-BEUGEF6.jpg)
-
-</div>
-<div className="yd-testimonial-quote">
-
-### Testimonial
-
-I was very well accommodated. I didn’t feel any pain throughout any of my visits. I trust Dr. Patel and her staff. I feel like I have been treated like a number one patient.
-
-**—Mr. Jeffery Mathurin**
-
-</div>
-</div>
-
-<div className="yd-videos">
-<div className="yd-videos-row">
-  <div className="yd-video yd-video--empty"></div>
-  <div className="yd-video yd-video--empty"></div>
-  <div className="yd-video yd-video--empty"></div>
-  <div className="yd-video">
-    <video src="/videos/testimonial-2.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
-  </div>
-  <div className="yd-video">
-    <video src="/videos/testimonial-1.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
-  </div>
-  <div className="yd-video yd-video--empty"></div>
-  <div className="yd-video yd-video--empty"></div>
-</div>
-</div>
-
 <div className="yd-grid yd-grid--3 yd-promos">
   <a className="yd-btn" href="/xrays">Free Consultation<br/>$399 worth of x-ray free</a>
   <a className="yd-btn" href="/dental-insurance">Dental Insurance</a>

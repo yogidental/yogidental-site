@@ -536,6 +536,51 @@
   margin-bottom: 1.25rem;
 }
 
+/* Plain variant — left-aligned, dark (not teal) titles, no square crop.
+   Used for simple photo + title + one-line-description service listings. */
+.yd-card--plain {
+  text-align: left;
+}
+
+.yd-card--plain img {
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+}
+
+.yd-card--plain h3,
+.yd-card--plain h3 > a {
+  color: var(--yd-ink);
+  font-size: 1.25rem;
+}
+
+/* Left-aligned section heading with a short accent dash before the title,
+   and a plain gray subtitle line beneath (no all-caps eyebrow). */
+.yd-services-head {
+  margin: 3rem 0 2rem;
+}
+
+.yd-services-head h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  margin-bottom: 0.5rem;
+}
+
+.yd-services-head h2::before {
+  content: '';
+  flex: none;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--yd-ink);
+}
+
+.yd-services-head p {
+  color: var(--yd-body);
+  margin: 0;
+}
+
 /* Trailing card link pinned to the bottom, rendered as a teal pill. */
 .yd-card > p:last-child {
   margin-top: auto;
@@ -993,16 +1038,12 @@
 }
 
 @media (max-width: 640px) {
+  /* On phones the hero/form stack tall enough that a fixed bottom-right
+     badge ends up sitting on top of form fields at some scroll position —
+     the offer is already visible in the promo row and New Patient Special
+     banner further down, so just hide the floating duplicate here. */
   .yd-float-offer {
-    right: 1rem;
-    bottom: 1rem;
-    padding: 0.7rem 1.15rem;
-  }
-  .yd-float-offer__title {
-    font-size: 0.85rem;
-  }
-  .yd-float-offer__sub {
-    font-size: 0.7rem;
+    display: none;
   }
 }
 
@@ -1805,6 +1846,33 @@
 .yd-step p {
   color: var(--yd-body);
   font-size: 0.95rem;
+}
+
+/* Small teal "Read More →" links under a step/card description. */
+.yd-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--yd-teal-text) !important;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Testimonial name + role beneath the quote (plain, not italic like the quote). */
+.yd-testimonial-quote__name {
+  margin-top: 1.5rem;
+}
+
+.yd-testimonial-quote__name strong {
+  display: block;
+  color: var(--yd-ink);
+  font-style: normal;
+}
+
+.yd-testimonial-quote__name span {
+  color: var(--yd-body);
+  font-size: 0.9rem;
 }
 
 /* Doctor bios: heading + round photo on the left, bio on the right. */
@@ -2713,7 +2781,7 @@
 }
 
 /* ==========================================================================
-   32. Reviews page — full-width rating banner + two rows of review cards
+   32. Patient Review & Ratings page — full-width rating banner + two rows of review cards
        sliding right to left; large stacked video testimonials below.
    ========================================================================== */
 .yd-reviews-page > h1:first-child {
