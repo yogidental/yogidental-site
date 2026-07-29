@@ -42,17 +42,39 @@ I was very well accommodated. I didn’t feel any pain throughout any of my visi
 
 <div className="yd-videos">
 <div className="yd-videos-row">
-  <div className="yd-video yd-video--empty"></div>
-  <div className="yd-video yd-video--empty"></div>
-  <div className="yd-video yd-video--empty"></div>
   <div className="yd-video">
-    <video src="/videos/testimonial-2.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+    <video src="/videos/02-09-2026.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
+  <div className="yd-video">
+    <video src="/videos/IMG_2364%20(1).mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
+  <div className="yd-video">
+    <video src="/videos/IMG_2412%20(1).mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
+  <div className="yd-video">
+    <video src="/videos/IMG_2673%20(1).mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
+  <div className="yd-video">
+    <video src="/videos/IMG_2677%20(1).mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
+  <div className="yd-video">
+    <video src="/videos/IMG_2708%20(1).mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
+  <div className="yd-video">
+    <video src="/videos/IMG_2823.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
   </div>
   <div className="yd-video">
     <video src="/videos/testimonial-1.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
   </div>
-  <div className="yd-video yd-video--empty"></div>
-  <div className="yd-video yd-video--empty"></div>
+  <div className="yd-video">
+    <video src="/videos/testimonial-2.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
+  <div className="yd-video">
+    <video src="/videos/video%201%20.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
+  <div className="yd-video">
+    <video src="/videos/vidoe%202.mp4#t=2" controls preload="metadata" playsInline controlsList="nodownload"></video>
+  </div>
 </div>
 </div>
 
