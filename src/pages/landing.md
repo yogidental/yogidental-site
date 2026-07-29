@@ -239,30 +239,6 @@ We are your smile makers at Yogi Dental, and we make the difference between a be
   <a className="yd-btn" href="https://calendly.com/yogidental/new-patient">Make Appointment</a>
 </div>
 
-##### Book Now
-
-## Make An Appointment
-
-Book your dental appointment today! Quick, easy scheduling for expert care. Call now or use our online form to get started.
-
-#### Opening Hours
-
-Monday - Thursday
-
--   09.30 AM - 5.30 PM
-
-#### Support
-
-Need help? Our friendly team is here to assist you with appointments, questions, and dental care support. Contact us anytime.
-
-### Email Address
-
-yogidental@gmail.com
-
-### Phone Number
-
-973-673-1311
-
 ##### Testimonial
 
 ## What Customer Says
