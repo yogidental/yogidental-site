@@ -64,6 +64,7 @@ function setup() {
   );
 
   const groupCounts = new WeakMap();
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
   RULES.forEach(({selector, variant, skipIfInside}) => {
     document.querySelectorAll(selector).forEach((el) => {
@@ -74,6 +75,16 @@ function setup() {
         return;
       }
       el.dataset.revealed = 'true';
+
+      // Elements already on-screen at setup time are shown as-is — no
+      // hide-then-reveal flash. Only elements below the fold get the
+      // animated entrance when the user scrolls to them.
+      const rect = el.getBoundingClientRect();
+      const alreadyInView = rect.top < viewportHeight * 0.92 && rect.bottom > 0;
+      if (alreadyInView) {
+        return;
+      }
+
       el.classList.add('yd-reveal', `yd-reveal--${variant}`);
 
       const parent = el.parentElement;
@@ -87,10 +98,10 @@ function setup() {
 }
 
 if (ExecutionEnvironment.canUseDOM) {
-  if (document.readyState === 'complete') {
-    setup();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setup, {once: true});
   } else {
-    window.addEventListener('load', setup, {once: true});
+    setup();
   }
 }
 
