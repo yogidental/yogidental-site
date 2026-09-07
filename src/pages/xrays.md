@@ -80,6 +80,11 @@ Booking your visit at Yogi Dental is quick and easy. Whether you’re due for a 
 <span className="yd-hours__time"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16zm.5-13H11v6l5.2 3.1.8-1.3-4.5-2.7V7z"/></svg> 09.30 AM - 05.30 PM</span>
 </div>
 
+<div className="yd-hours">
+<span>Friday - Sunday</span>
+<span className="yd-hours__time"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.4A8.5 8.5 0 1 1 9.6 3.5a7 7 0 0 0 10.9 10.9Z" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg> Holiday</span>
+</div>
+
 #### Support
 
 Your trusted dental care provider offering gentle, advanced treatments for healthy, beautiful smiles in a warm and welcoming environment.

@@ -68,6 +68,10 @@ Monday - Thursday
 
 -   09.30 AM - 05.30 PM
 
+Friday - Sunday
+
+-   Holiday
+
 #### Support
 
 Your trusted dental care provider offering gentle, advanced treatments for healthy, beautiful smiles in a warm and welcoming environment.
