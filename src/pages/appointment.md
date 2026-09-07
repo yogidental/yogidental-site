@@ -35,12 +35,12 @@ Booking your visit at Yogi Dental is quick and easy. Whether you're due for a ch
 
 <div className="yd-book-hours__row">
 <span>Monday - Thursday</span>
-<span className="yd-book-hours__time"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg> 09.30 AM - 05.30 PM</span>
+<span className="yd-book-hours__time"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg> Open, 09.30 AM - 05.30 PM</span>
 </div>
 
 <div className="yd-book-hours__row">
-<span>Friday - Sunday</span>
-<span className="yd-book-hours__time yd-book-hours__time--off"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" strokeWidth="1.6"/><path d="M3 9.5h18" stroke="currentColor" strokeWidth="1.6"/><path d="M8 3v4M16 3v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/><path d="M9.3 13.5l5.4 5.4M14.7 13.5l-5.4 5.4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg> Holiday</span>
+<span>Friday - Saturday</span>
+<span className="yd-book-hours__time yd-book-hours__time--off"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" strokeWidth="1.6"/><path d="M3 9.5h18" stroke="currentColor" strokeWidth="1.6"/><path d="M8 3v4M16 3v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/><path d="M9.3 13.5l5.4 5.4M14.7 13.5l-5.4 5.4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg> Closed</span>
 </div>
 
 </div>
