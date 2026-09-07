@@ -55,8 +55,8 @@ To accommodate a wide range of financial situations, we accept several convenien
   <li>MasterCard</li>
   <li>Discover</li>
   <li>American Express</li>
-  <li><strong>CareCredit</strong></li>
-  <li><strong>Springstone Financing</strong></li>
+  <li>CareCredit</li>
+  <li>Springstone Financing</li>
 </ul>
 
 You deserve a healthy, beautiful smile—and we’re here to help make that possible with payment options that work for you.
