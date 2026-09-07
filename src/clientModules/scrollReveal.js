@@ -30,6 +30,28 @@ const RULES = [
 
 let observer;
 
+// A single observer, reused for the life of the page. Recreating (and
+// disconnecting the old one) on every setup() call — including the extra
+// call Docusaurus's router triggers right after the initial page load —
+// used to cancel any reveal that hadn't fired yet, permanently stranding
+// those elements at opacity:0.
+function getObserver() {
+  if (!observer) {
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {threshold: 0.15, rootMargin: '0px 0px -8% 0px'},
+    );
+  }
+  return observer;
+}
+
 function stagger(el, indexInParent) {
   el.style.transitionDelay = `${Math.min(indexInParent * 70, 420)}ms`;
 }
@@ -43,26 +65,11 @@ function setup() {
     '(prefers-reduced-motion: reduce)',
   ).matches;
 
-  if (observer) {
-    observer.disconnect();
-  }
-
   if (prefersReducedMotion) {
     return;
   }
 
-  observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {threshold: 0.15, rootMargin: '0px 0px -8% 0px'},
-  );
-
+  const obs = getObserver();
   const groupCounts = new WeakMap();
   const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
@@ -92,7 +99,11 @@ function setup() {
       stagger(el, count);
       groupCounts.set(parent, count + 1);
 
-      observer.observe(el);
+      obs.observe(el);
+
+      // Safety net: guarantee content is never stuck invisible even if the
+      // observer misses it for some reason (odd viewport/layout edge case).
+      window.setTimeout(() => el.classList.add('is-visible'), 4000);
     });
   });
 }
@@ -107,8 +118,10 @@ if (ExecutionEnvironment.canUseDOM) {
 
 // Docusaurus SPA navigation swaps the page content without a full reload;
 // re-scan shortly after so the new page's sections get the same treatment.
-export function onRouteUpdate() {
-  if (ExecutionEnvironment.canUseDOM) {
+// Note: this also fires once on the very first page load (previousLocation
+// is null then) — skip that call since the trigger below already covers it.
+export function onRouteUpdate({previousLocation} = {}) {
+  if (ExecutionEnvironment.canUseDOM && previousLocation) {
     window.setTimeout(setup, 80);
   }
 }

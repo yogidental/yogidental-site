@@ -115,7 +115,11 @@ Book Your Appointment Now
 
 Monday - Thursday
 
--   09.30 AM - 05.30 PM
+-   Open, 09.30 AM - 05.30 PM
+
+Friday - Saturday
+
+-   Closed
 
 #### Support
 

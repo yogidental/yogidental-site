@@ -2509,6 +2509,22 @@
   flex: none;
 }
 
+.yd-book-hours__time--off {
+  color: var(--yd-body);
+}
+
+.yd-book-hours__time--off svg {
+  color: var(--yd-body);
+}
+
+.yd-hours__time--off {
+  color: var(--yd-body);
+}
+
+.yd-hours__time--off svg {
+  fill: var(--yd-body);
+}
+
 .yd-book-contacts {
   display: flex;
   flex-wrap: wrap;
