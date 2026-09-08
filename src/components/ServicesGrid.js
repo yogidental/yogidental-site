@@ -36,14 +36,12 @@ export default function ServicesGrid() {
       {SERVICES.map((service, i) => (
         <div className="yd-service-card" key={service.title}>
           <div className="yd-service-card__head">
-            <Link to="/smile-gallery" aria-label="View our Smile Gallery">
-              <img
-                className="yd-service-card__ico"
-                src={ICONS[i % ICONS.length]}
-                alt=""
-                aria-hidden="true"
-              />
-            </Link>
+            <img
+              className="yd-service-card__ico"
+              src={ICONS[i % ICONS.length]}
+              alt=""
+              aria-hidden="true"
+            />
             <h3>{service.title}</h3>
           </div>
           <p>{service.desc}</p>

@@ -44,7 +44,11 @@ No shots, drilling, or adhesives needed with Snap-On Smile. This non-invasive, r
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Snap-On Smile appliance](/img/site/Adjustable-Snap-On-Dentures-4-Piece-Smile-Veneers_ef9e5b2f-43ad-4757-a081-36c0412a56b1.690a33c5a7d0343af91b02e01d3557ad.avif)
+
+</a>
 
 <div className="yd-cta">
   <a className="yd-btn" href="/about-us">Learn About Us</a>

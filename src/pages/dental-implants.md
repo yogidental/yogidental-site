@@ -55,7 +55,11 @@ Tooth decay Root canal failure Periodontitis (gum disease) Trauma to the mouth D
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Matching an implant crown shade](/img/site/pexels-karolina-grabowska-6627564.jpg)
+
+</a>
 
 <div className="yd-cta">
   <a className="yd-btn" href="/about-us">Learn About Us</a>

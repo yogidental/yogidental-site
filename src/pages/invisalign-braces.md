@@ -56,7 +56,11 @@ Invisalign aligners are clear, comfortable, and removable—making them nearly i
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Clear Invisalign aligner](/img/site/pros-and-cons-of-invisalign.jpg)
+
+</a>
 
 <div className="yd-cta">
   <a className="yd-btn" href="/about-us">Learn About Us</a>

@@ -55,7 +55,11 @@ Porcelain veneers typically require two painless visits. First, teeth are gently
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Natural-looking smile with porcelain veneers](/img/site/Porcelain-Veneers-FAQs.webp)
+
+</a>
 
 <div className="yd-cta">
   <a className="yd-btn" href="/about-us">Learn About Us</a>

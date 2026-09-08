@@ -55,7 +55,11 @@ During your routine checkup, Yogi Dental will examine your gums for periodontal 
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Before and after periodontal gum disease treatment](/img/site/Periodontal-Gum-Disease-Treatment-NYC-Periodontist.jpg)
+
+</a>
 
 </div>
 </div>

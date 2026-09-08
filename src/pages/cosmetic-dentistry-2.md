@@ -98,7 +98,11 @@ Transform your smile with laser gum contouring at Yogi Dental. This quick, painl
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Fotona laser gum contouring](/img/site/646fe88553cdb9334b18e714_Fotona-Laser-Therapy-768x512.jpeg)
+
+</a>
 
 </div>
 </div>
@@ -115,9 +119,13 @@ Transform your smile with laser gum contouring at Yogi Dental. This precise, pai
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Gum contouring before and after](/img/site/laser-gum-contouring-before-and-after-s.webp)
 
-<p className="yd-caption">Before And After</p>
+</a>
+
+<p className="yd-caption">Before And After — <a href="/smile-gallery">View Smile Gallery</a></p>
 
 </div>
 </div>

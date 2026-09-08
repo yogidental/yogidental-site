@@ -55,7 +55,11 @@ Preventing dental disease starts at home with good oral hygiene and a balanced d
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Professional teeth cleaning](/img/site/pexels-karolina-grabowska-6627315.jpg)
+
+</a>
 
 </div>
 </div>

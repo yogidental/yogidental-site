@@ -55,7 +55,11 @@ Porcelain fillings repair teeth damaged by decay, cracks, or fractures. The affe
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Tooth-colored composite filling](/img/site/tooth-colored-composite-fillings.jpg)
+
+</a>
 
 <div className="yd-cta">
   <a className="yd-btn" href="/about-us">Learn About Us</a>
