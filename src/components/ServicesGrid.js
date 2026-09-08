@@ -46,7 +46,7 @@ export default function ServicesGrid() {
           </div>
           <p>{service.desc}</p>
           <Link className="yd-readmore" to={service.to}>
-            Read More <span aria-hidden="true">→</span>
+            Click Here To View The Services <span aria-hidden="true">→</span>
           </Link>
         </div>
       ))}

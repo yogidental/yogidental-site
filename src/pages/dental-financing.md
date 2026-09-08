@@ -57,6 +57,10 @@ To accommodate a wide range of financial situations, we accept several convenien
   <li>American Express</li>
   <li>CareCredit</li>
   <li>Springstone Financing</li>
+  <li>Cherry</li>
+  <li>Sunbit</li>
+  <li>Happen</li>
+  <li>NerdWallet</li>
 </ul>
 
 You deserve a healthy, beautiful smile—and we’re here to help make that possible with payment options that work for you.

@@ -56,7 +56,11 @@ A “Root Canal” is needed when the nerve of a tooth is negatively affected by
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Root canal therapy illustration](/img/site/root-canal.jpg)
+
+</a>
 
 <div className="yd-cta">
   <a className="yd-btn" href="/about-us">Learn About Us</a>
@@ -70,7 +74,11 @@ A “Root Canal” is needed when the nerve of a tooth is negatively affected by
 <div className="yd-split">
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![CEREC same-day crown milling machine](/img/site/CEREC.jpg)
+
+</a>
 
 </div>
 <div>

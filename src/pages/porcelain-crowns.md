@@ -55,7 +55,11 @@ Porcelain crowns fully cover and restore damaged teeth to their original shape a
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![How a porcelain crown fits over a tooth](/img/site/porcelain-crowns.jpg)
+
+</a>
 
 <div className="yd-cta">
   <a className="yd-btn" href="/about-us">Learn About Us</a>

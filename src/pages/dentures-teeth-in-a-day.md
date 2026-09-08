@@ -55,7 +55,11 @@ The process of getting dentures requires several appointments, usually over seve
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Before and after dentures](/img/site/BA-before-and-after.webp)
+
+</a>
 
 <div className="yd-cta">
   <a className="yd-btn" href="/about-us">Learn About Us</a>

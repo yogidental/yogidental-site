@@ -55,7 +55,11 @@ Professional dental cleanings (dental prophylaxis) are usually performed by regi
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Comprehensive dental exam](/img/site/pexels-karolina-grabowska-6627451.jpg)
+
+</a>
 
 </div>
 </div>

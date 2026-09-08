@@ -56,7 +56,11 @@ The ZOOM! Teeth Whitening procedure is a simple and painless way to whiten your 
 </div>
 <div className="yd-media">
 
+<a href="/smile-gallery" aria-label="View more smile transformations in our Smile Gallery">
+
 ![Bright, whitened smile after ZOOM whitening](/img/site/pexels-shiny-diamond-3762408.jpg)
+
+</a>
 
 <div className="yd-cta">
   <a className="yd-btn" href="/about-us">Learn About Us</a>
