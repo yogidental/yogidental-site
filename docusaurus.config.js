@@ -12,6 +12,13 @@ const config = {
 
   future: {
     v4: true,
+    // The SWC HTML minimizer (on by default under v4) silently strips the
+    // contents of <noscript> tags — it dropped the Meta Pixel's noscript
+    // fallback <img> entirely. Falling back to the Terser-based minifier
+    // just for this step; everything else stays on the fast Rspack/SWC path.
+    faster: {
+      swcHtmlMinimizer: false,
+    },
   },
 
   url: 'https://yogidental.com',
