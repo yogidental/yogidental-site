@@ -98,6 +98,28 @@ const config = {
         ],
       }),
     },
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML: `
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1568296597633148');
+fbq('track', 'PageView');
+      `,
+    },
+    {
+      tagName: 'noscript',
+      attributes: {},
+      innerHTML:
+        '<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1568296597633148&ev=PageView&noscript=1" />',
+    },
   ],
 
   // Optional live Google Reviews integration (see src/components/ReviewsSection.js).
@@ -111,7 +133,12 @@ const config = {
 
   // Site-wide scroll-reveal entrance animations (fade/slide sections into
   // view), matching the source site's Elementor animations on every page.
-  clientModules: ['./src/clientModules/scrollReveal.js'],
+  // metaPixel re-fires the Meta Pixel PageView event on client-side route
+  // changes (the base script in headTags only fires it once, on load).
+  clientModules: [
+    './src/clientModules/scrollReveal.js',
+    './src/clientModules/metaPixel.js',
+  ],
 
   plugins: [
     [
