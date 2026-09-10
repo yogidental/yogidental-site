@@ -129,7 +129,53 @@ We proudly offer **CareCredit**, a healthcare credit card designed specifically 
 </div>
 <div className="yd-media yd-fin-cc-img">
 
-<a className="yd-btn" href="https://www.happen.com/apply/personal/identity/primary-name">Check My Rate with Happen</a>
+<a href="https://www.happen.com/apply/personal/identity/primary-name" aria-label="Check your rate with Happen">
+
+![Happen](/img/site/happen-logo.png)
+
+</a>
+
+</div>
+</div>
+
+<div className="yd-split yd-fin-carecredit">
+<div>
+
+## Payment Plans with Cherry
+
+**Cherry** offers simple payment plans for dental treatment with a fast, soft-credit-check application.
+
+**Find Yogi Dental Center** on Cherry's provider finder to apply—search "Yogi Dental" to get started.
+
+</div>
+<div className="yd-media yd-fin-cc-img">
+
+<a href="https://finder.withcherry.com/" aria-label="Find Yogi Dental Center on Cherry">
+
+![Cherry](/img/site/Logo-Primary-1.svg)
+
+</a>
+
+</div>
+</div>
+
+<div className="yd-split yd-fin-carecredit">
+<div>
+
+## Pay Over Time with Sunbit
+
+**Sunbit** offers flexible payment plans with no hidden fees, approved in seconds for a wide range of credit types.
+
+**Find Yogi Dental Center** on Sunbit's directory to pre-qualify—search "Yogi Dental" to get started.
+
+</div>
+<div className="yd-media yd-fin-cc-img">
+
+<a href="https://sunbit.com/shop-directory/" aria-label="Find Yogi Dental Center on Sunbit">
+
+![Sunbit](/img/site/logo.svg)
+
+</a>
 
 </div>
 </div>
