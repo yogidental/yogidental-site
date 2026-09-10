@@ -96,6 +96,130 @@ We proudly offer **CareCredit**, a healthcare credit card designed specifically 
 </div>
 </div>
 
+<div className="yd-split yd-fin-carecredit">
+<div>
+
+## Flexible Financing with Alphaeon Credit
+
+**Alphaeon Credit** is a healthcare credit card that helps cover treatments not fully covered by insurance, with plans designed to fit a range of budgets.
+
+**Benefits of Alphaeon Credit include:**
+
+<ul className="yd-fin-list">
+  <li>Credit lines up to $25,000 for treatments over $250</li>
+  <li>Promotional interest-free periods available</li>
+  <li>Reusable for future treatments, again and again</li>
+  <li>Instant pre-qualification results</li>
+  <li>Soft credit check to pre-qualify—no impact to your credit score</li>
+</ul>
+
+**Apply now** online—checking your rate uses a soft inquiry and won't affect your credit score.
+
+</div>
+<div className="yd-media yd-fin-cc-img">
+
+<a href="https://goalphaeon.com/prequalify-me" aria-label="Apply now with Alphaeon Credit">
+
+![Alphaeon Credit](/img/site/Alphaeon_Credit_logo_registered_RGB-300x138.png)
+
+</a>
+
+</div>
+</div>
+
+<div className="yd-split yd-fin-carecredit">
+<div>
+
+## Personal Loan Financing with Happen
+
+**Happen** (formerly LendingClub) offers personal loans that can be used to help cover the cost of dental treatment.
+
+**Benefits of Happen include:**
+
+<ul className="yd-fin-list">
+  <li>Loan amounts from $1,000 to $75,000</li>
+  <li>Flexible terms from 24 to 84 months</li>
+  <li>Funding as fast as 24 hours after approval</li>
+  <li>Rates typically lower than credit card APRs</li>
+  <li>Checking your rate won't affect your credit score</li>
+</ul>
+
+**Check your rate** online—it won't affect your credit score.
+
+</div>
+<div className="yd-media yd-fin-cc-img">
+
+<a href="https://www.happen.com/apply/personal/identity/primary-name" aria-label="Check your rate with Happen">
+
+![Happen](/img/site/happen-logo.png)
+
+</a>
+
+</div>
+</div>
+
+<div className="yd-split yd-fin-carecredit">
+<div>
+
+## Payment Plans with Cherry
+
+**Cherry** offers simple payment plans for dental treatment with a fast, soft-credit-check application.
+
+**Benefits of Cherry include:**
+
+<ul className="yd-fin-list">
+  <li>~35-second application with no impact to your credit score</li>
+  <li>Industry-leading ~90% approval rate</li>
+  <li>Zero-interest Pay-in-4 plan for every approved applicant</li>
+  <li>No hidden, deferred, or compounding interest</li>
+  <li>Immediate funding upon approval</li>
+</ul>
+
+**Find Yogi Dental Center** on Cherry's provider finder to apply—search "Yogi Dental" to get started.
+
+</div>
+<div className="yd-media yd-fin-cc-img">
+
+<a href="https://finder.withcherry.com/" aria-label="Find Yogi Dental Center on Cherry">
+
+![Cherry](/img/site/Logo-Primary-1.svg)
+
+</a>
+
+</div>
+</div>
+
+<div className="yd-split yd-fin-carecredit">
+<div>
+
+## Pay Over Time with Sunbit
+
+**Sunbit** offers flexible payment plans with no hidden fees, approved in seconds for a wide range of credit types.
+
+**Benefits of Sunbit include:**
+
+<ul className="yd-fin-list">
+  <li>Application completed in seconds, right at checkout</li>
+  <li>87% approval rate, starting at a 500 credit score</li>
+  <li>No hard credit check—won't affect your credit score</li>
+  <li>No late fees or hidden costs, ever</li>
+  <li>No-interest plans available up to 24 months</li>
+</ul>
+
+**Find Yogi Dental Center** on Sunbit's directory to pre-qualify—search "Yogi Dental" to get started.
+
+</div>
+<div className="yd-media yd-fin-cc-img">
+
+<a href="https://sunbit.com/shop-directory/" aria-label="Find Yogi Dental Center on Sunbit">
+
+![Sunbit](/img/site/logo.svg)
+
+</a>
+
+</div>
+</div>
+
 <div className="yd-band yd-fin-insurance">
 <div className="yd-section-head">
 

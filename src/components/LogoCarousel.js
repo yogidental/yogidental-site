@@ -2,13 +2,13 @@ import React, {useState, useEffect, useCallback} from 'react';
 
 // Trusted-financing-partner logos, shown one at a time in the carousel.
 const LOGOS = [
-  {src: '/img/site/logo.svg', alt: 'Financing partner'},
+  {src: '/img/site/logo.svg', alt: 'Sunbit'},
   {
     src: '/img/site/Alphaeon_Credit_logo_registered_RGB-300x138.png',
     alt: 'Alphaeon Credit',
   },
-  {src: '/img/site/Logo-Primary-1.svg', alt: 'Financing partner'},
-  {src: '/img/site/lendingclubLogo.svg', alt: 'LendingClub'},
+  {src: '/img/site/Logo-Primary-1.svg', alt: 'Cherry'},
+  {src: '/img/site/happen-logo.png', alt: 'Happen'},
   {src: '/img/site/main_logo-300x77.png', alt: 'CareCredit'},
 ];
 
