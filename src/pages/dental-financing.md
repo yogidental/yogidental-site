@@ -144,12 +144,12 @@ We proudly offer **CareCredit**, a healthcare credit card designed specifically 
   <li>Checking your rate won't affect your credit score</li>
 </ul>
 
-**Check your rate** online—it won't affect your credit score.
+**Visit Happen** to check your rate—it won't affect your credit score.
 
 </div>
 <div className="yd-media yd-fin-cc-img">
 
-<a href="https://www.happen.com/apply/personal/identity/primary-name" aria-label="Check your rate with Happen">
+<a href="https://www.happen.com/" aria-label="Check your rate with Happen">
 
 ![Happen](/img/site/happen-logo.png)
 
