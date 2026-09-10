@@ -96,6 +96,44 @@ We proudly offer **CareCredit**, a healthcare credit card designed specifically 
 </div>
 </div>
 
+<div className="yd-split yd-fin-carecredit">
+<div>
+
+## Flexible Financing with Alphaeon Credit
+
+**Alphaeon Credit** is a healthcare credit card that helps cover treatments not fully covered by insurance, with plans designed to fit a range of budgets.
+
+**Apply now** online—checking your rate uses a soft inquiry and won't affect your credit score.
+
+</div>
+<div className="yd-media yd-fin-cc-img">
+
+<a href="https://goalphaeon.com/prequalify-me" aria-label="Apply now with Alphaeon Credit">
+
+![Alphaeon Credit](/img/site/Alphaeon_Credit_logo_registered_RGB-300x138.png)
+
+</a>
+
+</div>
+</div>
+
+<div className="yd-split yd-fin-carecredit">
+<div>
+
+## Personal Loan Financing with Happen
+
+**Happen** (formerly LendingClub) offers personal loans that can be used to help cover the cost of dental treatment.
+
+**Check your rate** online—it won't affect your credit score.
+
+</div>
+<div className="yd-media yd-fin-cc-img">
+
+<a className="yd-btn" href="https://www.happen.com/apply/personal/identity/primary-name">Check My Rate with Happen</a>
+
+</div>
+</div>
+
 <div className="yd-band yd-fin-insurance">
 <div className="yd-section-head">
 
