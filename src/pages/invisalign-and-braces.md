@@ -1,17 +1,12 @@
 ---
 title: "Invisalign and Braces"
-description: "Straighten Your Teeth and Enhance Your Smile with Invisalign Braces Home About Us About Us Straighten Your Smile Discreetly with Invisalign & Fast Braces Achieve a straighter smile with Invisalign or Fast Braces—clear, comfortable, and removable options for teens and adults. These treatments correct alignment without metal wires, offering faster results, easy cleaning, and minimal"
+description: "Straighten Your Smile Discreetly with Invisalign & Fast Braces. Achieve a straighter smile with Invisalign or Fast Braces—clear, comfortable, and removable options for teens and adults. These treatments correct alignment without metal wires, offering faster results, easy cleaning, and minimal impact on daily life."
 format: md
 slug: /invisalign-and-braces
 hide_table_of_contents: true
 ---
 
 ## Straighten Your Teeth and Enhance Your Smile with Invisalign Braces
-
--   Home
--   About Us
-
-##### About Us
 
 ## Straighten Your Smile Discreetly with Invisalign & Fast Braces
 
@@ -26,6 +21,4 @@ Invisalign aligners are clear, comfortable, and removable—no metal, no pain. T
 1.A series of clear plastic “aligners” are custom made to fit your teeth and mouth. 2.Each successive Invisalign brace is worn for 2-3 weeks all day and night, except while eating and brushing. 3.While wearing your Invisalign braces your teeth are gently moved to the desired position over time. 4.The duration of the process of aligning and straightening teeth varies, but is usually just 6-14 months.
 
 [![Invisalign and Braces](/img/site/6036ba0b904d993b851b6618_g-invisalign-step-3.jpeg)](/img/site/6036ba0b904d993b851b6618_g-invisalign-step-3.jpeg)
-
-[Learn About Us](#)
 

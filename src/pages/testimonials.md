@@ -1,6 +1,6 @@
 ---
 title: "Testimonials"
-description: "Testimonials & Reviews Home About Us Why Do Patients Choose Yogi Dental? Testimonial What Customer Says — Carmeta T. I have being going to Yogi Dentist for twenty plus years and never had a bad experience. I am afraid of the Dentist instruments, nervous when I have to go there, but, they always makes me"
+description: "Why Do Patients Choose Yogi Dental? Read real testimonials from our patients in Orange, NJ, and see why they trust us with their dental care."
 format: md
 slug: /testimonials
 hide_table_of_contents: true
