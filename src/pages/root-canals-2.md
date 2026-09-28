@@ -20,8 +20,6 @@ hide_table_of_contents: true
 <div className="yd-split">
 <div>
 
-<p className="yd-eyebrow">About Us</p>
-
 <div className="yd-teal-heading">
 
 ## Pain-Free Root Canal Therapy to Save Your Natural Teeth

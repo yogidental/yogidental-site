@@ -20,8 +20,6 @@ hide_table_of_contents: true
 <div className="yd-split">
 <div>
 
-<p className="yd-eyebrow">About Us</p>
-
 <div className="yd-teal-heading">
 
 ## Teeth Cleanings and Dental Check-Ups Help Prevent Cavities and Gum Disease
