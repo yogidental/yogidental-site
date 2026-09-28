@@ -20,8 +20,6 @@ hide_table_of_contents: true
 <div className="yd-split">
 <div>
 
-<p className="yd-eyebrow">About Us</p>
-
 <div className="yd-teal-heading">
 
 ## Natural-Looking Porcelain Crowns to Restore and Protect Your Teeth
