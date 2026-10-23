@@ -205,11 +205,14 @@ fbq('track', 'PageView');
         theme: {
           customCss: './src/css/custom.css',
         },
-        // Injects the gtag.js loader + `gtag("config", trackingID)` call into
-        // every page's <head> automatically (including client-side route
-        // changes), so Google Ads/Analytics sees traffic across the whole site.
+        // Injects the gtag.js loader + a `gtag("config", trackingID)` call
+        // per ID into every page's <head> automatically (including
+        // client-side route changes), so both the Google Ads conversion tag
+        // and the GA4 property see traffic across the whole site. Per
+        // Google's own guidance, multiple tags share a single gtag.js
+        // loader rather than each getting their own <script> tag.
         gtag: {
-          trackingID: 'AW-17676578946',
+          trackingID: ['AW-17676578946', 'G-DYF8FJX491'],
           anonymizeIP: true,
         },
       }),
